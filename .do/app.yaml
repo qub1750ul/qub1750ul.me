@@ -1,0 +1,26 @@
+name: personal-website
+region: fra
+
+domains:
+
+- domain: www.qub1750ul.me
+  type: PRIMARY
+  zone: qub1750ul.me
+
+- domain: qub1750ul.me
+  type: ALIAS
+  zone: qub1750ul.me
+
+static_sites:
+
+- name: personal-website
+  routes:
+  - path: /
+
+  dockerfile_path: src/ctn/do-app-builder.dockerfile
+  output_dir: /mnt/projectRoot/build/hugo
+
+  github:
+    repo: qub1750ul/qub1750ul.me
+    branch: main
+    deploy_on_push: true

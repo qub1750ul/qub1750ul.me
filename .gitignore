@@ -1,0 +1,6 @@
+build
+
+# Hugo
+src/hugo/public/
+src/hugo/resources/_gen/
+src/hugo/hugo_stats.json
