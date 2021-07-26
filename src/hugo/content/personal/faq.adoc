@@ -1,0 +1,7 @@
+[#hlp]
+== What does it mean "High Latency Person"
+
+I pathologically take a long time to respond to messages after visualization. +
+In the worst case expect ~24h latency. +
+Please poke me even hourly if i haven't responded in that time frame or
+you urge a response.
