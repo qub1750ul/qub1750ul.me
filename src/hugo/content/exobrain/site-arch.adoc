@@ -1,0 +1,86 @@
+= Site architecture notes
+
+== WWW URL Architecture
+
+// TODO: Convert to table
+
+[%autowidth,cols="m,d",grid="all"]
+|===
+s| URL       s| Description
+ | /personal  | Pages with personal info
+ | /blog      | Blog root directory
+ | /exobrain  | Brain dump
+ | /link      | Static URL shortener
+ | /apps      | Single page web apps
+|===
+
+== Blog Post Categories
+
+[%autowidth,cols="m,d"]
+|===
+s| Tag     s| Description
+ | DevLog   | Development Blog: Articles documenting the development process of a
+              project
+ | DevArt   | Developer Articles: Research-like pulications
+ | TIL      | Today I Learned: Diaries of exploration of CS/CE
+ | SysAdm   | System Admin: Personal Tales around System Administration
+ | Insight  | Distilled knowledge derived from sparse data all over the web
+|===
+
+== Blog URL Architecture
+
+Version 0.1.0
+
+=== Canonical URLs
+Using shell notation
+....
+/blog/${index}.${shortTitle}.${serialNumber}
+....
+
+....
+/blog/draft.${index}.${shortTitle}.${serialNumber}
+....
+
+Example:
+....
+/blog/2.universal-multiboot-drive.2
+....
+
+Points to the article number `2`, titled `universal-multiboot-drive`,
+that is the 2nd of a series
+
+Note: this URL is SemVer v2 compatible
+
+== Conventional commits
+
+[%autowidth]
+|===
+s| Tag     s| Semantics
+ | ctn      | Container related edits
+ | content  | Edits to site contents
+ | hugo     | Generic change to Hugo configuration
+ | hugo/template | Any edit related to layouts or archetypes
+ 
+|===
+
+== Domain Name Space Architecture
+
+[graphviz,dns-arch,svg]
+....
+
+graph {
+
+qub1750ul.me. -- root namespace
+
+qub1750ul.me. -> { www vpn }
+
+www -- Classic HyperText server
+
+vpn -> { portal nexus m }
+
+portal -- "VPN bastion, 6o4 endpoint, IPv6 edge router"
+nexus  -- "IPv6 core VPN router"
+m      -- "VPN member machine namespace"
+
+}
+....

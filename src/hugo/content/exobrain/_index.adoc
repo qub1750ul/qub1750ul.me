@@ -1,1 +1,10 @@
-exobrain index
++++
+title = "Exobrain"
++++
+
+Home of inorganic intellectual chaos and unpolished content.
+
+== Pages
+
+- Title
+- Description
