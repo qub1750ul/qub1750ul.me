@@ -1,3 +1,6 @@
-baseURL = "/"
+baseURL = "https://www.qub1750ul.me"
 languageCode = "en-us"
 title = "qub1750ul's website"
+enableGitInfo = true
+enableInlineShortcodes = true
+destination = "/mnt/projectRoot/build/hugo"
