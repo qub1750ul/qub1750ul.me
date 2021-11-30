@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<link rel='stylesheet' href='/static/css/blogpost.css'/>
+	<title>{{ .Title }}</title>
+	<body>
+		
+		{{- .Content -}}
+
+		<center> {{ partial "exobrain/warn.html" }} </center>
+		
+		<h2>Index</h2>
+
+		{{ range where .Pages "Draft" false }}
+			
+			{{ $defaultTitle := replace .File.BaseFileName "-" " " | title }}
+			{{ $title := default $defaultTitle .Title }}
+			
+			<a href="{{ .RelPermalink }}">{{- $title -}}</a> <br>
+			{{- .Description -}} {{ with .Description }} <br/> {{ end }}
+		
+		{{ end }}
+	
+	</body>
+</html>
