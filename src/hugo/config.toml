@@ -1,6 +1,13 @@
-baseURL = "https://www.qub1750ul.me"
-languageCode = "en-us"
-title = "qub1750ul's website"
+baseURL       = "http://bad-ref.link"
+languageCode  = "en-us"
+title         = "qub1750ul's website"
+
+canonifyURLs  = false
+relativeURLs  = true
+
 enableGitInfo = true
 enableInlineShortcodes = true
 destination = "/mnt/projectRoot/build/hugo"
+
+[security.exec]
+  allow = ["^asciidoctor$"]

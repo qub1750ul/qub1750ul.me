@@ -1,4 +1,4 @@
-FROM docker.io/klakegg/hugo:ext-asciidoctor as hugo
+FROM docker.io/klakegg/hugo:0.97.2-ext-asciidoctor as hugo
 
 WORKDIR /mnt/projectRoot
 ADD . ./
