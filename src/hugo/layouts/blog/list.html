@@ -1,0 +1,19 @@
+{{ define "body" }}
+
+	{{ with .Content }}
+		{{ warnf "Content won't be displayed here" }}
+	{{ end }}
+
+	<header>
+		<h1>{{ .Title }}</h1>
+	</header>
+
+	<title>{{ .Title }}</title>
+	<main>
+		{{ range .Pages }}
+			<a href="{{ .RelPermalink }}">{{ .Title }}</a><br/>
+		{{ end }}
+	</main>
+
+{{ end }}
+

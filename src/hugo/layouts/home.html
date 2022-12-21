@@ -1,0 +1,30 @@
+{{ define "head" }}
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" href="{{ relURL "css/home.css" }}"/>
+{{ end }}
+
+{{ define "body" }}
+
+<header>
+	<h1>{{.Site.Title}}</h1>
+	{{ with .Params.subtitle -}} <span class="subtitle">{{.}}</span> {{- end }}
+	
+	<p>Site in costruction</p>
+
+</header>
+
+<main>
+
+	<nav>
+		<ul>
+			{{ range .Site.Sections }}
+				<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+			{{ end }}
+		</ul>
+	</nav>
+
+	{{.Content}}
+
+</main>
+
+{{ end }}

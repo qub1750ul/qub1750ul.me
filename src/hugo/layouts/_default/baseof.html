@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html>
-	{{- partial "head.html" . -}}
+	<head>
+		{{ block "head" . }}
+			{{- partial "head.html" . -}}
+		{{ end }}
+	</head>
 	<body>
-		<div id="content">
-		{{- .Content -}}
-		</div>
+		{{ block "body" . }}
+			<p>Empty body</p>
+		{{end}}
 	</body>
+	<footer>
+		{{ block "footer" . }}
+			{{- partial "footer.html" -}}
+		{{ end }}
+	</footer>
 </html>

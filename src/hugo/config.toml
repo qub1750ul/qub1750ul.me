@@ -1,4 +1,4 @@
-baseURL       = "http://bad-ref.link"
+baseURL       = "http://bad-ref.invalid"
 languageCode  = "en-us"
 title         = "qub1750ul's website"
 
@@ -8,6 +8,9 @@ relativeURLs  = true
 enableGitInfo = true
 enableInlineShortcodes = true
 destination = "/mnt/projectRoot/build/hugo"
+
+[permalinks]
+  "blog" = "/permalinks/v1/:section/:year/:month/:title/"
 
 [security.exec]
   allow = ["^asciidoctor$"]

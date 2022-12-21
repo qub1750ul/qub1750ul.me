@@ -1,17 +1,9 @@
-Site in construction
-
 == Pages
 
-- link:/blog/[Blog]
-- link:/exobrain[Exobrain]
-- link:/link/[Static URL shortner]
+- link:/bio/[About me]
 
-- link:/personal/keys[Personal PKI Data]
-- link:/personal/faq[Personal FAQ]
-- link:/personal/bio[Short biography]
-- link:/personal/extbio[Extented biography]
-- link:/personal/diary[Diary]
-- link:/personal/lore[An exercise in creative writing]
+- link:/keys[Personal PKI Data]
+- link:/faq[Personal FAQ]
 
 == Social links
 

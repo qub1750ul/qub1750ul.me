@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-	{{- partial "head.html" . -}}
-	<body>
-		<div id="content">
-		{{- .Content -}}
-		</div>
-	</body>
-</html>
+{{ define "body" }}
+
+<main>
+	{{- .Content -}}
+</main>
+
+{{ end }}

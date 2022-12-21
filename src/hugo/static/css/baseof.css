@@ -1,0 +1,27 @@
+body
+{
+	background-color: black ;
+	color: white ;
+	font-family: Fura Sans, sans-serif;
+	font-size: 120%;
+	max-width: 40em;
+	margin: 0px auto;
+	padding: 0em 1em 1em 1em;
+	line-height: 1.6;
+}
+
+h1, h2,
+div.paragraph > div.title
+{
+	color: orange ;
+}
+
+footer
+{
+	display: flex vertical ;
+	text-align: center ;
+	border-top: 1px solid #999 ;
+	border-bottom: 1px solid #999 ;
+	margin-bottom: 3rem ;
+}
+

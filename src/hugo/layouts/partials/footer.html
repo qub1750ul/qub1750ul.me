@@ -1,0 +1,16 @@
+{{- $buildInfo := getJSON "../../build/.buildinfo.json" -}}
+
+<div>
+	<a>Credits</a>
+	<a>History</a>
+</div>
+
+<div style="margin: 1rem"></div>
+
+<div>
+	Made with <a href="https://gohugo.io/">Hugo</a>.<br/>
+	<br/>
+	{{ with $buildInfo }}
+		Built from commit {{ .git.shortCommitHash }} on {{ .git.commitDate }}.
+	{{ end }}
+</div>
