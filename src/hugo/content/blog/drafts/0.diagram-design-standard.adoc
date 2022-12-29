@@ -1,0 +1,8 @@
++++
+draft = true
+title = "On the design of architectural diagrams"
+category = "devart"
++++
+
+- Kubernetes
+https://github.com/kubernetes/community/tree/master/icons

@@ -1,0 +1,157 @@
+
+[pass]
+--
+<img
+	src="../propic.jpg"
+	height="300" width="300"
+	style="border-radius: 40px ; margin-right: 20px ; float: left"
+/>
+--
+
+Giuseppe Masino ( qub1750ul ) is an Informatics Engineering student at the
+https://web.unisa.it[University of Salerno], Italy.
+
+Active study interests comprehend:
+
+- Linux init systems and process management
+- Cloud Architecture
+- Linux System Programming
+- Embedded System Programming
+- GitDevOps
+- System Reliability
+- System Reproducibility
+
+
+== Extended biography
+
+[pass]
+--
+
+<link rel="stylesheet" href="extbio.css" />
+
+<div id="content-header">
+
+	<img
+			src="{{ "propic.jpg" | prepend: assetsdir }}"
+			height="300" width="300"
+			style="border-radius: 40px ; padding: 20px ; float: left"
+		/>
+
+		<p style="flex-grow: 1" />
+
+		<p style="display: block ; text-align: center ; width: auto">
+			Informatics Engineering student 📕<br/>
+			at University of Salerno 🏫<br/>
+			<br/>
+			FLOSS Developer 💻<br/>
+			<br/>
+			Maker 🛠<br/>
+			<br/>
+			Otaku 🍜<br/>
+			<br/>
+			from the South Italy 🇮🇹<br/>
+		</p>
+
+		<p style="flex-grow: 1" />
+
+</div>
+
+<div class="content-grid">
+
+	<!-- Biography section -->
+
+	<div class="section-title">
+		<p> Story </p>
+	</div>
+
+	<div class="section-body">
+		<p>
+			Hi, nice to meet you !<br/>
+			<br/>
+			Passionate about computers and science at 360 degrees from early childhood,<br/>
+			i've undertaken studies in informatics and telecommunications in
+			<a href="https://www.istitutocicerone.edu.it/i-t-i-s-elettronica-informatica-e-moda/">
+			high school</a>,<br/>
+			where i also learnt about robotics and automation.<br/>
+			<br/>
+			Then i continued with a degree course in Informatics Engineering in one of
+			the italian universities of excellence in the field:
+			the <a href="https://www.unisa.it">University of Salerno</a><br/>
+		</p>
+	</div>
+
+	<div style="display: flex ; flex-direction: column ; text-align: right ; font-size: 12px">
+		<img src="{{ "time-icon.svg" | prepend: assetsdir }}" height="200" />
+		<a href="/credits">Credits</a>
+	</div>
+
+	<!-- Passions section -->
+
+	<div class="section-title">
+		<p> Passions </p>
+	</div>
+
+	<div class="section-body">
+		<p>
+			My current interests cover<br/>
+			electronics, programming for the desktop and embedded devices,<br/>
+			Java for Android, IoT, Arduino, FLOSS and Linux.<br/>
+			<br/>
+			I love to spend my free time listening to
+			<a href="https://en.wikipedia.org/wiki/Electronic_dance_music">EDM</a>,<br/>
+			watching anime,<br/>
+			helping people with programming and electronics,<br/>
+			practicing as linux system administrator,<br/>
+			hacking and learning new things.<br/>
+			<br/>
+			I also publish and mantain FOSS for fun on my Github profile,<br/>
+			and contribute to popular projects such as translating the Arduino Reference.
+		</p>
+	</div>
+
+	<div style="display: flex ; flex-direction: column ; text-align: right ; font-size: 12px">
+		<img src="{{ "myOctocat.png" | prepend: assetsdir }}" height="300" />
+		<a href="https://myoctocat.com">Credits</a>
+	</div>
+
+	<!-- Achievements section -->
+
+	<div class="section-title">
+		<p> Achievements </p>
+	</div>
+
+	<div class="section-body">
+		<span>
+			<h3>1st team prize at the Future Fair Milano 2017</h3>
+			Competition organized in collaboration between Microsoft Italy and
+			<a href="https://unimi.it">University of Milano ( UniMi )</a>,
+			with teams from high schools of the entire
+			Italy.<br/>
+			<br/>
+			<a href="{{ "/assets/posts/about/futureFair2017-ms-blogpost.pdf" | prepend: site.baseurl }}">
+				Official blog post from Microsoft ( in italian )
+			</a><br/>
+			<a href="{{ "/assets/posts/about/futureFair2017-livestream-video.mp4" | prepend: site.baseurl }}">
+				Recorded live stream of the event ( in italian )
+			</a>
+		</span>
+	</div>
+
+	<img src="{{ "achievement.jpg" | prepend: assetsdir }}" height="300" />
+
+	<!-- Goals section -->
+
+	<div class="section-title">
+		<p> Goals </p>
+	</div>
+
+	<div class="section-body">
+		<p>
+			Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse. Vinyl XOXO lumbersexual
+		</p>
+	</div>
+
+	<img src="{{ "path-to-goals.jpg" | prepend: assetsdir }}" height="300" />
+
+</div>
+--

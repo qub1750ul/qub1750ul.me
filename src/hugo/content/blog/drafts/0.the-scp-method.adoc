@@ -1,0 +1,7 @@
++++
+draft = true
+title = "The SCP method for Software Development"
+description = "Secure, Contain, Protect the horrors of technical debt"
+category = "devart"
++++
+

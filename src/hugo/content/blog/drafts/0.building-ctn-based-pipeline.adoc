@@ -1,0 +1,5 @@
++++
+title = "Building a container based pipeline"
+category = "devart"
+draft = true
++++

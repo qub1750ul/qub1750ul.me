@@ -1,0 +1,19 @@
+HELP_MAKEMODULES = src/make/help
+HELP_CACHE_DIR = $(BUILD_DIR)/cache/makefile-help
+
+# Extract help strings from makefiles, synthesize help lines and put them in
+# the build cache
+$(HELP_CACHE_DIR)/%: $$(subst $(HELP_CACHE_DIR)/,,$$@) $(wildcard src/make/help/*)
+
+	@ mkdir -p $(dir $@)
+	@ $(GAWK) -f $(HELP_MAKEMODULES)/extractor.awk $< > $@
+
+##
+# @target help
+# @brief Print the help screen
+#
+.SILENT .PHONY: help
+help: $$(foreach file,$$(MAKEFILE_LIST),$$(HELP_CACHE_DIR)/$$(file))
+
+	printf "%s\n%s\n\n" "No target specified" "Available public targets:"
+	cat $^

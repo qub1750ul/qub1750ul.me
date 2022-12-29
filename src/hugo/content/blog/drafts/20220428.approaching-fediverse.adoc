@@ -1,0 +1,14 @@
++++
+draft = true
+title = "My first approach to the Fediverse"
++++
+
+== Introduction
+
+.A bit on fediverse
+.Elon buys Twitter
+.Federated platforms
+
+== Finding a home
+
+.Identity on the fediverse

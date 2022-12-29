@@ -1,0 +1,19 @@
++++
+draft = true
+title = "Trusted Computing for Power Users"
+category = "devart"
++++
+
+== Intro to Trusted Computing and TPM
+
+=== OEM Exploitation
+
+== Trusted Computing devices
+
+== Designing a trusted system
+
+== Building a trusted computer
+
+== Archieving full stack security
+
+== Conclusion and ideas for the future

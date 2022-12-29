@@ -1,0 +1,41 @@
++++
+title = "Curriculum Vitae"
++++
+
+link:printable.pdf[Click here for the short & printable version]
+
+WARNING: This page is a Work In Progress
+
+== Skills by Category
+
+=== Informatics
+
+=== Programming Languages
+
+C11
+C++11
+Java 8
+Python 3
+Bash 4
+Nix
+
+=== Tools
+
+GNU Make
+GNU Privacy Guard
+Docker
+Podman
+Git
+Subversion
+
+== Operating Systems
+
+GNU/Linux
+ChibiOS
+
+== Platforms
+
+Arduino
+Platformio
+Linux Containers
+KVM

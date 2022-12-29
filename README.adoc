@@ -1,1 +1,7 @@
-Sources for https://www.qub1750ul.me
+= www.qub1750ul.me
+
+Sources and SDK for https://www.qub1750ul.me
+
+== Dependencies
+
+- Podman

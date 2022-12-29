@@ -1,0 +1,53 @@
++++
+draft = true
+title = "Building a Universal Multiboot Drive"
++++
+:toc:
+
+== Intro
+A swiss army knife
+
+== Partition tables
+Refresher on MBR and GPT
+Hybrid MBR
+
+{ MBR BOOT, ESP, DATA }
+
+== Supporting multiple booting schemes
+Refresher on MBR magic boot sector and EFI/GPT boot protocol
+Dual bootloader installation
+
+== Bootloader configuration 1: All for one, one for all
+Configuration trampoline
+
+== Bootloader configuration 2: OS load scripts
+
+=== Chainloading
+What chainloading is
+
+==== Direct chainloading
+
+.Host system chainloading
+.Microsoft OS chainloading
+.Darwin loader chainloading
+.EFI app chainloading
+
+==== System image chainloading
+
+.Raw MBR-style chainloading
+.Loop devices
+.Loader hijacking
+
+=== Direct kernel handoff
+
+.Linux loading one-liner
+.A more streamlined example: loading ArchLinux
+.A more complex example: loading Ubuntu
+
+== Extra: Persistent Portable OS
+
+.Immutable or Mutable image ?
+.Creating a persistent data mount
+.Reliably loading a system from a removable drive
+.Necessary Boot options
+

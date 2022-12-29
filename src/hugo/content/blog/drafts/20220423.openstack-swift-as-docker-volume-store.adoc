@@ -1,0 +1,114 @@
++++
+draft = true
+title = "Using OpenStack Swift as Docker volumes' backing store"
+category = [ "devart", "garrlab" ]
++++
+:toc:
+
+== The Problem
+
+Recently at GARRLab we've been experimenting with Linux container hosts. +
+One problem that arose was getting high availability of container volumes.
+
+.Starting situation
+
+Our current container platform constists of as single Docker host, built as
+a virtual machine running Ubuntu 20.04 on a GARR-Cloud compute node. +
+The entirety of virtual machine's storage consists of a virtual block-storage
+device, hosted on a GARR-Cloud Ceph cluster.
+
+Currently all Docker containers are instatiated using default settings in regard
+to volumes.
+This means that storage-wise volumes are just regular directories ending up
+somewhere in the indistinct blob of data that is the VM's block storage device.
+
+.Not so High Availability
+
+So far so good, someone could say. After all, Ceph is *the* High Availability
+solution for the cloud.
+
+Well, not exactly.
+
+For starters, the fact that a Docker volume is truly nothing more than a
+directory on a regular file system on a block device means that container state
+is interwinted with global VM state.
+This is especially problematic, considering that the maximum level of
+granularity in terms of block storage management from outside the VM is the
+*entire block device*.
+In fact, the only way to meaningfully inspect the contents of a block device is
+to mount it somewhere, and run scripts that are inevitably linked to the OS
+configuration.
+
+Not much scalable.
+
+Next, we have to consider that the GARR-Cloud block storage cluster *isn't
+replicated across the cloud*, but only internally to each cloud region.
+This means that if the cloud region goes down the data is inaccessible, and
+thus recovery to a different cloud region is impossible.
+
+== A way forward
+
+So, what to do ? 
+
+Actually GARR-Cloud has another storage cluster, one that is replicated across
+the entirety of GARR-Cloud and thus remains accessible until all cloud regions
+go down simultaneously.
+
+That is the object storage cluster that powers the
+https://docs.openstack.org/swift/latest/[SWIFT]
+service.
+
+SWIFT exposes a simple REST API that works on a few concepts: accounts,
+containers and objects. To put it briefly:
+
+- _objects_ are generic blobs of data with a name, usually encoding a single file
+- _containers_ are named collection of objects
+- _accounts_ are, well, user accounts, owning a number of _containers_
+
+It is that simple: nothing more, nothing less.
+
+.Mapping Docker volumes to Swift containers
+
+aa
+
+== Hacking a solution
+
+The first step in linking Docker to SWIFT is allowing on-demand creation of
+SWIFT containers by Docker Engine.
+That way the presence of SWIFT is transparent to Docker users.
+
+.Docker volume drivers
+
+Docker has a convenient plugin system that allows extending the capabilities of
+the engine.
+In particular we're interested in
+https://docs.docker.com/engine/extend/plugins_volume/[volume plugins],
+that allow redefining the way volumes are administered.
+
+Docker comes by default with a
+https://docs.docker.com/registry/storage-drivers/swift/[Swift plugin]
+that while labeled as "storage driver" doesn't manage volumes. +
+In fact in the Linux container world the concept of _storage_ generally
+doesn't comprend volumes.
+
+So we must look elsewhere.
+Fortunately the _local_ driver accepts _mount_ options.
+
+.Mounting a Swift container as a file system
+
+The OpenStack project releases a number of clients for it's services.
+For Swift we have two: the general _openstackclient_ CLI, and the _swiftclient_
+CLI.
+
+While swiftclient is generally deprecated in favor of openstackclient, the
+former is still maintained because the latter still isn't a full port.
+
+RClone...
+
+.Putting all togheter
+
+aa
+
+== Conclusions
+
+.Performance considerations

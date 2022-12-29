@@ -1,0 +1,33 @@
+# Container ruleset template file
+# Make ruleset template for container related operations
+#
+# This template is oriented to subprojects with a makefile.
+# For these we just delegate to inner makefile.
+#
+# IMPORTANT: to correctly instantiate this template some variables need to be
+# set in the environment, so Make will apply all necessary substitutions:
+#
+# - SRCDIR : should already be set in defaults
+# - name : basename of the root directory containing container sources
+#          ( e.g. for '$(SRCDIR)/ctn/server' is 'server' )
+
+# Common scoped variables for the ruleset
+ctn.$(name).%: name   := $(name)
+ctn.$(name).%: ctndir := $(SRCDIR)/ctn/$(name)
+
+# Main rule
+# The default action to be performed on a container is to build it, so the
+# `ctn.$(name)` target is an alias for `ctn.$(name).build` .
+#
+.SILENT .PHONY: ctn.$(name)
+ctn.$(name): ctn.$(name).build
+
+# Generic rule
+# Most targets for 'ctn.$(name)' namespace are managed by the inner makefile,
+# so delegate execution to that.
+# Since the inner makefile is supposed to operate only in his directory, to
+# simplify things the 'ctn.$(name)' prefix is stripped from target name and
+# PWD is changed to the makefile one.
+#
+ctn.$(name).%:
+	@ exec $(MAKE) -C "$(ctndir)" $(subst ctn.$(name).,,$@)

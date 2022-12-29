@@ -1,0 +1,29 @@
+# Container rule file
+# Make rule file for container related operations
+#
+# When this file is sourced in a Make process the `$(SRCDIR)/ctn` directory is
+# scanned.
+# For each subdirectory a dedicated ruleset is generated according to a
+# template.
+# There are two templates: the first for directories that DO NOT contain a
+# root-level makefile, and the second for directories that do.
+# Consult the template files for more info about generated rulesets.
+
+# List of names of directories that contain a makefile
+define ctnSubmakes !=
+	$(FIND) $(SRCDIR)/ctn -maxdepth 2 -type f -name makefile | cut -d/ -f3
+endef
+
+# List of names of directories that do not contain a makefile
+define ctnNoSubmakes !=
+
+	$(FIND) src/ctn -mindepth 1 -maxdepth 1 -type d \
+	| cut -d/ -f3 \
+	| cat /dev/stdin <( echo $(ctnSubmakes) ) \
+	| sort | uniq -u
+
+endef
+
+# Generate rulesets for each subdirectory
+$(foreach name,$(ctnNoSubmakes),$(eval $(file < src/make/ctn-nosubmake.template)))
+$(foreach name,$(ctnSubmakes),$(eval $(file < src/make/ctn-submake.template)))

@@ -1,0 +1,13 @@
++++
+draft = true
+title = "Objective Make"
+description = "Bringing Object Oriented Programming to Makefiles"
+category = "blog/devart"
++++
+:toc:
+
+== What?
+
+== A brief recap on OOP
+== Case Study
+== TL;DR & final considerations

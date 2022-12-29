@@ -1,0 +1,216 @@
+#!/usr/bin/bash
+
+set -o errexit
+set -o nounset
+set -o pipefail
+shopt -s lastpipe
+shopt -s expand_aliases
+
+declare -i buildash_stageCounter=0
+declare -a buildash_stageSrc=()
+declare -a buildash_stageCtn=()
+declare -a buildash_stageFn=()
+declare -a buildash_registry=()
+declare -a buildash_remoteImagePath=()
+
+declare -a buildash_disabledCommands=() 
+
+declare buildash_wctn
+
+: "${BUILDASH_DRY_RUN:=}"
+: "${BUILDASH_NAMESPACED:=}"
+: "${BUILDASH_CACHE_FILE:=/dev/null}"
+
+#---------------------#
+# BUILDASH PUBLIC API #
+#---------------------#
+
+function buildash
+{
+	declare subcmd="$1"
+	shift
+
+	if ! grep -e "$subcmd" <<< "${buildash_disabledCommands[*]}" >&- ; then
+		buildash_echo "ERROR: \`buildash ${subcmd}\` not supported in this context"
+		return 1
+	fi
+
+	! command -v "buildash_${subcmd}" >&- || "buildash_${subcmd}" "$@" && return 0
+	buildash_buildah "${subcmd}" "$@"
+}
+
+#--------------------------#
+# BUILDAH COMMAND WRAPPERS #
+#--------------------------#
+
+##
+# Low level decoupling function
+function buildash_buildah
+{
+	{ [ -n "${BUILDASH_DRY_RUN}" ] && return 0 ; } || command buildah "$@"
+}
+
+function buildash_from
+{
+	: $(( buildash_stageCounter = buildash_stageCounter + 1 ))
+	declare -n c="buildash_stageCounter"
+	
+	buildash_echo "Instantiating base container...\n"
+
+	buildash_buildah from "$@" | read -r buildash_wctn
+
+	buildash_buildah inspect \
+		--type container --format '{{.FromImage}}' "$buildash_wctn" |\
+		read -r buildash_stageSrc[$c]
+	
+	buildash_stageCtn[ $c ]="$buildash_wctn"
+
+	buildash_echo "From ${buildash_stageSrc[ $c ]}"
+	buildash_echo "Working container: ${buildash_stageCtn[ $c ]}"
+}
+
+##
+# `buildah push` wrapper
+#
+# @param $1 source image
+function buildash_push
+{
+	declare localImage="${1:-buildash_stageSrc[-1]}"
+
+	buildash_echo "Pushing artifact to remote registry"
+	buildash_echo "Local image: ${localImage} \n"
+
+	for n in $( seq 1 ${#buildash_registry[@]} ) ; do
+
+		declare remoteImage="${buildash_registry[$n]}/${buildash_remoteImagePath[$n]}"
+		
+		buildash_echo "Pushing $remoteImage \n"
+
+		buildash_buildah login "${buildash_registry[$n]}"
+		buildash_buildah push  "$localImage" "$remoteImage"
+	
+	done
+}
+
+#-----------------------#
+# BUILDASH EXTENDED API #
+#-----------------------#
+
+##
+# Register a remote image URL
+#
+# @param $1 Registry URI
+# @param $@ Image name and aliases
+function buildash_setRemote
+{
+	declare -ri argc=2
+
+	if [ $# -lt $argc ] ; then
+		buildash_echo "ERROR: buildash_setRemote requires $argc arguments"
+		buildash_echo "ERROR: provided $#"
+		return 1
+	fi
+
+	for n in $( seq 2 $# ) ; do
+		buildash_registry+=( "$1" )
+		buildash_remoteImagePath+=( "${$n:}" )
+	done
+}
+
+function buildash_addStage
+{
+	: $(( buildash_stageCounter = buildash_stageCounter + 1 ))
+	buildash_setupStage "${buildash_stageCounter}" "$@"
+}
+
+function buildash_setupStage
+{
+	buildash_stageSrc[$1]="$2"
+	buildash_stageFn[$1]="$3"
+}
+
+function buildash_dropCache
+{
+	buildash_buildah containers rm "${buildash_stageCtn[@]}"
+	buildash_stageCtn=()
+	echo > "$BUILDASH_CACHE_FILE"
+}
+
+function buildash_trimCache
+{
+	declare -a trimList
+
+	cut -d' ' -f "$1-" <<< "${buildash_stageCtn[*]}" | mapfile trimList
+	buildash_buildah containers rm "${trimList[@]}"
+	
+	# shellcheck disable=2034
+	for e in $( seq "$1" ) ; do echo ; done | mapfile -O "$1" buildash_stageCtn
+
+	buildash_mkCacheFile
+}
+
+function buildash_mkCacheFile
+{
+	dirname "${BUILDASH_CACHE_FILE}" | xargs mkdir -p
+	printf "%s\n" "${buildash_stageCtn[@]}" > "${BUILDASH_CACHE_FILE}"
+}
+
+function buildash_echo
+{
+	command echo -e "STAGE ${buildash_stageCounter} :" "$@"
+}
+
+function buildash_welcome
+{
+	cat <<-EOF
+		=========================================================================
+		Starting buildash script
+
+		Target artifact: ${OCI_IMAGE_NAME}
+		=========================================================================
+
+		EOF
+}
+
+function buildash_showStats
+{
+	echo "======================================================================="
+	echo "Lowest common base   | ${buildash_stageSrc[0]}"
+	echo "Intermediate stages  | ${#buildash_stageSrc[@]}"
+	echo "Remote aliases       | ${#buildash_registry[@]}"
+
+	for n in $( seq 1 "${#buildash_registry[@]}" ) ; do
+		echo "Alias #$n            | ${buildash_registry[$n]}/${buildash_remoteImagePath[$n]}"
+	done
+
+	echo "======================================================================="
+}
+
+function buildash_autoBuild
+{
+	buildash_welcome
+	buildash_showStats
+
+	# Load cache pointers
+	if [ -z "${BUILDASH_DISABLE_CACHE:-}" ] && [ -r "$BUILDASH_CACHE_FILE" ] ; then
+		mapfile buildash_stageCtn < "$BUILDASH_CACHE_FILE"
+	fi
+
+	for idx in $( seq 1 "$buildash_stageCounter" ) ; do
+
+		# buildash_from edits the counter internally,
+		# so it must be set to a proper value before processing the stage
+		# to have coherent status messages
+		: $(( buildash_stageCounter = idx - 1 ))
+		buildash from "${buildash_stageSrc[ $idx ]}"
+
+		buildash_disabledCommands=( from )
+		"${buildash_stageFn[ $idx ]}"
+		buildash_disabledCommands=()
+
+	done
+
+	${BUILDASH_DISABLE_CACHE::return 0}
+	buildash_mkCacheFile
+}
+

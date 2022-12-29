@@ -1,0 +1,25 @@
++++
+draft = true
+title = "RUnit User #02"
+description = "Building a custom init with bash and runit"
+category = "devlog"
++++
+
+== Recap
+
+== Cap 1: Basic Work
+
+=== Codebase restructuring
+
+=== Needed configurability
+
+== Cap 2: Making the program distributable & installable
+
+=== Thinking into the rabbit hole
+
+=== Configuring the build system
+=== Coding the configuration system
+
+== Cap 3: Reproducibilty && Testability
+
+=== Devcontainers

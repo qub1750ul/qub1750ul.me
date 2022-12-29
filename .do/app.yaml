@@ -1,16 +1,6 @@
 name: personal-website
 region: fra
 
-domains:
-
-- domain: www.qub1750ul.me
-  type: PRIMARY
-  zone: qub1750ul.me
-
-- domain: qub1750ul.me
-  type: ALIAS
-  zone: qub1750ul.me
-
 static_sites:
 
 - name: personal-website

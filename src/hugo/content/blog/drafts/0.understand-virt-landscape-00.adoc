@@ -1,0 +1,13 @@
++++
+draft = true
+title = "Understanding the virtualization technology landscape"
+category = "til"
++++
+
+Sources:
+
+https://en.wikipedia.org/wiki/Hypervisor +
+https://en.wikipedia.org/wiki/Xen +
+https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine +
+https://en.wikipedia.org/wiki/VMware_ESXi +
+

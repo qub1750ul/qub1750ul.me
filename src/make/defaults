@@ -1,0 +1,56 @@
+# Make defaults file
+# This file contains default variables and settings used in the build system
+# Due to how GNU Make works it SHOULD be the first file sourced in any Make
+# process that uses it
+
+# ----------------- #
+# GNU MAKE SETTINGS #
+# ----------------- #
+
+# Environment overrides
+MAKEFLAGS := --warn-undefined-variables --no-builtin-rules
+
+# Shell settings
+.ONESHELL:
+SHELL := /bin/bash
+.SHELLFLAGS := -eu -o pipefail -c
+
+# Special variables
+.DEFAULT_GOAL := help
+
+# Special targets
+.SECONDEXPANSION:
+.DELETE_ON_ERROR:
+
+# ----------------- #
+# DEFAULT VARIABLES #
+# ----------------- #
+
+# Default tool aliases
+TAR  ?= tar
+GAWK ?= awk
+FIND ?= find
+PIXZ ?= pixz
+
+# Default directory aliases
+PROJECT_ROOT != pwd
+SRCDIR := src
+
+BUILD_DIR := build
+ARTIFACTS_DIR = $(BUILD_DIR)/artifacts
+
+# Default exported variables
+export FIND
+export PROJECT_ROOT
+
+# --------------- #
+# DEFAULT RECIPES #
+# --------------- #
+
+##
+# @target clean
+# @brief Remove build files
+#
+.SILENT .PHONY: clean
+clean:
+	rm -rf $(BUILD_DIR)

@@ -1,0 +1,5 @@
+# This makefile contains additional rules necessary to correctly build
+# containers that serve hugo sites
+
+# Site sources must exists before container build
+ctn.server.build: $(rwildcard $(BUILD_DIR)/hugo/,*) $(BUILD_DIR)/hugo/

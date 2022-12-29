@@ -1,0 +1,20 @@
++++
+draft = true
+title = "RUnit User #00"
+description = "Building a custom init with bash and runit"
+category = "devlog"
++++
+:toc:
+
+== Intro
+
+TODO
+lorem ipsum
+
+== The problem
+
+Runit 
+
+== The plan
+
+TODO

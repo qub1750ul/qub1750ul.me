@@ -1,5 +1,6 @@
 +++
 title = "Exobrain Index"
+linkTitle = "Exobrain"
 +++
 
 {{< passthrough >}}

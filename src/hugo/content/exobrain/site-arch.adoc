@@ -1,4 +1,6 @@
-= Site architecture notes
+---
+title: "Site architecture notes"
+---
 
 == WWW URL Architecture
 
@@ -19,8 +21,8 @@ s| URL       s| Description
 [%autowidth,cols="m,d"]
 |===
 s| Tag     s| Description
- | DevLog   | Development Blog: Articles documenting the development process of a
-              project
+ | DevLog   | Development Blog: Articles documenting the development process of
+              a project
  | DevArt   | Developer Articles: Research-like pulications
  | TIL      | Today I Learned: Diaries of exploration of CS/CE
  | SysAdm   | System Admin: Personal Tales around System Administration
@@ -34,22 +36,16 @@ Version 0.1.0
 === Canonical URLs
 Using shell notation
 ....
-/blog/${index}.${shortTitle}.${serialNumber}
-....
-
-....
-/blog/draft.${index}.${shortTitle}.${serialNumber}
+/blog/${date}.${shortTitle}.${part}
 ....
 
 Example:
 ....
-/blog/2.universal-multiboot-drive.2
+/blog/20211215.universal-multiboot-drive.2
 ....
 
-Points to the article number `2`, titled `universal-multiboot-drive`,
-that is the 2nd of a series
-
-Note: this URL is SemVer v2 compatible
+Points to an article published on `2021-12-15`,
+titled `universal-multiboot-drive`, that is the 2nd of a series
 
 == Conventional commits
 

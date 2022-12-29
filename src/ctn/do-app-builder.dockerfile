@@ -16,8 +16,7 @@ RUN dnf -y install make
 USER podman
 
 # Mount build context over container VFS. Then do actual build work.
-ADD . projectRoot
-RUN make -C projectRoot build/hugo/
+RUN --mount=rw,target=. make build/hugo/
 
 # DigitalOcean's cloud automation system searches for files to publish into the
 # container file system. As the previous build step wrote files on a bind mount

@@ -1,0 +1,23 @@
+# Artifact rules file
+# Make rule file for artifact syntesis.
+# All final artifacts produced by recipes in this file SHOULD be placed in
+# $(ARTIFACTS_DIR) directory.
+
+##
+# @target help.artifacts
+# @brief Show the help sub-screen for artifact related targets
+#
+.SILENT .PHONY: help.artifacts
+help.artifacts:
+	echo TBD # TODO
+
+# Syntesize a TXZ archive containing a snapshot of website's root directory
+# that can be mounted and served as-is by a web server
+#
+.SILENT: $(ARTIFACTS_DIR)/website.txz
+$(ARTIFACTS_DIR)/website.txz: $(BUILD_DIR)/hugo
+
+	echo 'Building $@'
+	mkdir -p $(dir $@)
+	$(TAR) --create --directory='$<' ./ | $(PIXZ) > '$@'
+	echo 'Built $@'
