@@ -10,17 +10,11 @@
 FROM quay.io/containers/podman:v4.3.1 AS builder
 
 # Install missing dependencies
-RUN dnf -y install make
+RUN dnf -y install make git
 
 # Switch to user 'podman' to enable nested containers
 USER podman
 
-# Mount build context over container VFS. Then do actual build work.
-RUN --mount=rw,target=. make build/hugo/
-
-# DigitalOcean's cloud automation system searches for files to publish into the
-# container file system. As the previous build step wrote files on a bind mount
-# that ISN'T part of container's fs, we create a clean layer and copy these in
-# a predefined location on it.
-FROM scratch AS final
-ADD build /mnt/projectRoot/build
+# Copy sources into the container. Then start the build.
+ADD --chown=podman . /mnt/projectRoot/
+RUN make -C /mnt/projectRoot build/hugo/
