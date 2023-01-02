@@ -1,0 +1,3 @@
+[submodule "lib/cv"]
+	path = lib/cv
+	url = https://github.com/qub1750ul/cv
