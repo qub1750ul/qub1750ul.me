@@ -40,6 +40,7 @@ endef
 define hugoBuildDeps :=
 	$(hugoSources)
 	$(BUILD_DIR)/.buildinfo.json
+	lib/cv/build/cv.toml
 endef
 
 define hugoMultilineMakeVars :=
@@ -93,29 +94,3 @@ $(BUILD_DIR)/hugo/%: $(hugoBuildDeps)
 #
 .SILENT .PHONY: $(hugoBuildDir)/
 $(hugoBuildDir)/: $(hugoBuildDir)/index.html
-
-# Additional recipes for externally generated files
-
-# Create a `.buildinfo.json` file to allow Hugo to access more info than
-# builtin `.GitInfo` object allows
-#
-.SILENT: $(BUILD_DIR)/.buildinfo.json
-$(BUILD_DIR)/.buildinfo.json: .git/HEAD
-
-	shopt -s lastpipe
-
-	git log -1 --format='%cI %H %h' | read -r date hash shortHash
-	git log -1 --format=%s | read -r subject
-
-	mkdir -p $(dir $@)
-	
-	cat > '$@' <<-EOF
-		{
-			"git": {
-				"commitHash": "$$hash",
-				"shortCommitHash": "$$shortHash",
-				"commitDate": "$$date",
-				"commitSubject": "$$subject"
-			}
-		}
-	EOF

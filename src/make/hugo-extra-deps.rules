@@ -1,0 +1,36 @@
+# Rules to remake files which Hugo depends on, but are out of Hugo source tree
+
+# Create a `.buildinfo.json` file to allow Hugo to access more info than
+# builtin `.GitInfo` object allows
+#
+.SILENT: $(BUILD_DIR)/.buildinfo.json
+$(BUILD_DIR)/.buildinfo.json: .git/HEAD
+
+	shopt -s lastpipe
+
+	git log -1 --format='%cI %H %h' | read -r date hash shortHash
+	git log -1 --format=%s | read -r subject
+
+	mkdir -p $(dir $@)
+	
+	cat > '$@' <<-EOF
+		{
+			"git": {
+				"commitHash": "$$hash",
+				"shortCommitHash": "$$shortHash",
+				"commitDate": "$$date",
+				"commitSubject": "$$subject"
+			}
+		}
+	EOF
+
+# Hugo generates the /cv page from a structured data file.
+# This file is sourced from another project via Git Submodules.
+#
+# Use the submodule's HEAD file as a cheap way to determine if changes have
+# occurred.
+# If HEAD has changed, execute the submodule's makefile.
+#
+.SILENT: lib/cv/build/cv.toml
+lib/cv/build/cv.toml: .git/modules/lib/cv/HEAD
+	$(MAKE) -C lib/cv
