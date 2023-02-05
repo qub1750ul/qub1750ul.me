@@ -1,10 +1,3 @@
-== Pages
-
-- link:/bio/[About me]
-
-- link:/keys[Personal PKI Data]
-- link:/faq[Personal FAQ]
-
 == Social links
 
 GitHub:
@@ -18,6 +11,3 @@ https://twitter.com/qub1750ul
 
 Instagram:
 https://instagram.com/qub1750ul
-
-This site:
-https://qub1750ul.me

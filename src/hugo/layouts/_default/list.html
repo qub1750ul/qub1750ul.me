@@ -1,22 +1,24 @@
-<!DOCTYPE html>
-<html>
-	<link rel='stylesheet' href='/static/css/blogpost.css'/>
-	<title>{{ .Title }}</title>
-	<body>
-		
-		{{- .Content -}}
-		
-		<h2>Index</h2>
+{{ define "body" }}
 
-		{{ range where .Pages "Draft" false }}
-			
-			{{ $defaultTitle := replace .File.BaseFileName "-" " " | title }}
-			{{ $title := default $defaultTitle .Title }}
-			
-			<a href="{{ .RelPermalink }}">{{- $title -}}</a> <br>
-			{{- .Description -}} {{ with .Description }} <br/> {{ end }}
-		
-		{{ end }}
+	<header>
+		{{ partial "breadcrumbs.html" . }}
+		{{ .Content }}
+	</header>
+
+	<main>
+		<h2>Index</h2>
+		{{ partial "exobrain/pageList.html" . }}
 	
-	</body>
-</html>
+	{{/*  {{ range where .Pages "Draft" false }}
+	
+		{{ $defaultTitle := replace .File.BaseFileName "-" " " | title }}
+		{{ $title := default $defaultTitle .Title }}
+	
+		<a href="{{ .RelPermalink }}">{{- $title -}}</a>
+		{{ with .Description -}} <br/> {{- .Description -}} <br/> {{- end }}
+	
+	{{ end }}  */}}
+
+	</main>
+
+{{ end }}

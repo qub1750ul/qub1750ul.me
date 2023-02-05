@@ -10,7 +10,7 @@ enableInlineShortcodes = true
 destination = "/mnt/projectRoot/build/hugo"
 
 [permalinks]
-  "blog" = "/permalinks/v1/:section/:year/:month/:title/"
+#	"blog" = "/:section/:year/:month/:title/"
 
 [security.exec]
-  allow = ["^asciidoctor$"]
+	allow = ["^asciidoctor$"]

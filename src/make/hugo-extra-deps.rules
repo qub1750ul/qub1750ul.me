@@ -34,3 +34,16 @@ $(BUILD_DIR)/.buildinfo.json: .git/HEAD
 .SILENT: lib/cv/build/cv.toml
 lib/cv/build/cv.toml: .git/modules/lib/cv/HEAD
 	$(MAKE) -C lib/cv
+
+# Devicons CSS
+#
+# Download and link Devicons CSS into Hugo source tree
+#
+.SILENT: $(BUILD_DIR)/devicons.min.css
+$(BUILD_DIR)/devicons.min.css:
+
+	version=v2.15.1
+
+	echo "Installing Devicons CSS $${version}"
+	$(CURL) -o '$@' https://cdn.jsdelivr.net/gh/devicons/devicon@$${version}/devicon.min.css
+	ln -sf ../../../../$@ $(SRCDIR)/hugo/static/css/$(notdir $@)

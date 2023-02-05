@@ -2,10 +2,3 @@
 title = "Exobrain Index"
 linkTitle = "Exobrain"
 +++
-
-{{< passthrough >}}
-	<center>
-		<h1> Exobrain </h1>
-		Home of inorganic intellectual chaos and unpolished content.
-	<center>
-{{< /passthrough >}}

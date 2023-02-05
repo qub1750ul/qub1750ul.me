@@ -1,0 +1,41 @@
+{{ define "head" }}
+
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" href="/css/exobrain.css"/>
+
+{{ end }}
+
+{{ define "body" }}
+
+	<header>
+		<h1> {{ .Title }} </h1>
+		<p> {{ .Content }} </p>
+		<nav> {{ partial "breadcrumbs.html" . }} </nav>
+	</header>
+	
+	<main>
+		<h1>Index</h1>
+		<ul>
+			{{ range .Pages.Reverse }}
+
+				{{/* Get page info from page front matter.
+				   * If not possible, extract them from content file name.
+				   */}}
+				{{ $title := .LinkTitle | default ( .File.BaseFileName | replaceRE `^[0-9-]+\.([^.]+)` "$1" | humanize ) }}
+				{{ $publishDate := .PublishDate | default ( .File.BaseFileName | replaceRE `^([0-9-]+)\..*` "$1" ) }}
+
+				<li>
+					<article>
+
+						{{ $publishDate }}
+						<a href="{{ .RelPermalink }}">{{ $title }}</a>
+						{{ with .Description }} <br /> {{.}} {{ end }}
+
+					</article>
+				</li>
+
+			{{ end }}
+		</ul>
+	</main>
+
+{{ end }}

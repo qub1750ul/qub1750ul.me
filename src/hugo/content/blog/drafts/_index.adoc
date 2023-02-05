@@ -1,0 +1,5 @@
++++
+title = "Blog draft index"
+draft = true
+publishDate = "1980-01-01"
++++

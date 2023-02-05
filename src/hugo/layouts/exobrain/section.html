@@ -1,0 +1,21 @@
+{{ define "head" }}
+
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" href="/css/exobrain.css"/>
+
+{{ end }}
+
+{{ define "body" }}
+
+	<header>
+		{{ partial "exobrain/header.html" . }}
+	</header>
+
+	<main>
+		<h2>Index</h2>
+		{{ partial "exobrain/pageList.html" . }}
+	</main>
+
+	{{ .Content }}
+
+{{ end }}

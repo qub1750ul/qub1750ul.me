@@ -1,0 +1,24 @@
+<aside id="debugAside">
+	<link rel="stylesheet" href="/css/debugAside.css" />
+	<header>
+		<h1>Debug info</h1>
+	</header>
+	<main>
+
+		<article>
+			<h1>Page metadata</h1>
+			Kind: {{ .Page.Kind }} <br/>
+			Layout: {{ default "<NIL>" .Page.Layout }}
+		</article>
+
+		<article>
+			<h1>Page parameters</h1>
+			<ul>
+				{{ range $key, $value := .Params }}
+					<li>{{ print $key ": " $value }}</li>
+				{{ end }}
+			</ul>
+		</article>
+
+	</main>
+</aside>

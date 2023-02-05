@@ -1,26 +1,39 @@
-{{ define "head" -}}
+{{ define "head" }}
 
 	{{ partial "head.html" . }}
-	<link rel='stylesheet' href='{{ relURL "css/blogpost.css" }}'/>
+	<link rel="stylesheet" href="/css/blogpost.css"/>
 
-{{- end }}
+{{ end }}
 
-{{ define "body" -}}
+{{ define "body" }}
 
-<main>
 	<header>
-		<h1> {{- .Title -}} </h1>
+
+		<h1> {{ .Title }} </h1>
+
 		<div class="docinfo">
-			<p> Published {{ .PublishDate }} </p>
-			<p> Last updated {{ .Lastmod }} </p>
-			<p> Reading time: {{ .ReadingTime }} minutes </p>
+			<p>
+				{{ with .PublishDate }}
+					Published on <br/> {{ . }}
+				{{ else }}
+					Not published
+				{{ end }}
+			</p>
+			<p> Last updated on <br/> {{ .Lastmod }} </p>
+			<p> Reading time: <br/> {{ .ReadingTime }} minutes </p>
 		</div>
+
+		<nav id="breadcrumbs"> {{ partial "breadcrumbs.html" . }} </nav>
+
 	</header>
-	<aside>
+
+	<aside class="tableOfContents">
 		<h1>Table of contents</h1>
 		{{- .TableOfContents -}}
 	</aside>
-	<article> {{- .Content -}} </article>
-</main>
 
-{{- end }}
+	<main>
+		{{ .Content }}
+	</main>
+
+{{ end }}

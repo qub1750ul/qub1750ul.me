@@ -1,9 +1,16 @@
-{{/*
-   * gg
-   */}}
-
 <title>
-	{{- .Site.Title }}{{ if not .IsHome }}{{ print " | " .Title }}{{ end -}}
+
+	{{/*
+	   * Get page title from page attributes.
+	   * If not possible, generate one from content file name.
+	   */}}
+
+	{{ if not .IsHome }}
+		{{ $pageTitle := default ( replace .File.BaseFileName "-" " " ) .Title | title }}
+		{{ print $pageTitle " | " }}
+	{{ end }}
+	{{ .Site.Title }}
+
 </title>
 
 <meta charset="UTF-8">

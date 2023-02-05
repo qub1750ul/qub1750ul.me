@@ -1,0 +1,73 @@
+{{ define "head" }}
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" href="{{ relURL "css/cv.css" }}"/>
+{{ end }}
+
+{{ define "body" }}
+
+{{ $cv := $Site.data.cv }}
+
+<header>
+
+	<div id="text">
+		<h1>{{ $cv.basics.name }}</h1>
+		<p>{{ $cv.basics.label }}</p>
+		<ul>
+			{{ range $cv.basics.profiles }}
+
+				<li><a href="{{ url }}">
+					<i class="devicon-{{ network }}-plain"></i>
+					<p>{{ url }}</p>
+				</a></li>
+
+			{{ end }}
+		</ul>
+	</div>
+
+	<img src="propic.jpg"/>
+
+</header>
+
+<article>
+	<p>{{ $cv.basics.punchline }}</p>
+	<button>Printable version</button>
+	<button>Contact me</button>
+</article>
+
+<section id="work">
+	<h1>Work experience</h1>
+	{{ range $cv.work }}
+		<div class="cv-item-card">
+			<h1>{{ .position }}</h1>
+			<h2>{{ .name }}</h2>
+			<h3>{{ .startDate }} - {{ .endDate }}</h3>
+			<p id="summary">{{ .summary }}</p>
+		</div>
+	{{ end }}
+</section>
+
+<section id="education">
+	<h1>Education</h1>
+	{{ range $cv.education }}
+		<div class="cv-item-card">
+			<h1>{{ .name }}</h1>
+			<h2>{{ .institution }}</h2>
+			<h3>{{ .startDate }} - {{ .endDate }}</h3>
+			<p id="summary">{{ .summary }}</p>
+		</div>
+	{{ end }}
+</section>
+
+<section id="awards">
+	<h1>Awards</h1>
+	{{ range $cv.awards }}
+		<div class="cv-item-card">
+			<h1>{{ .name }}</h1>
+			<h2>{{ .awarder }}</h2>
+			<h3>{{ .date }}</h3>
+			<p id="summary">{{ .summary }}</p>
+		</div>
+	{{ end }}
+</section>
+
+{{ end }}

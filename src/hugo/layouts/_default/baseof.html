@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		{{ block "head" . }}
-			{{- partial "head.html" . -}}
-		{{ end }}
+		{{ block "head" . }}{{ partial "head.html" . }}{{ end }}
 	</head>
 	<body>
+
+		<p id="constructionNotice">Site in costruction</p>
+
 		{{ block "body" . }}
 			<p>Empty body</p>
-		{{end}}
+		{{ end }}
 	</body>
 	<footer>
-		{{ block "footer" . }}
-			{{- partial "footer.html" -}}
-		{{ end }}
+		{{ block "footer" . }}{{ partial "footer.html" }}{{ end }}
 	</footer>
+
+	{{/*  {{ partial "debug/asideLeft.html" . }}  */}}
+
 </html>

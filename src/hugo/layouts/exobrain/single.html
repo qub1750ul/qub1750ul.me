@@ -1,19 +1,23 @@
-<!DOCTYPE html>
-<html>
-	<link rel='stylesheet' href='/static/css/blogpost.css'/>
-	<title>{{ .Title }}</title>
-	<body>
+{{ define "head" }}
 
-		{{ if not ( isset .Params "customcontentheader" ) }}
-			{{ $defaultTitle := replace .File.BaseFileName "-" " " | title }}
-			<center>
-				<h1>{{ default $defaultTitle .Title }}</h1><br/>
-				{{ with .Description }} {{.}}<br/> {{ end }}
-			</center>
-		{{ end }}
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" href="/css/exobrain.css" />
 
-		<center> {{ partial "exobrain/warn.html" }} </center>
-		
+{{ end }}
+
+{{ define "body" }}
+
+	<header>
+		{{ partial "exobrain/header.html" . }}
+
+		<aside class="tableOfContents">
+			<header>Table of contents</header>
+			{{ .TableOfContents }}
+		</aside>
+	</header>
+
+	<main>
 		{{ .Content }}
-	</body>
-</html>
+	</main>
+
+{{ end }}

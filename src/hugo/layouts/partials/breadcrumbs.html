@@ -1,0 +1,17 @@
+{{/* Recursive partial layout that renders a breadcrumb navigation
+   *
+   */}}
+
+{{ with .Parent }}
+	{{ partial "breadcrumbs.html" . }} ❱
+{{ end }}
+
+<a href="{{ .RelPermalink }}">
+
+	{{- if .IsHome }}
+		Home
+	{{ else }}
+		{{ default ( replace .File.BaseFileName "-" " " ) .LinkTitle | title }}
+	{{ end -}}
+
+</a>

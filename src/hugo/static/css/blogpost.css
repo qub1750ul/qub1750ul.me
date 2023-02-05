@@ -1,16 +1,21 @@
-header
-{
-	text-align: center;
-}
 
-header > div.docinfo
+body > header > .docinfo
 {
 	display: flex ;
+	align-items: baseline ;
+	justify-content: center ;
+	padding: auto ;
 }
 
-header > div.docinfo > p
+body > header > div.docinfo > p
 {
+	margin-left : 1em ;
 	margin-right: 1em ;
+}
+
+body > main
+{
+	text-align: justify ;
 }
 
 code

@@ -5,26 +5,24 @@
 
 {{ define "body" }}
 
-<header>
-	<h1>{{.Site.Title}}</h1>
-	{{ with .Params.subtitle -}} <span class="subtitle">{{.}}</span> {{- end }}
-	
-	<p>Site in costruction</p>
+	<header>
+		<h1>{{.Site.Title}}</h1>
+	</header>
 
-</header>
+	<main>
 
-<main>
+		<h1> Pages </h1>
 
-	<nav>
-		<ul>
-			{{ range .Site.Sections }}
-				<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-			{{ end }}
-		</ul>
-	</nav>
+		<nav>
+			<ul>
+				{{ range .Page.Pages }}
+					<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+				{{ end }}
+			</ul>
+		</nav>
 
-	{{.Content}}
+		{{.Content}}
 
-</main>
+	</main>
 
 {{ end }}

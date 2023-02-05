@@ -1,3 +1,5 @@
+:toc:
+
 == The original Turboencabulator
 
 For a number of years now, work has been proceeding in order to bring perfection

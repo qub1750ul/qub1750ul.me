@@ -1,11 +1,4 @@
----
-title: "Hyperlink Nexus"
-description: "Static URL shortner made in HTML5 and Hugo"
----
-
-{{< content.inline >}}
-	<center>
-		<h1>{{ .Page.Params.Title }}</h1>
-		{{ .Page.Params.Description }}
-	</center>
-{{< /content.inline >}}
++++
+title = "Hyperlink Nexus"
+description = "Static URL shortner made in HTML5 and Hugo"
++++

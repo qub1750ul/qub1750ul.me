@@ -1,0 +1,20 @@
+{{/*    */}}
+
+<ul>
+	{{ range .Pages }}
+
+		{{/*
+		   * Get link title title from page attributes.
+		   * If not possible, generate one from content file name.
+		   */}}
+		{{ $title := default ( replace .File.BaseFileName "-" " " ) .LinkTitle | title }}
+
+		<li>
+			<article>
+				<a href="{{ .RelPermalink }}">{{- $title -}}</a>
+				{{ with .Description }} <br/> {{.}} <br/> {{ end }}
+			</article>
+		</li>
+
+	{{ end }}
+</ul>
