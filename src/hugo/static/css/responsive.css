@@ -1,0 +1,16 @@
+@media(min-width: 801px) {
+	body {
+		width: 60%;
+		max-width: 48rem;
+	}
+}
+
+@media(max-width: 800px) {
+	body {
+		width: 90%;
+	}
+
+	header {
+		margin-bottom: 2rem;
+	}
+}

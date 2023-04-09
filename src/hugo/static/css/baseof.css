@@ -1,18 +1,25 @@
+@import "responsive.css" ;
+
 body
 {
-	background-color: black ;
-	color: white ;
+	background-color: #101010 ;
+	color: #bebebe ;
+
+	--primary-color: #3a86e6 ;
+	--secondary-color: #8751f2 ;
+
 	font-family: Fura Sans, sans-serif;
 	font-size: 120%;
 	max-width: 40em;
 	margin: 0px auto;
 	padding: 0em 1em 1em 1em;
-	line-height: 1.6;
+	line-height: 1.6rem ;
 }
 
 body > p#constructionNotice
 {
 	background: red ;
+	color: white ;
 	text-align: center ;
 }
 
@@ -21,16 +28,30 @@ body header
 	text-align: center ;
 }
 
+body > header
+{
+	border-bottom: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: white;
+}
+
 body header nav
 {
 	text-align: left ;
 }
 
-
 h1, h2, h3, h4, h5, h6,
 div.paragraph > div.title
 {
 	color: orange ;
+}
+
+a {
+	color: var(--primary-color);
+}
+
+a:visited {
+	color: var(--secondary-color);
 }
 
 footer
