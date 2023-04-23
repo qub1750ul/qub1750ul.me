@@ -1,20 +1,20 @@
 {{/*    */}}
 
 <ul>
-	{{ range .Pages }}
-
-		{{/*
-		   * Get link title title from page attributes.
-		   * If not possible, generate one from content file name.
-		   */}}
-		{{ $title := default ( replace .File.BaseFileName "-" " " ) .LinkTitle | title }}
-
+	{{ range sort .Pages "LinkTitle" "asc" }}
 		<li>
-			<article>
-				<a href="{{ .RelPermalink }}">{{- $title -}}</a>
-				{{ with .Description }} <br/> {{.}} <br/> {{ end }}
-			</article>
-		</li>
 
+			{{/*
+			* Get link title from page attributes.
+			* If not possible, generate one from content file name.
+			*/}}
+			{{ $title := default ( replace .File.BaseFileName "-" " " ) .LinkTitle | title }}
+			<a href="{{ .RelPermalink }}">{{- $title -}}</a>
+			{{ with .Description }} <br/> {{.}} <br/> {{ end }}
+
+			{{/* Generate subpage links if any */}}
+			{{ partial "exobrain/pageList.html" . }}
+
+		</li>
 	{{ end }}
 </ul>

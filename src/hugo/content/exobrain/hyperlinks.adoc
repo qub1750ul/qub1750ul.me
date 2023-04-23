@@ -1,5 +1,0 @@
-= HyperLinks
-Internet link portal page
-
-.Linux Wireless Wiki
-https://wireless.wiki.kernel.org

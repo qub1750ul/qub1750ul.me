@@ -3,6 +3,11 @@ body main
 	text-align: justify ;
 }
 
+body main > h1
+{
+	text-align: center ;
+}
+
 aside.tableOfContents header
 {
 	text-align: left ;

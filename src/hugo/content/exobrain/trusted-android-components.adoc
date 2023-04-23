@@ -1,8 +1,0 @@
-
-Team Win Recovery Package +
-https://twrp.me
-
-Pitch Black Recovery Package +
-
-Magisk +
-https://magisk.me

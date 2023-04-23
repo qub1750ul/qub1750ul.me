@@ -1,6 +1,0 @@
----
-title: "Personal DNS Resolver Architecture"
----
-
-.Resolver architecture, Drawio SVG
-image:schema.drawio.svg[Schema]

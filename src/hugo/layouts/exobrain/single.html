@@ -9,15 +9,22 @@
 
 	<header>
 		{{ partial "exobrain/header.html" . }}
-
-		<aside class="tableOfContents">
-			<header>Table of contents</header>
-			{{ .TableOfContents }}
-		</aside>
 	</header>
 
 	<main>
+
+		{{/*
+		* Get link title from page attributes.
+		* If not possible, generate one from content file name.
+		*/}}
+		<h1>{{ default ( replace .File.BaseFileName "-" " " ) .Title | title }}</h1>
+		<nav class="tableOfContents">
+			<h1>Index</h1>
+			{{ .TableOfContents }}
+		</nav>
+
 		{{ .Content }}
+
 	</main>
 
 {{ end }}

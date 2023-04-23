@@ -1,4 +1,0 @@
-+++
-title = "Exobrain Index"
-linkTitle = "Exobrain"
-+++
