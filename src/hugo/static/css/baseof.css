@@ -16,6 +16,11 @@ body
 	line-height: 1.6rem ;
 }
 
+body *
+{
+	max-width: 100% ;
+}
+
 body > p#constructionNotice
 {
 	background: red ;

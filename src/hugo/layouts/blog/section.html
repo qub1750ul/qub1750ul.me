@@ -8,12 +8,13 @@
 {{ define "body" }}
 
 	<header>
-		<h1> {{ .Title }} </h1>
-		<p> {{ .Content }} </p>
-		<nav> {{ partial "breadcrumbs.html" . }} </nav>
+		{{ partial "blog/header.html" . }}
 	</header>
-	
+
+	<p> {{ .Content }} </p>
+
 	<main>
+
 		<h1>Index</h1>
 		<ul>
 			{{ range .Pages.Reverse }}
@@ -36,6 +37,7 @@
 
 			{{ end }}
 		</ul>
+
 	</main>
 
 {{ end }}

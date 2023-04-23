@@ -1,0 +1,56 @@
+@import "responsive.css" ;
+
+html {
+	background-color: #101010;
+	color: #bebebe;
+	
+	--primary-color: #3a86e6;
+	--secondary-color: #8751f2;
+
+	font-family: monospace ;
+	font-size: 16px;
+	line-height: 1.6rem;
+	counter-reset: h2;
+}
+
+body {
+	margin: auto;
+}
+
+header {
+	border-bottom: solid 1px #999 ;
+	margin-bottom: 2rem ;
+}
+
+a {
+	color: var(--primary-color);
+}
+
+a:visited {
+	color: var(--secondary-color);
+}
+
+header > #title {
+	text-align: center ;
+	font-size: 1em ;
+}
+
+#nav-breadcrumb a {
+	text-decoration: none ;
+	transition: background-color 500ms ;
+}
+
+#nav-breadcrumb a:visited {
+	color: var( --default-text-color ) ;
+}
+
+#nav-breadcrumb a:hover {
+	background-color: #414141 ;
+}
+
+#rfc-table {
+	text-align: center ;
+	margin: 0 ;
+}
+
+@import "light-mode.css" ;

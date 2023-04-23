@@ -1,5 +1,5 @@
 
-body > header > .docinfo
+body > main > header > .docinfo
 {
 	display: flex ;
 	align-items: baseline ;
@@ -7,7 +7,7 @@ body > header > .docinfo
 	padding: auto ;
 }
 
-body > header > div.docinfo > p
+body > main > header > .docinfo > p
 {
 	margin-left : 1em ;
 	margin-right: 1em ;

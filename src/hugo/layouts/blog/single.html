@@ -8,31 +8,35 @@
 {{ define "body" }}
 
 	<header>
-
-		<h1> {{ .Title }} </h1>
-
-		<div class="docinfo">
-			<p>
-				{{ with .PublishDate }}
-					Published on <br/> {{ . }}
-				{{ else }}
-					Not published
-				{{ end }}
-			</p>
-			<p> Last updated on <br/> {{ .Lastmod }} </p>
-			<p> Reading time: <br/> {{ .ReadingTime }} minutes </p>
-		</div>
-
-		<nav id="breadcrumbs"> {{ partial "breadcrumbs.html" . }} </nav>
-
+		{{ partial "blog/header.html" . }}
 	</header>
 
-	<aside class="tableOfContents">
-		<h1>Table of contents</h1>
-		{{- .TableOfContents -}}
-	</aside>
-
 	<main>
+
+		<header>
+
+			<h1> {{ .Title }} </h1>
+			<aside class="docinfo">
+
+				<p>
+					{{ with .PublishDate }}
+					Published on <br/> {{ . }}
+					{{ else }}
+					Not published
+					{{ end }}
+				</p>
+				<p> Last updated on <br/> {{ .Lastmod }} </p>
+				<p> Reading time: <br/> {{ .ReadingTime }} minutes </p>
+
+			</aside>
+
+		</header>
+
+		<nav class="tableOfContents">
+			<h1> Table of contents </h1>
+			{{- .TableOfContents -}}
+		</nav>
+
 		{{ .Content }}
 	</main>
 
