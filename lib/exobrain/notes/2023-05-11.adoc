@@ -1,0 +1,7 @@
+== Blogpost idea: dealing with bad containers
+
+Talk about:
+- containers that do not allow to mount config in a volume-friendly way
+  examples: windmill, element-web
+
+- bad docker-compose practices: i.e. direct bind mounts

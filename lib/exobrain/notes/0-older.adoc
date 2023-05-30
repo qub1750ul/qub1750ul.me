@@ -1,0 +1,25 @@
+:toc:
+:attachDir: ../../attachments
+
+[blogpost]
+== Why make websites simple ?
+https://archive.org/about/offline-archive
+
+== Cool Android stuff
+
+Team Win Recovery Package +
+https://twrp.me
+
+Pitch Black Recovery Package +
+
+Magisk +
+https://magisk.me
+
+== A list of things i want to do in the long term
+
+[TODO]
+.Italian Espresso Coffee Sommelier
+https://www.aicaf.com/it/sommelier-espresso.php
+
+== DNS resolution chain from my local system
+image:{attachDir}/dns-resolv.drawio.svg[Schema]

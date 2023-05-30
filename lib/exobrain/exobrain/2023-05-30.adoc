@@ -1,0 +1,15 @@
+:toc:
+
+== Lowering publishing friction
+
+Separating the exobrain source from the website has been a great idea, using a
+submodule to relink them a dumb one. +
+The exobrain isn't something inherently versioned, only the latest version
+matters at all. So using Git for this job brings nothing but worthless mental
+overhead. +
+I still had to manually sync the submodule in the website to the exobrain repo,
+that in turn had to be _quite artificially_ be synced to the
+authoritative copy.
+
+Directly rsyncing the website copy from the authoritative one is a much simpler
+and effective method to manage publication.

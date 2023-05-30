@@ -1,0 +1,18 @@
+= Exobrain
+
+[todo]
+nice header image. brain that pushes things out, like in informatve systems.
+Look in the uni book for ideas.
+
+Home of inorganic intellectual chaos and unpolished content.
+
+== Why
+
+== Format
+== Publishing
+
+todo: Hugo import
+
+== More
+More on <<exobrain.adoc>>
+

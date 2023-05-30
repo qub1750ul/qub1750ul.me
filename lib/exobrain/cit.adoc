@@ -1,0 +1,51 @@
++++
+title = "Citations"
+description = "Snippets with attribution copy-pasted from the web."
++++
+:toc:
+
+== The Kernighan Law
+Debugging is twice as hard as writing the code in the first place. +
+Therefore, if you write the code as cleverly as possible, you are, by definition,
+not smart enough to debug it.
+
+~ Kernighan, Brian W., and P.J. Plauger.
+The Elements of Programming Style. 2nd. ed.
+New York: McGraw-Hill Book, 1978. Print.
+
+== Premature optimization is the root of all evil
+The real problem is that programmers have spent far too much time worrying about
+efficiency in the wrong places and at the wrong times ; +
+premature optimization is the root of all evil (or at least most of it) in
+programming.
+
+~ Knuth, Donald E.
+The Art of Computer Programming. 2.nd ed.
+Reading (MA): Addison-Wesley, 1980. Print.
+Addison-Wesley Ser. in Computer Science and Information Processing.
+
+== The first enemy of a Good Solution(R) is a Perfect Solution(TM)
+~~ (TBA)
+
+== Respect the levels of abstraction
+As software developers we get to learn many good practices and strive to apply
+them in our code.
+
+For instance we learn the importance of good naming of variables and functions,
+encapsulation, class cohesion, the usage of polymorphism, conciseness,
+readability, code clarity and expressiveness, and many others.
+
+What if there was only one principle to know instead of plenty of best practices
+?
+
+I believe this principle exists: it consists of Respecting levels of abstraction.
+
+This is the one principle to rule them all, because applying it automatically
+applies all the above best practices, and even more of them. When you follow it,
+your code writes itself out well naturally.
+
+~ Boccara, Jonathan.
+It all comes down to respecting levels of abstraction.
+Fluent C++, 2016-12-15.
+https://www.fluentcpp.com/2016/12/15/respect-levels-of-abstraction/
+

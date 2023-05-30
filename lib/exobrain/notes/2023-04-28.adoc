@@ -1,0 +1,14 @@
+:toc:
+
+== The case for biparted project structure ( build/src )
+
+I always structure my projects in two main directories: build and src.
+Build contains "dynamic", temporary, possibily auto-generated stuff.
+Src contains human-made stuff.
+
+This policy is quite rigid, with very few carefully considered exceptions.
+
+Why ?
+
+
+Let's say you want to take the lazy route and put everithing together without much regard.

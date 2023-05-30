@@ -1,0 +1,38 @@
+:toc:
+
+== Finally starting an exobrain
+
+Liking https://beepb00p.xyz one a lot. Especially annotation style.
+Done some more research on Org and org-mode. Might not be the right thing.
+Org is serialization format for org-mode, using it outside of it is kinda meh.
+Going with asciidoctor for now as it is practical to write and edit right now.
+
+Adopting a daily journal filing method for this: avoids creating complex
+taxonomies and it is efficient to parse incrementaly having a cache file
+somewhere.
+
+[future]
+must think of a nice retrival system for this knowledge base.
+It must be an active app. There isn't really a way to make it static.
+
+== Importing old stuff from exobrain v0.1
+
+This is technically the 2nd revision of my exobrain, so i'll call it v0.2. +
+Old version was just a bunch of pages in Hugo.
+Reorganizing it in a way that makes more sense.
+
+== User experience
+
+Want to take a journaling approach to adding content: a file per day, append
+only.
+When rendered in Hugo should look like one single page.
+
+TODO: Merge note files under a single section in a single view.
+
+TODO: Still need to figure out how to manage headings. Should i manage them at
+all ?
+
+TODO: Still need to inject some Hugo magic into files to make this work.
+I need tooling to export stuff from exobrain in a machine-readable format.
+
+TODO: Figure out tags for Zettelkasten functionality.

@@ -1,0 +1,7 @@
+:toc:
+
+== Links
+
+blogpost: https://karl-voit.at/2020/01/25/avoid-complex-folder-hierarchies/
+
+coolblog: https://karl-voit.at

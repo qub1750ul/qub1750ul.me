@@ -1,0 +1,21 @@
++++
+title = "Links"
+description = "Links to cool places on the web"
++++
+
+.Linux Wireless Wiki
+https://wireless.wiki.kernel.org
+
+[THD]
+== A list of quality threads with people having strong feelings about technology
+
+.Self-closing elements in HTML considered harmful
+https://github.com/orgs/mdn/discussions/242
+
+.Tabs vs Spaces - Rust edition (2020)
+https://github.com/rust-lang/rfcs/issues/3003
+
+== Faith
+
+.Tabs vs Spaces
+https://lea.verou.me/2012/01/why-tabs-are-clearly-superior

@@ -1,0 +1,33 @@
+:toc:
+:attachDir: ../../attachments
+
+== Editing friction
+
+Experienced first friction moments with the system. +
+Currently using Syncthing to sync exobrain across personal devices and Git to
+export it to the public cloud.
+Today i was looking to write a note and noticed something was wrong.
+The directory that contains this very note was missing, couldn't figure out
+where it was gone.
+Checked sync history on phone and pc, couldn't figure it out.
+Started developing some migraine-inducing thougths about distributed state
+failure modes.
+Then it hit me: i was one revision behind on the Git side of things.
+Git pulled. Problem solved.
+But the tought sill haunts me: in the event stuff gets messed up i struggle
+to repair the system state. I could lose data and not have the ability to
+tell with mathematical certainity.
+
+I need to make the distributed editing process more reliable.
+
+== Considerations in solving reliability problems
+
+Keeping the authoritative copy of exobrain in a backed-up CIFS share sure can
+solve desync problems, but then availability concerns arise.
+
+For the system to be useful i must be able to edit it at all times.
+
+== System architecture at 2023-04-27
+
+image::{attachDir}/exobrain-20230427.drawio.svg[]
+
