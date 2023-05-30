@@ -1,0 +1,18 @@
++++
+title = "Read"
++++
+:toc:
+
+== How to use zettelkasten as a programmer
+https://theproductiveengineer.net/how-to-use-zettelkasten-as-a-programmer-or-developer/
+
+== Don't Do Complex Folder Hierarchies - They Don't Work and This Is Why and What to Do Instead
+by Karl Voit +
+https://karl-voit.at/2020/01/25/avoid-complex-folder-hierarchies/
+
+> I often read comments from people that are trying to come up with a clever,
+> deeply-nested directory hierarchy to manage their personal files.
+> You will frequently find discussions about these topics on this
+> https://reddit.com/r/datacurator[sub-reddit].
+> I don't recommend investing effort in complex directory structures and this 
+> is why and what to do instead.

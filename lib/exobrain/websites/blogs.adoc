@@ -1,11 +1,12 @@
 +++
-title = "Nice websites"
-description = "An annotated collection of cool places on the web"
+title = "Blogs"
 +++
 :toc:
 
-== Introduction
+== Favourites
 
+[NOTE]
+--
 This page is a list of sites i like. +
 Each entry is organized in the following format:
 
@@ -14,8 +15,9 @@ Each entry is organized in the following format:
 - About page
 - Themes ?
 - Personal tought
+--
 
-== Julia Evans' blog
+=== Julia Evans' blog
 https://jvns.ca
 
 About: https://jvns.ca/about/
@@ -28,7 +30,7 @@ This blog is about
 - how being clear & curious & humble is better than sounding like I know it all already
 - experimenting with alternative ways to teach hard concepts (zines!)
 
-== Matt Might's blog
+=== Matt Might's blog
 http://matt.might.net
 
 Dr. Matthew Might has been A CS and Internal Medicine professor
@@ -37,19 +39,49 @@ The articles on his blog cover various topics:
 life hacking, computing and programming languages theory and tips,
 academic life tips.
 
-== The Overflow
+=== The Overflow
 https://stackoverflow.blog
 
 A blog from people at StackOverflow.
 
-== beepb00p's Website
+=== beepb00p's Website
 https://beepb00p.xyz/exobrain/
 
 A very interesting content packed blog and exobrain.
 
-== Chuan Ji
+=== Chuan Ji
 https://jichu4n.com
 
 A personal blog of a San Francisco engineer with a small but nice collection
 of articles.
 
+=== public voit - Home page of Karl Voit
+https://karl-voit.at
+
+== Friends
+
+=== Alberto Ventafridda
+https://halb.it
+
+> Hi, I'm Alberto.
+>
+> I'm a computer science student at UniMib, living in Milan, Italy.
+> I like to work on projects that span the topics of cyber security, web
+> development, and distributed systems, occasionally writing about the
+> challenges I encounter.
+
+=== Damiano Verzulli
+https://dvblog.soabit.com
+
+> I really like to spend time:
+>
+> - investigating networking news and problems (at least in LAN and small WAN
+>   environments; from Ethernet to IPv4, up to BGP);
+> - improving my skills in system administration, expecially GNU/Linux
+>   environments;
+> - getting my hands on top of current Web 2.0 development standards (I started
+>   enjoying AngularJS and Bootstrap one year ago, when I finally understood
+>   that Javascript is no more what I knew lots and lots of year ago…)
+
+=== Marco Russo
+https://mrusso99.com/

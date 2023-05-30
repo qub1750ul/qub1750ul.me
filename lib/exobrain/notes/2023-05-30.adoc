@@ -1,6 +1,7 @@
 == About OOP and theoretical technical righteousness
 
-See Stroustup OOP. Because one influential person says something condivisible, it is that "right" ?
+See Stroustup OOP. Because one influential person says something condivisible,
+it is that "right" ?
 
 Models are just models
 

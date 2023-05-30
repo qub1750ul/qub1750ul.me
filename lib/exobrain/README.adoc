@@ -1,18 +1,50 @@
 = Exobrain
 
 [todo]
-nice header image. brain that pushes things out, like in informatve systems.
+nice header image. brain that pushes things out, like in information systems.
 Look in the uni book for ideas.
 
 Home of inorganic intellectual chaos and unpolished content.
 
 == Why
 
+An *exobrain*, or "second brain", or "brain dump" is something like a public
+wiki where you can keep your bookmarks, notes, ideas and thoughts. +
+Other people can search in your exobrain without having to physically interact 
+with you.
+The point is not to avoid physical interaction altogether, but to scale
+collaboration and knowledge exchange with other people.
+
+It also allows for quicker iteration in writing blog posts or developing
+thoughts - I can just quickly publish it here, share it gradually, and
+receive immediate feedback.
+
 == Format
+
+This knowledge base is made of thematic https://asciidoctor.org[Asciidoctor]
+files. +
+In some cases ( like _notes_ and _exobrain_ ) there is a thematic directory of
+files.
+
+Notes are very simple: just a h2 followed by whatever.
+
+Journaling complements the synchrinization model. Otherwise distributed editing
+would get messy, cause of conflicts.
+
 == Publishing
 
-todo: Hugo import
+This exobrain is made available in a number of ways and formats.
+
+At the moment the only consumption method available to the public is via the
+Web2.0 interface. AKA my https://www.qub1750ul.me/exobrain/[personal website].
 
 == More
-More on <<exobrain.adoc>>
 
+You can learn more about this system exploring the notes about itself
+link:/exobrain[here] or on the
+https://www.qub1750ul.me/exobrain/exobrain[Web2.0 interface].
+
+If you still want more, here are some web resources about exorains and similar
+stuff. _Good luck, see you in the rabbit hole_.
+
+* https://en.wikipedia.org/wiki/Zettelkasten

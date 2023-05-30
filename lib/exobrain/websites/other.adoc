@@ -1,6 +1,5 @@
 +++
-title = "Links"
-description = "Links to cool places on the web"
+title = "Other"
 +++
 
 .Linux Wireless Wiki
