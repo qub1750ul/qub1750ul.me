@@ -1,0 +1,25 @@
+/* body > main > nav > ul
+{
+	display: flex ;
+	flex-direction: row ;
+	flex-wrap: wrap ;
+	gap: 1em ;
+}*/
+
+section#latestUpdates article
+{
+	margin-bottom: 1em ;
+	border-left: 1px solid white ;
+	padding-left: 1em ;
+}
+
+section#latestUpdates article h1,
+section#latestUpdates article p
+{
+	margin: 0 ;
+}
+
+section #latestUpdates article .dateLabel
+{
+	margin-bottom: 1em ;
+}

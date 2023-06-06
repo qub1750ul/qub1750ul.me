@@ -1,27 +1,55 @@
 {{ define "head" }}
 	{{ partial "head.html" . }}
-	<link rel="stylesheet" href="{{ relURL "css/home.css" }}"/>
+	<link rel="stylesheet" href='{{ relURL "css/home.css" }}'/>
 {{ end }}
 
 {{ define "body" }}
 
 	<header>
-		<h1>{{.Site.Title}}</h1>
+
+		<h1>{{.Title}}</h1>
+		{{ .Params.Tagline }}
+
+		<nav id="breadcrumbs"> {{ partial "breadcrumbs.html" . }} </nav>
+
 	</header>
 
 	<main>
 
-		<h1> Pages </h1>
-
 		<nav>
+			<h1> Pages </h1>
 			<ul>
-				{{ range .Page.Pages }}
+				{{ range where .Page.Pages "Section" "!=" "home" }}
 					<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
 				{{ end }}
 			</ul>
 		</nav>
 
-		{{.Content}}
+		<nav>
+			{{ with .GetPage "/home/socials" }}
+				<h1>{{ .Title }}</h1>
+				{{ .Content }}
+			{{ end }}
+		</nav>
+
+		<section>
+			{{ .Content }}
+		</section>
+
+		<section id="latestUpdates">
+
+			<h1> Last updates <i class="feedIcon">Feed</i> </h1>
+
+			{{ range ( where $.Site.Pages.ByLastmod "Section" "blog" | first 3 ) }}
+				<article>
+					<h1> [ {{ upper .Section }} ] {{ .Title }} </h1>
+					<i class="dateLabel"> Updated {{ .Lastmod }} </i>
+
+					<p> {{ .Summary }} <a href='{{ .RelPermalink }}'> More ... </a> </p>
+				</article>
+			{{ end }}
+
+		</section>
 
 	</main>
 

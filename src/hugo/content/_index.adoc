@@ -3,21 +3,3 @@ title = "qub1750ul's website"
 linkTitle = "Home"
 tagline = "Student. Engineer. Scientist. Likes computers."
 +++
-
-== Social links
-
-=== In the fediverse
-
-eMail / Mastodon / Matrix / etc :
-link:/link/mastodon[personal@qub1750ul.me]
-
-=== In the Web2.0
-
-Telegram:
-https://t.me/qub1750ul
-
-GitHub:
-https://github.com/qub1750ul
-
-Twitter:
-https://twitter.com/qub1750ul
