@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
 		{{ block "head" . }}{{ partial "head.html" . }}{{ end }}
 	</head>
+
 	<body>
-
 		<p id="constructionNotice">Site in costruction</p>
-
-		{{ block "body" . }}
-			<p>Empty body</p>
-		{{ end }}
+		{{ block "body" . }} <p>Empty body</p> {{ end }}
 	</body>
+
 	<footer>
 		{{ block "footer" . }}{{ partial "footer.html" }}{{ end }}
 	</footer>
