@@ -1,0 +1,81 @@
+main
+{
+	text-align: justify ;
+}
+
+main > header
+{
+	display: flex;
+	flex-direction: row ;
+	/* flex-wrap: wrap ; */
+	justify-items: stretch ;
+	/* justify-self: center ; */
+}
+
+main > header > img
+{
+	margin: 1rem ;
+	border-radius: 2rem ;
+	max-width: 25% ;
+}
+
+main > div#navcontainer
+{
+	border: 1px ;
+	border-style: solid ;
+	border-color: white ;
+	padding: 0.5em ;
+}
+
+main nav
+{
+	display: flex ;
+	flex-direction: row ;
+	flex-wrap: wrap ;
+	justify-content: center ;
+}
+
+main nav a
+{
+	margin-right: 0.5em ;
+}
+
+#cvHeaderText
+{
+	text-align: center ;
+}
+
+article
+{
+	border-left: 1px ;
+	border-left-style: solid ;
+	border-left-color: white ;
+	padding-left: 1em ;
+	margin-bottom: 1em ;
+}
+
+article > h2
+{
+	margin-top: 0em ;
+}
+
+article ul
+{
+	display: grid ;
+	grid-template-columns: auto auto ;
+}
+
+article ul li
+{
+	padding: 0 2em 0.5em 0 ;
+}
+
+article ul p
+{
+	margin: 0 ;
+}
+
+#dataFetchError
+{
+	color: red ;
+}

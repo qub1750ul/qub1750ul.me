@@ -1,0 +1,89 @@
+{{ define "head" }}
+
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" href="/css/devicons.min.css" />
+	<link rel="stylesheet" href="/css/cv.css" />
+
+{{ end }}
+
+{{ define "body" }}
+
+	{{ $cv   := $.Site.Data.cv }}
+	{{ $page := .              }}
+
+	<header>
+		<h1>Curriculum Vitae</h1>
+		A full lenght account of my experience
+		<nav> {{ partial "breadcrumbs.html" . }} </nav>
+	</header>
+
+	<main>
+
+		<header>
+
+			<img src="propic.jpg" />
+			<div id="cvHeaderText">
+
+				<h1>{{ $cv.basics.name }}</h1>
+
+				<div id="socialLinkList">
+					{{ range $cv.basics.contacts }}
+						<a href="{{ .url }}">
+							{{ .network }}
+						</a>
+					{{ end }}
+				</div>
+
+				{{ $cv.basics.label | $page.RenderString }}
+				{{ $cv.basics.punchline | $page.RenderString }}
+
+			</div>
+
+		</header>
+
+		<div id="navcontainer">
+			<nav>
+				<a href="#work">Work experience</a>
+				<a href="#education">Education</a>
+				<a href="#awards">Awards and certifications</a>
+				<a href="#volunteer">Volunteer experiences</a>
+			</nav>
+			<nav>
+				<a href="redux.pdf">Reduced PDF version</a>
+				<a href="/bio">More about me</a>
+			</nav>
+		</div>
+
+		<section id="work">
+			<h1>Work experience</h1>
+			{{ range $cv.work }}
+				{{ partial "cv/article.html" ( dict "cv" $cv "page" $page "item" . "title" .position "org" .name ) }}
+			{{ end }}
+		</section>
+
+		<section id="education">
+			<h1>Education</h1>
+			{{ range $cv.education }}
+				{{ partial "cv/article.html" ( dict "cv" $cv "page" $page "item" . "title" .name "org" .institution ) }}
+			{{ end }}
+		</section>
+
+		<section id="awards">
+			<h1>Awards and Certifications</h1>
+			{{ range $cv.awards }}
+				{{ partial "cv/article.html" ( dict "cv" $cv "page" $page "item" . "title" .name "org" .awarder ) }}
+			{{ end }}
+		</section>
+
+		<section id="volunteer">
+
+			<h1>Volunteer experiences</h1>
+			{{ range $cv.volunteer }}
+				{{ partial "cv/article.html" ( dict "cv" $cv "page" $page "item" . "title" .position "org" .organization ) }}
+			{{ end }}
+
+		</section>
+
+	</main>
+
+{{ end }}

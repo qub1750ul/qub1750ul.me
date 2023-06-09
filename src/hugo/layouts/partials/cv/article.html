@@ -1,0 +1,47 @@
+{{/* Context is CV item */}}
+
+{{ $cv    := .cv    }}
+{{ $page  := .page  }}
+{{ $title := .title }}
+{{ $org   := .org   }}
+
+{{/*  Render  */}}
+
+{{ with .item }}
+	<article>
+
+		<h2>{{ $title }}</h2>
+
+		<div class="organization">
+			
+			{{ $orgInfo := where $cv.organizations "name" "==" $org }}
+			{{ if eq 0 ( len $orgInfo ) }}
+
+				<div class="dataFetchError">{{ $org }}</div>
+
+			{{ else }}
+				{{ range $orgInfo }}
+
+					<a href="{{ .url }}">{{ .legalName }}</a><br>
+					{{ .address }}
+
+				{{ end }}
+			{{ end }}
+
+		</div>
+
+		{{/* Render timestamp */}}
+		{{ if isset . "date" }}
+			<div class="timeSpan">{{ .date }}</div>
+		{{ else if isset . "startDate" }}
+			<div class="timeSpan">{{ .startDate }} - {{ default "today" .endDate }}</div>
+		{{ else }}
+			<div class="dataFetchError">Could not fetch time data</div>
+		{{ end }}
+
+		<p class="summary">
+			{{ .summary | $page.RenderString }}
+		</p>
+
+	</article>
+{{ end }}
