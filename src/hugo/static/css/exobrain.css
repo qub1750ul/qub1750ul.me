@@ -12,3 +12,10 @@ aside.tableOfContents header
 {
 	text-align: left ;
 }
+
+.journalDivider
+{
+	display: flex ;
+	align-content: center ;
+	justify-content: center ;
+}

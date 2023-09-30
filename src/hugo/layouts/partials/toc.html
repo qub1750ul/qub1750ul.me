@@ -1,0 +1,7 @@
+<ul>
+	{{ range .Headings }}
+		<li><a href="#{{.ID}}">{{ .Title }} a</a></li>
+		{{/*  {{ with .Headings }}{{ partial "toc.html" . }}{{ end }}  */}}
+	{{ end }}
+</ul> 
+

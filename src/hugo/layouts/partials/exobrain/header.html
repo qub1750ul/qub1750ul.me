@@ -1,5 +1,8 @@
-<h1> Exobrain </h1>
-Home of inorganic intellectual chaos and unpolished content.
+{{ with .Site.GetPage .Section }}
+	<h1> {{ .Title }} </h1>
+	<div> {{ .Params.Tagline }} </div>
+{{ end }}
+
 {{ partial "exobrain/warn.html" . }}
 
 <nav id="breadcrumbs"> {{ partial "breadcrumbs.html" . }} </nav>

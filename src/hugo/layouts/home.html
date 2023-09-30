@@ -3,54 +3,52 @@
 	<link rel="stylesheet" href='{{ relURL "css/home.css" }}'/>
 {{ end }}
 
-{{ define "body" }}
+{{ define "header" }}
 
-	<header>
+	<h1>{{.Title}}</h1>
+	{{ .Params.Tagline }}
 
-		<h1>{{.Title}}</h1>
-		{{ .Params.Tagline }}
+	<nav id="breadcrumbs"> {{ partial "breadcrumbs.html" . }} </nav>
 
-		<nav id="breadcrumbs"> {{ partial "breadcrumbs.html" . }} </nav>
+{{ end }}
 
-	</header>
+{{ define "main" }}
 
-	<main>
-
-		<nav>
-			<h1> Pages </h1>
-			<ul>
-				{{ range where .Page.Pages "Section" "!=" "home" }}
-					<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-				{{ end }}
-			</ul>
-		</nav>
-
-		<nav>
-			{{ with .GetPage "/home/socials" }}
-				<h1>{{ .Title }}</h1>
-				{{ .Content }}
+	<nav>
+		<h1> Pages </h1>
+		<ul>
+			{{ range where .Page.Pages "Section" "!=" "home" }}
+				<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
 			{{ end }}
-		</nav>
+		</ul>
+	</nav>
 
-		<section>
+	<nav>
+		{{ with .GetPage "/home/socials" }}
+			<h1>{{ .Title }}</h1>
 			{{ .Content }}
-		</section>
+		{{ end }}
+	</nav>
 
-		<section id="latestUpdates">
+	<section>
+		{{ .Content }}
+	</section>
 
-			<h1> Last updates <i class="feedIcon">Feed</i> </h1>
+	<section id="latestUpdates">
 
-			{{ range ( where $.Site.Pages.ByLastmod "Section" "blog" | first 3 ) }}
-				<article>
-					<h1> [ {{ upper .Section }} ] {{ .Title }} </h1>
-					<i class="dateLabel"> Updated {{ .Lastmod }} </i>
+		<h1> Last updates <i class="feedIcon">Feed</i> </h1>
 
-					<p> {{ .Summary }} <a href='{{ .RelPermalink }}'> More ... </a> </p>
-				</article>
-			{{ end }}
+		{{ range ( where $.Site.Pages.ByLastmod "Section" "blog" | first 3 ) }}
+			<article>
 
-		</section>
+				<h1> [ {{ upper .Section }} ] {{ .Title }} </h1>
+				<i class="dateLabel"> Updated {{ .Lastmod }} </i>
 
-	</main>
+				<p> {{ .Summary }} <a href='{{ .RelPermalink }}'> More ... </a> </p>
+
+			</article>
+		{{ end }}
+
+	</section>
 
 {{ end }}

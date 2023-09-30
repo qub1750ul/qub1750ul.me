@@ -6,13 +6,21 @@
 	</head>
 
 	<body>
-		<p id="constructionNotice">Site in costruction</p>
-		{{ block "body" . }} <p>Empty body</p> {{ end }}
-	</body>
 
-	<footer>
-		{{ block "footer" . }}{{ partial "footer.html" }}{{ end }}
-	</footer>
+		<header>
+			<p id="constructionNotice">Site in costruction</p>
+			{{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+		</header>
+
+		<main>
+			{{ block "main" . }}{{ .Content }}{{ end }}
+		</main>
+
+		<footer>
+			{{ block "footer" . }}{{ partial "footer.html" }}{{ end }}
+		</footer>
+
+	</body>
 
 	{{/*  {{ partial "debug/asideLeft.html" . }}  */}}
 

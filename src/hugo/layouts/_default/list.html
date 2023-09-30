@@ -1,11 +1,5 @@
-{{ define "body" }}
+{{ define "main" }}
 
-	<header>
-		{{ partial "breadcrumbs.html" . }}
-		{{ .Content }}
-	</header>
-
-	<main>
 		<h2>Index</h2>
 		{{ partial "exobrain/pageList.html" . }}
 	
@@ -19,6 +13,7 @@
 	
 	{{ end }}  */}}
 
-	</main>
+	{{ .Content }}
+
 
 {{ end }}

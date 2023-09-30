@@ -1,17 +1,7 @@
-{{ define "body" }}
+{{ define "main" }}
 
-	<header>
-		<h1> {{ .Title }} </h1>
-		<p> {{ .Description }} </p>
-		<nav> {{ partial "breadcrumbs.html" . }} </nav>
-	</header>
-
-	<main>
-
-		<h1>Index</h1>
-		{{ partial "exobrain/pageList.html" . }}
-		{{ .Content }}
-
-	</main>
+	<h1>Index</h1>
+	{{ partial "exobrain/pageList.html" . }}
+	{{ .Content }}
 
 {{ end }}

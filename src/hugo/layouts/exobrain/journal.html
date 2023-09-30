@@ -1,0 +1,40 @@
+{{ define "head" }}
+
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" href="/css/exobrain.css"/>
+
+{{ end }}
+
+{{ define "header" }}
+	{{ partial "exobrain/header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+
+	<h1>{{ .Title }}</h1>
+	<div>{{ .Description }}</div>
+
+	{{/*  <nav class="tableOfContents">
+		<h1>Table of Contents</h1>
+		<ul>
+			{{ range .RegularPages.ByDate }}
+				{{ range .Fragments.Headings }}
+					<li><a href="{{.ID}}">{{ .Title }} a</a></li>
+				{{ end }}
+			{{ end }}
+		</ul>
+	</nav>  */}}
+
+	<nav class="tableOfContents">
+		<h1>Table of Contents</h1>
+		{{ range .RegularPages.ByDate }}
+			{{ .TableOfContents }}
+		{{ end }}
+	</nav>
+
+	{{ range .RegularPages.ByDate }}
+		{{ partial "exobrain/journalDivider.html" . }}
+		{{ .Content }} <br>
+	{{ end }}
+
+{{ end }}

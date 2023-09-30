@@ -16,12 +16,7 @@ body
 	line-height: 1.6rem ;
 }
 
-body *
-{
-	max-width: 100% ;
-}
-
-body > p#constructionNotice
+header > p#constructionNotice
 {
 	background: red ;
 	color: white ;
@@ -43,6 +38,11 @@ body > header
 body header nav
 {
 	text-align: left ;
+}
+
+body header nav a
+{
+	text-decoration-line: none ;
 }
 
 h1, h2, h3, h4, h5, h6,

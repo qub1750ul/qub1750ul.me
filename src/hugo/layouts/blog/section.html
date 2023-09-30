@@ -5,39 +5,32 @@
 
 {{ end }}
 
-{{ define "body" }}
-
-	<header>
-		{{ partial "blog/header.html" . }}
-	</header>
+{{ define "main" }}
 
 	<p> {{ .Content }} </p>
 
-	<main>
+	<h1>Index</h1>
+	<ul>
+		{{ range .Pages.Reverse }}
 
-		<h1>Index</h1>
-		<ul>
-			{{ range .Pages.Reverse }}
+			{{/* Get page info from page front matter.
+					* If not possible, extract them from content file name.
+					*/}}
+			{{ $title := .LinkTitle | default ( .File.BaseFileName | replaceRE `^[0-9-]+\.([^.]+)` "$1" | humanize ) }}
+			{{ $publishDate := .PublishDate | default ( .File.BaseFileName | replaceRE `^([0-9-]+)\..*` "$1" ) }}
 
-				{{/* Get page info from page front matter.
-				   * If not possible, extract them from content file name.
-				   */}}
-				{{ $title := .LinkTitle | default ( .File.BaseFileName | replaceRE `^[0-9-]+\.([^.]+)` "$1" | humanize ) }}
-				{{ $publishDate := .PublishDate | default ( .File.BaseFileName | replaceRE `^([0-9-]+)\..*` "$1" ) }}
+			<li>
+				<article>
 
-				<li>
-					<article>
+					{{ $publishDate }}
+					<a href="{{ .RelPermalink }}">{{ $title }}</a>
+					{{ with .Description }} <br /> {{.}} {{ end }}
 
-						{{ $publishDate }}
-						<a href="{{ .RelPermalink }}">{{ $title }}</a>
-						{{ with .Description }} <br /> {{.}} {{ end }}
+				</article>
+			</li>
 
-					</article>
-				</li>
+		{{ end }}
+	</ul>
 
-			{{ end }}
-		</ul>
-
-	</main>
 
 {{ end }}

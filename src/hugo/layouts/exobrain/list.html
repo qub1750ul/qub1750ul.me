@@ -1,0 +1,10 @@
+{{ define "main" . }}
+
+	<h1>{{ .Title }}</h1>
+
+	{{ .Content }}
+
+	<h2>Explore by Section</h2>
+	{{ partial "exobrain/pageList.html" . }}
+
+{{ end }}

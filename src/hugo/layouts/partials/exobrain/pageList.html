@@ -1,4 +1,4 @@
-{{/*    */}}
+{{/* Generate a list of pages in the current bundle */}}
 
 <ul>
 	{{ range sort .Pages "LinkTitle" "asc" }}
@@ -9,11 +9,18 @@
 			* If not possible, generate one from content file name.
 			*/}}
 			{{ $title := default ( replace .File.BaseFileName "-" " " ) .LinkTitle | title }}
-			<a href="{{ .RelPermalink }}">{{- $title -}}</a>
-			{{ with .Description }} <br/> {{.}} <br/> {{ end }}
 
-			{{/* Generate subpage links if any */}}
-			{{ partial "exobrain/pageList.html" . }}
+			{{ if ne .Params.layout "list" }}
+				<a href="{{ .RelPermalink }}">{{ $title }}</a>
+			{{ else }}
+				{{ $title }}
+			{{ end }}
+			{{ with .Description }} <br /> {{.}} <br /> {{ end }}
+
+			{{/* Generate subpage links if any, but not for "journal" pages */}}
+			{{ if ne .Params.layout "journal" }}
+				{{ partial "exobrain/pageList.html" . }}
+			{{ end }}
 
 		</li>
 	{{ end }}

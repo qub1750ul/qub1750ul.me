@@ -5,26 +5,22 @@
 
 {{ end }}
 
-{{ define "body" }}
+{{ define "header" }}
+	{{ partial "exobrain/header.html" . }}
+{{ end }}
 
-	<header>
-		{{ partial "exobrain/header.html" . }}
-	</header>
+{{ define "main" }}
 
-	<main>
+	{{/*
+	* Get link title from page attributes.
+	* If not possible, generate one from content file name.
+	*/}}
+	<h1>{{ default ( replace .File.BaseFileName "-" " " ) .Title | title }}</h1>
+	<nav class="tableOfContents">
+		<h1>Index</h1>
+		{{ .TableOfContents }}
+	</nav>
 
-		{{/*
-		* Get link title from page attributes.
-		* If not possible, generate one from content file name.
-		*/}}
-		<h1>{{ default ( replace .File.BaseFileName "-" " " ) .Title | title }}</h1>
-		<nav class="tableOfContents">
-			<h1>Index</h1>
-			{{ .TableOfContents }}
-		</nav>
-
-		{{ .Content }}
-
-	</main>
+	{{ .Content }}
 
 {{ end }}
