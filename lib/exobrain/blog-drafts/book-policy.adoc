@@ -1,5 +1,5 @@
 +++
-title = "Paper or electronic: my policy on books
+title = "Paper or electronic: my policy on books"
 layout = "blog"
 +++
 
