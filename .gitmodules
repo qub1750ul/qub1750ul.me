@@ -1,6 +1,4 @@
 [submodule "lib/cv"]
 	path = lib/cv
 	url = https://github.com/qub1750ul/cv
-[submodule "lib/exobrain"]
-	path = lib/exobrain
-	url = https://github.com/qub1750ul/exobrain.git
+	
