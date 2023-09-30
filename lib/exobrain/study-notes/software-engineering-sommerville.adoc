@@ -1,0 +1,197 @@
+= Study notes about Ian Sommerville's book
+
+Gaethered from
+"Software Engineering ( 10th edition ), Ian Sommerville"
+ISBN 13: 978-1-292-09613-1
+
+while preparing for the exam of
+"Informative Systems" lectured by Prof. Matteo Gaeta
+at University of Salerno, Italy
+during 2nd semester A.A. 2021-2022
+
+by Giuseppe Masino
+at the time student of B.Sc. in Informatics Engineering
+from A.A. 2018-2019
+
+== Preface
+
+These notes are not a replacenment to studying the source material,
+as they are very sparse and dry.
+These are published for use as a tool for comparative verification of learning
+goals for the serious student.
+
+=== Strcture of this document
+
+A section for each read chapter.
+For each chapter i produce a breaf synthesis and a bullet list of key points
+to keep in mind.
+
+== Ch.1 Introduction
+
+What was this chapter about ?
+
+Introducing reader to the concept of software engineering.
+
+=== Key points
+
+- Software engineering is a discipline concerned with applied computer science
+  ( computer engineering ) and business process engineering.
+
+- Software engineering is the study of methods, processes and tools to archieve
+  successful software production and maintanance in a business context.
+
+- Software engineering tecniques are made to solve specific recurrent problems
+  of the software production process. Therefore ignorance of these statistically
+  leads to higher costs and lenghtned times in the software business.
+  
+- A software process is not a strictly defined thing: different contexts require
+  application of different tecniques, processes and tools in different ways.
+  ( See differences in aircraft, game and e-commerce software markets ).
+
+== Ch.2 Software process
+
+What was this chapter about ?
+
+Explore the topic of software (production) processes.
+
+=== Key points
+
+- Real software processes are interleaved sequences of technical, collaborative, 
+  and managerial activities with the overall goal of specifying, designing, 
+  implementing, and testing a software system.
+  How these activities are carried out depends on the type of software being 
+  developed, the experience and competence of the developers, and the 
+  type of organization developing the software.
+
+== Ch.4 Requirements engineering
+
+What was this chapter about ?
+
+Methods to elicit, understand, process and communicate software product
+requirements among different classes of stakeholders.
+
+In other words: How to understand what people want and not fuck up in the process.
+
+=== Key points
+
+- Requirements: descriptions of what the system should archive.
+
+- Functional requirements: specify what features the system should have and how 
+  the system should behave to serve its purpose.
+
+- Non-functional requirements: complementary to functional requirements, pose 
+  ulterior restrictions on system behaviour. They often apply to the system in 
+  general instead of very specific parts.
+  
+- Requirements engineering activities: elicitation & analisys, specification, 
+  validation, documentation 
+
+== Ch.6 Architectural design
+
+What was this chapter about ?
+
+Illustrating methods and processes to design a software architecture.
+
+=== Key points
+
+On the role of design processes:
+
+- Sharing architecture diagrams are a great way to disseminate info and
+  stimulate feedback in collaborative contexts.
+  
+- Critical and adaptive use ( lowering formality grade ) of design elements
+  when employing formal design languages is *essential* when communicating with 
+  different classes of stakeholders.
+  *Semantic accessibility is key to communication effectiveness*
+  ( allowing parties to develop a correct, but not necessarily complete,
+  understanding without much friction ).
+  
+- Block diagrams are a good example of adaptive design language.
+
+- Architecture design is not a rigid iterative process,
+  but more of a constrained logic inference problem ( system requirements ).
+
+- Process structure will depend on the type of system being 
+  developed, the background and experience of the system architect, and the
+  specific requirements for the system.
+
+About design decisions:
+  
+- Non-functional requirements play a dominant role in shaping an architecture.
+
+- Architectural requirements may be conflicting, and thus require accepting 
+  tradeoffs.
+  Using pattern composition and armonization is a good general way to approach 
+  the problem.
+  
+- Differential analisys of an architecture against reference models can help
+  with pre-production design validation.
+  
+About architectural views:
+
+- [COMMENT]
+  Krutchen "4+1" meta-architecture model is relatable.
+  It prescribes a logical view, a dynamic view ( process
+  view ), a concrete component-wise "business-mappable" view ( development view 
+  ), a deployment view ( physical view ), and a global aspect-associative view.
+  
+About architectural patterns:
+ 
+- [COMMENT]
+  Provides advice on the fundamental qualities of a good pattern description.
+  A few patterns are presented in shallow detail: MVC, Layered, Repository,
+  Client-Server, Pipe&Filter.
+
+About application architectures:
+
+- Application architectures are highly subject to reuse, because most 
+  businesses operate fundamentally in the same way and this remains true
+  even when considering more specific classes of them.
+
+- To better illustrate the applicability of this concept seemingly
+  different type of systems are compared: Transaction processing systems,
+  Information Systems and Language Processing Systems.
+
+== Ch.7 Object-oriented design and implementation
+
+What was this chapter about ?
+
+Introducing object-oriented software design principles, processes and tools, higlighting related idiosycraties.
+
+--
+The objectives of this chapter are to introduce object-oriented software 
+design using the UML and highlight important implementation concerns.
+
+1. To show how system modeling and architectural design (covered in Chapters 5 
+and 6) are put into practice in developing an object-oriented software design.
+
+2. To introduce important implementation issues that are not usually covered in 
+programming books. These include software reuse, configuration management 
+and open-source development.
+
+=== Key points
+
+About class identification and design, three methods are proposed:
+
+- Grammatical analisys of natural language specification, and mapping of
+  semantic entities to object-oriented costructs.
+- A domain entity mapping strategy, where classes are associated to entities     
+  and definitions are inferred following use-case descriptions.
+- A scenario-based analisys where class definitions are determined empirically
+  by exploring a usage scenario.
+
+About design models:
+
+In object oriented design there are two macro-categories of models that are useful: structural and dynamic ( read "dynamics" ) models.
+In these we can identify some UML models that are interesting for the job:
+
+- subsystem models: static models representing hierachical grouping of objects 
+  ( packages ); 
+
+- sequence models: dynamic models representing interactions among objects.
+  ( UML sequence or collaboration )
+
+- state machine models: dynamic models representing how object state changes 
+  during system runtime.
+  ( UML state diagrams )
+

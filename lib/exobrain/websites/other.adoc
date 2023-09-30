@@ -1,18 +1,19 @@
 +++
 title = "Other"
 +++
+:toc:
 
 .Linux Wireless Wiki
 https://wireless.wiki.kernel.org
 
+== Curiosities
+- https://en.wikipedia.org/wiki/Rekursiv[Rekursiv: object-oriented computer]
+
 [THD]
 == A list of quality threads with people having strong feelings about technology
 
-.Self-closing elements in HTML considered harmful
-https://github.com/orgs/mdn/discussions/242
-
-.Tabs vs Spaces - Rust edition (2020)
-https://github.com/rust-lang/rfcs/issues/3003
+- https://github.com/orgs/mdn/discussions/242[Self-closing elements in HTML considered harmful]
+- https://github.com/rust-lang/rfcs/issues/3003[Tabs vs Spaces - Rust edition (2020)]
 
 == Faith
 

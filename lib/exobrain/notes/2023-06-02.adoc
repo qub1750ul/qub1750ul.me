@@ -1,0 +1,4 @@
+== A small glossary for the Web2.x platform
+
+There is a lot of confusion among my peers about the web platform.
+

@@ -1,0 +1,2 @@
+== Installing programs trough the OS package manager is an anti-pattern
+

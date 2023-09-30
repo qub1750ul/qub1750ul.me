@@ -1,11 +1,28 @@
----
-title: "A sane guide to Hugo"
-description: "A guide to the fastest SSG out there, that also values your mental sanity"
---- 
++++
+title = "A sane guide to Hugo"
+description = "A guide to the fastest SSG out there, that also values your mental sanity"
++++ 
+:toc:
 
 Hugo is a Static Site Generator
 
-== Snippets
+[NOTE]
+--
+Validated for Hugo extended v101
+--
+
+== Basics
+
+=== Project structure
+=== Correlation beetween files
+
+== Working with themes
+
+./archetypes/default.md disables your theme archetypes
+
+== Developing a theme
+
+== Patterns and best practices
 
 .Generating section indexes
 
@@ -34,7 +51,3 @@ If you want to avoid empty lists, you can store the slice of section pages in a 
   </ul>
 {{ end }}
 ```
-
-== Working with themes
-
-./archetypes/default.md disables your theme archetypes

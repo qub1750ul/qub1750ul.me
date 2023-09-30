@@ -1,0 +1,83 @@
++++
+title    = "Hello World: Lessons learned coding and deploying GARRLab first cloud-native service"
+author   = "Giuseppe Masino"
+topimage = "topimage.drawio.svg"
+layout   = "single"
++++
+:toc:
+
+[tldr]
+--
+We faced the cloud native challenge head first, embracing new tools and paradigms
+with a little foolish attitude.
+Explored the tradeoffs ( and the complexities ! ) of the model first hand,
+found solutions to emerging problems and... learnt something new.
+--
+
+== Intro
+
+GARRLab opened its doors to students in 2021.
+
+== Requirements
+
+We needed a quite simple website that could host a presentation page and some
+blog-like articles. The complementing systems though needs to satisfy some
+additional requirements:
+
+- It must be trivial to edit and build locally, allowing for fast feedback cycles.
+- It must be possible to edit it collaboratively without much hassle or prior
+  coordination.
+- Operations such as deployment should be as automated as possible
+
+.Super-high level system architecture
+image::architecture-0.drawio.svg[Super-high level system architecture]
+
+After a brief discussion we designed an architecture centered on Hugo: a fast
+Static Site Generator written in Go.
+
+== The plan
+
+== First difficulties
+
+=== Works on my machine. Server edition.
+
+=== Debugging cloud execution environments
+
+Using a cloud automation system such as GitLab CI proved challenging, for two
+main reasons: long feedback cycles and scarce visibility into the cloud process.
+The latter exacerbates the first as i will explain in a moment.
+
+GitLab CI in itself is not a difficult system to setup and use: most of time
+all is needed is to edit a YAML document in a known position into your
+repository, document schema is also very easy once you get the hang of it and
+executing cloud pipelines either via CLI or WebUI is pretty much hassle free.
+
+The real pain points unveal themselves once you need to seriously debug your
+own scripts in the cloud environment.
+
+An important fact to keep present is that when working with cloud pipelines
+the only direct debugging tool you have is good old link:invalid[printf] ( or
+whatever other flavor you like ), as the only realiable form of communication
+with the developer is the pipeline log.
+While possible, you
+https://docs.gitlab.com/ee/ci/interactive_web_terminal/[can't reliably ssh into]
+and inspect the job execution environment as the server-side management of these is
+https://docs.gitlab.com/runner/executors/index.html[quite]
+https://docs.gitlab.com/runner/executors/custom.html[sophisticated].
+And that assuming you can access the execution server at all, considering that
+in true DevOps fashion the cloud stack is owned piece-wise by a number of people
+with different ways of working and that do not interoperate.
+On top of that interactively poking at the cloud environment is a bad idea as
+it encourages the creation of
+https://schneide.blog/tag/snowflake-server/[unicorn-environments that only work on the server],
+other than being generally brittle. (More on that later)
+
+Long feedback cycles.
+
+== Solutions
+
+.Highly reproducible development workflow
+image::architecture-1.drawio.svg[]
+
+=== Every problem can be solved by creating an abstraction layer...
+

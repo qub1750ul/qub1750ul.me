@@ -16,3 +16,33 @@ https://karl-voit.at/2020/01/25/avoid-complex-folder-hierarchies/
 > https://reddit.com/r/datacurator[sub-reddit].
 > I don't recommend investing effort in complex directory structures and this 
 > is why and what to do instead.
+
+== Stop using so many divs! An intro to semantic HTML
+by Ken Bellows +
+https://dev.to/kenbellows/stop-using-so-many-divs-an-intro-to-semantic-html-3i9i
+
+> Authors are strongly encouraged to view the div element as an element of last resort,
+> for when no other element is suitable.
+> Use of more appropriate elements instead of the div element leads to better accessibility
+> for readers and easier maintainability for authors.
+
+== The log/event processing pipeline you can't have
+https://apenwarr.ca/log/20190216
+
+> Lately, I've had a surprisingly large number of conversations about logs processing pipelines.
+> I can find probably 10+ already-funded, seemingly successful startups processing logs, and the
+> Big Name Cloud providers all have some kind of logs thingy, but still, people are not satisfied.
+> It's expensive and slow. And if you complain, you mostly get told that you shouldn't be using
+> unstructured logs anyway, you should be using event streams.
+>
+> That advice is not wrong, but it's incomplete.
+>
+> Instead of doing a survey of the whole unhappy landscape, let's just ignore what other people
+> suffer with and talk about what does work. You can probably find, somewhere, something similar to
+> each of the components I'm going to talk about, but you probably can't find a single solution
+> that combines it all with good performance and super-low latency for a reasonable price.
+> At least, I haven't found it. I was a little surprised by this, because I didn't think we were
+> doing anything all that innovative. Apparently I was incorrect.
+
+== Crafting container images without Dockerfiles
+https://ochagavia.nl/blog/crafting-container-images-without-dockerfiles/

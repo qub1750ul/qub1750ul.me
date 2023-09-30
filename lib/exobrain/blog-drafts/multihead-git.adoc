@@ -1,0 +1,37 @@
++++
+title = "Using git worktrees effectively"
+layout = "blog"
++++
+
+Git worktrees
+
+Can do with `git worktree add`
+
+Problems:
+- Cant create directly
+- Directories
+
+
+Solution:
+
+Note: do not call your git directory `.git` or tools will detect as repo a
+directory that is not
+
+[code,shell]
+--
+set -o errexit
+
+mkdir multihead.mgit && cd multihead.mgit
+git init --separate-git-dir=git main.wt
+--
+
+== Too long
+
+Custom git command
+
+Inspired by https://github.com/yankeexe/git-worktree-switcher/
+
+== Bibliography
+
+- https://github.com/yankeexe/git-worktree-switcher/
+- https://stackoverflow.com/questions/54367011/git-bare-repositories-worktrees-and-tracking-branches

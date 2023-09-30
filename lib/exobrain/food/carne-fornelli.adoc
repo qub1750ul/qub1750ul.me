@@ -1,0 +1,36 @@
++++
+title = "Carne & Fornelli"
++++
+
+== Gold Standard
+
+- Hamburger di Scottona
+
+- Patate al forno
+- Lattuga
+- Uovo all'occhio di bue
+- Cipolla ramata
+
+- Pane classico
+
+- Cottura al sangue
+
+- Salsa BBQ
+- Provola affumicata
+
+
+== Contadino
+
+- Hamburger di Maiale
+
+- Cottura Al sangue
+
+- Lattuga
+- Cipolla
+- Peperoni
+- Zucchine
+
+- Panino Classico
+
+- Caciocavallo
+

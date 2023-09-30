@@ -1,3 +1,18 @@
 +++
 title = "Exobrain"
+tagline = "Home of inorganic intellectual chaos and unpolished content"
 +++
+
+An *exobrain*, or "second brain", or "brain dump" is something like
+a public wiki where you can keep your bookmarks, notes, ideas and thoughts. +
+Other people can search in your exobrain without having to physically
+interact with you. The point is not to avoid physical interaction
+altogether, but to scale collaboration and knowledge exchange with other
+people.
+
+It also allows for quicker iteration in writing blog posts or developing
+thoughts - I can just quickly publish it here, share it gradually, and
+receive immediate feedback.
+
+You can read more about this system in the
+link:./exobrain/[dedicated section].

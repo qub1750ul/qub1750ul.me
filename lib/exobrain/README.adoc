@@ -44,7 +44,7 @@ You can learn more about this system exploring the notes about itself
 link:/exobrain[here] or on the
 https://www.qub1750ul.me/exobrain/exobrain[Web2.0 interface].
 
-If you still want more, here are some web resources about exorains and similar
+If you still want more, here are some web resources about exobrains and similar
 stuff. _Good luck, see you in the rabbit hole_.
 
 * https://en.wikipedia.org/wiki/Zettelkasten

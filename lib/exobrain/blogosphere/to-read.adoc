@@ -1,1 +1,6 @@
-== https://www.linusakesson.net/programming/tty/[TTY demystified]
++++
++++
+
+- https://www.linusakesson.net/programming/tty/[TTY demystified]
+- https://xeiaso.net/blog/anything-message-queue
+- https://jvns.ca/blog/2023/06/05/some-blogging-myths/#myth-you-need-to-explain-every-concept

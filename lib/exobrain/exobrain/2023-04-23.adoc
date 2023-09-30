@@ -27,7 +27,8 @@ Want to take a journaling approach to adding content: a file per day, append
 only.
 When rendered in Hugo should look like one single page.
 
-TODO: Merge note files under a single section in a single view.
+DONE: Merge note files under a single section in a single view.
+	* Completed on 2023-06-17 with note #1
 
 TODO: Still need to figure out how to manage headings. Should i manage them at
 all ?
@@ -36,3 +37,4 @@ TODO: Still need to inject some Hugo magic into files to make this work.
 I need tooling to export stuff from exobrain in a machine-readable format.
 
 TODO: Figure out tags for Zettelkasten functionality.
+

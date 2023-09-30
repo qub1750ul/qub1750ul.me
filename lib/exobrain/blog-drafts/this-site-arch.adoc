@@ -1,6 +1,6 @@
----
-title: "Site architecture notes"
----
++++
+title = "Site architecture notes"
++++
 
 == WWW URL Architecture
 

@@ -1,0 +1,42 @@
+== A good-ish content view for journaled notes
+
+Figured out how to render journaled notes as a single page in Hugo: iteratively
+fetching the `.Content` property for each note from Hugo DOM proved a quite
+inflexible but simple and effective method.
+
+While current result is satisfactory from the visual standpoint it definitely
+isn't from the codegen one, this mainly due to the underlying Asciidoctor
+codegen combined with the inflexibility of certain Hugo features. +
+The table of contents for example results in this:
+
+```html
+<nav id="TableOfContents">
+	
+	<h1>Table of Contents</h1>
+	
+	<nav id="TableOfContents">
+		<ul>
+			<li><a href="#_why_make_websites_simple">Why make websites simple ?</a></li>
+			<li><a href="#_cool_android_stuff">Cool Android stuff</a></li>
+			<li><a href="#_a_list_of_things_i_want_to_do_in_the_long_term">A list of things i want to do in the long term</a></li>
+			<li><a href="#_dns_resolution_chain_from_my_local_system">DNS resolution chain from my local system</a></li>
+		</ul>
+	</nav>
+		
+	<nav id="TableOfContents">
+  	<ul>
+    	<li><a href="#_the_case_for_biparted_project_structure_buildsrc">The case for biparted project structure ( build/src )</a></li>
+  	</ul>
+	</nav>
+		
+	<nav id="TableOfContents"></nav>
+		
+	<nav id="TableOfContents"></nav>
+</nav>	
+```
+
+TODO: Figure out how to customize Asciidoctor codegen
+
+Overall this tecnique is is still an inferior solution to the data driven one,
+but it's slighly better than before.
+
