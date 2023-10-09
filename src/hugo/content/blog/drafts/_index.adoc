@@ -1,5 +1,5 @@
 +++
-title = "Blog drafts index"
+title = "qub1750ul blog drafts"
 linktitle = "Blog drafts"
 layout = "drafts"
 +++

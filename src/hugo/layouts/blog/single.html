@@ -5,6 +5,14 @@
 
 {{ end }}
 
+{{ define "header" }}
+
+	<h1>{{ humanize .Section }}</h1>
+	<p>{{ ( .Site.GetPage .Section ).Params.Tagline }}</p>
+	<nav id="breadcrumbs">{{ partial "breadcrumbs.html" . }}</nav>
+
+	{{ end }}
+
 {{ define "main" }}
 
 	<header>
@@ -16,7 +24,7 @@
 				{{ with .PublishDate }}
 				Published on <br/> {{ . }}
 				{{ else }}
-				Not published
+				Draft
 				{{ end }}
 			</p>
 			<p> Last updated on <br/> {{ .Lastmod }} </p>
@@ -32,6 +40,5 @@
 	</nav>
 
 	{{ .Content }}
-	
 
 {{ end }}

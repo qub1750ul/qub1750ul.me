@@ -1,4 +1,5 @@
 +++
-title = "Blog Index"
+title     = "qub1750ul blog"
 linkTitle = "Blog"
+tagline   = "Adventures, toughts and ramblings of a passioned over-engineer."
 +++
