@@ -3,9 +3,9 @@
 # Due to how GNU Make works it SHOULD be the first file sourced in any Make
 # process that uses it
 
-# ----------------- #
-# GNU MAKE SETTINGS #
-# ----------------- #
+# --------------------------------------------------------------------------- #
+# GNU MAKE SETTINGS                                                           #
+# --------------------------------------------------------------------------- #
 
 # Environment overrides
 MAKEFLAGS := --warn-undefined-variables --no-builtin-rules
@@ -22,9 +22,9 @@ SHELL := /bin/bash
 .SECONDEXPANSION:
 .DELETE_ON_ERROR:
 
-# ----------------- #
-# DEFAULT VARIABLES #
-# ----------------- #
+# --------------------------------------------------------------------------- #
+# DEFAULT VARIABLES                                                           #
+# --------------------------------------------------------------------------- #
 
 # Default tool aliases
 TAR  ?= tar
@@ -34,19 +34,21 @@ PIXZ ?= pixz
 CURL ?= curl
 
 # Default directory aliases
-PROJECT_ROOT != pwd
-SRCDIR := src
+PROJECT_ROOT  != pwd
+SRCDIR        := src
+BUILD_DIR     := build
+ARTIFACTS_DIR  = $(BUILD_DIR)/artifacts
 
-BUILD_DIR := build
-ARTIFACTS_DIR = $(BUILD_DIR)/artifacts
+# Base container image for the Hugo module
+HUGO_CTN_IMAGE := docker://docker.io/klakegg/hugo:0.111.0-ext-asciidoctor
 
 # Default exported variables
 export FIND
 export PROJECT_ROOT
 
-# --------------- #
-# DEFAULT RECIPES #
-# --------------- #
+# --------------------------------------------------------------------------- #
+# DEFAULT RECIPES                                                             #
+# --------------------------------------------------------------------------- #
 
 ##
 # @target clean

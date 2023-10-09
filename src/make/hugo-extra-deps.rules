@@ -12,7 +12,7 @@ $(BUILD_DIR)/.buildinfo.json: .git/HEAD
 	git log -1 --format=%s | read -r subject
 
 	mkdir -p $(dir $@)
-	
+
 	cat > '$@' <<-EOF
 		{
 			"git": {
@@ -33,6 +33,8 @@ $(BUILD_DIR)/.buildinfo.json: .git/HEAD
 #
 .SILENT: lib/cv/build/cv.toml
 lib/cv/build/cv.toml: .git/modules/lib/cv/HEAD
+
+	echo "Detected external library update: lib/cv"
 	$(MAKE) -C lib/cv
 
 # Devicons CSS

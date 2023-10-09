@@ -34,21 +34,4 @@
 		{{ .Content }}
 	</section>
 
-	<section id="latestUpdates">
-
-		<h1> Last updates <i class="feedIcon">Feed</i> </h1>
-
-		{{ range ( where $.Site.Pages.ByLastmod "Section" "blog" | first 3 ) }}
-			<article>
-
-				<h1> [ {{ upper .Section }} ] {{ .Title }} </h1>
-				<i class="dateLabel"> Updated {{ .Lastmod }} </i>
-
-				<p> {{ .Summary }} <a href='{{ .RelPermalink }}'> More ... </a> </p>
-
-			</article>
-		{{ end }}
-
-	</section>
-
 {{ end }}

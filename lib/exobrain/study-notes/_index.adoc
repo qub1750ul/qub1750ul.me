@@ -1,4 +1,4 @@
 +++
-name = "Study notes"
+title = "Study notes"
 description = "Personal notes from books, courses and lectures"
 +++

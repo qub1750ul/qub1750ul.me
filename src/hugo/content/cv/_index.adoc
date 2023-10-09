@@ -1,4 +1,5 @@
 +++
 title = "Curriculum Vitae"
 linktitle = "CV"
+tagline = "A full lenght account of my experience"
 +++

@@ -2,4 +2,4 @@
 # containers that serve hugo sites
 
 # Site sources must exists before container build
-ctn.server.build: $(rwildcard $(BUILD_DIR)/hugo/,*) $(BUILD_DIR)/hugo/
+ctn.server.build: $(call rwildcard,$(BUILD_DIR)/hugo/,*) $(BUILD_DIR)/hugo/

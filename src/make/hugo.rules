@@ -5,19 +5,34 @@
 # Main project directory (PROJECT_ROOT) is shared with containers via bind mount,
 # so containerized processes can access project files at `/mnt/projectRoot`
 
-# PUBLIC VARIABLE DEFAULTS
+# --------------------------------------------------------------------------- #
+# PUBLIC VARIABLE DEFAULTS                                                    #
+# --------------------------------------------------------------------------- #
 
-HUGO_CTN_IMAGE ?= docker.io/klakegg/hugo:0.101.0-ext-asciidoctor
+# Default image for the Hugo container
+HUGO_CTN_IMAGE_DEFAULT := docker://docker.io/klakegg/hugo:latest
 
+# Image URI for the Hugo container
+#
+# NOTE: A default is specified as a convenience for quick initial setup but
+# should not be used outside of throw-away setups. Please override this value
+# with a stable image URI instead.
+HUGO_CTN_IMAGE ?= $(HUGO_CTN_IMAGE_DEFAULT)
+
+# Default options to pass to Hugo server
 define HUGO_SERVER_OPTIONS ?=
 	--noHTTPCache
 	--disableFastRender
+	--cleanDestinationDir
+	--cacheDir $(PROJECT_ROOT)/build/cache/hugo
 endef
 
-## Extra options to append to Hugo cmdline
+# Extra options to append to Hugo cmdline
 HUGO_EXTRA_OPTIONS ?= # Empty on purpose
 
-# INTERNAL VARIABLES
+# --------------------------------------------------------------------------- #
+# INTERNAL VARIABLES                                                          #
+# --------------------------------------------------------------------------- #
 
 hugoBuildDir = $(BUILD_DIR)/hugo
 hugoSrcDir   = $(SRCDIR)/hugo
@@ -49,10 +64,21 @@ define hugoMultilineMakeVars :=
 	hugoBuildDeps
 endef
 
+# --------------------------------------------------------------------------- #
+# PARAMETER PREPROCESSING                                                     #
+# --------------------------------------------------------------------------- #
+
 # Pre-strip multi line variables to avoid shell parsing issues
 $(foreach v,$(hugoMultilineMakeVars),$(eval $(v) := $$(strip $$($v))))
 
-# PUBLIC TARGETS
+# Emit a warning if selected container image is the default one
+ifeq ($(HUGO_CTN_IMAGE),$(HUGO_CTN_IMAGE_DEFAULT))
+	$(warn HUGO_CTN_IMAGE set to default value. This could have undesirable effects. Please override the value _BEFORE_ loading the module.)
+endif
+
+# --------------------------------------------------------------------------- #
+# PUBLIC TARGETS                                                              #
+# --------------------------------------------------------------------------- #
 
 ##
 # @target hugo.server
@@ -74,7 +100,9 @@ hugo.server: $(hugoBuildDeps)
 		$(hugoCtnOptions) '$(HUGO_CTN_IMAGE)' $(hugoBaseOptions) \
 		server $(HUGO_SERVER_OPTIONS) $(HUGO_EXTRA_OPTIONS)
 
-# INTERNAL TARGETS
+# --------------------------------------------------------------------------- #
+# INTERNAL TARGETS                                                            #
+# --------------------------------------------------------------------------- #
 
 # General Hugo build recipe
 #
