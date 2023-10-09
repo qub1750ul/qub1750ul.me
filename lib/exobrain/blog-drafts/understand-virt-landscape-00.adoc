@@ -1,5 +1,4 @@
 +++
-draft = true
 title = "Understanding the virtualization technology landscape"
 category = "til"
 +++

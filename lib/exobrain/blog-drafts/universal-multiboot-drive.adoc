@@ -1,6 +1,5 @@
 +++
-draft = true
-title = "Building a Universal Multiboot Drive"
+title = "How to build a universal multiboot drive"
 +++
 :toc:
 

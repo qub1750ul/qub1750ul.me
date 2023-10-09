@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+	<p> {{ .Content }} </p>
+
+	<table style="text-align: initial">
+
+		<tr>
+			<th>Title</th>
+			<th>Lastmod</th>
+			<th>Word count</th>
+		</tr>
+
+		{{/* Blog drafts are kept in exobrain rather than /blog/drafts, so fetch
+			 * the page list from there
+			 */}}
+		{{ range ( .Site.GetPage "/exobrain/blog-drafts" ).Pages }}
+			{{ $title := .LinkTitle | default ( humanize .File.BaseFileName ) }}
+			<tr>
+				<td><a href="{{ .RelPermalink }}">{{ $title }}</a></td>
+				<td>{{ .Date | dateFormat "1980-01-01" }}</td>
+				<td>{{ .WordCount }} words</td>
+			</tr>
+		{{ end }}
+
+	</table>
+
+
+{{ end }}

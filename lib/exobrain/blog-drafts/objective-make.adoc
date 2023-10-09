@@ -1,5 +1,4 @@
 +++
-draft = true
 title = "Objective Make"
 description = "Bringing Object Oriented Programming to Makefiles"
 category = "blog/devart"

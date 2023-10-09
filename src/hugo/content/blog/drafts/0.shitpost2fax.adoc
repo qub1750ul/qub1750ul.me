@@ -1,7 +1,0 @@
----
-draft: true
----
-
-== Shitpost2fax
-
-OpenCV

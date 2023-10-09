@@ -1,5 +1,4 @@
 +++
-draft = true
 title = "Selfdoc: A self documentation library for makefiles"
 category = "devart"
 +++

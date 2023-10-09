@@ -1,7 +1,6 @@
 +++
 title = "An overview of modern linux init systems"
 category = "devart"
-draft = true
 +++
 :toc:
 

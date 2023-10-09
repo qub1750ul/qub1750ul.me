@@ -1,7 +1,6 @@
 +++
 title = "Building a VPAN"
 category = "devlog"
-draft = true
 +++
 
 == Intro

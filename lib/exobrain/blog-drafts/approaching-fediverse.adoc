@@ -1,5 +1,4 @@
 +++
-draft = true
 title = "My first approach to the Fediverse"
 +++
 

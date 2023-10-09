@@ -1,5 +1,4 @@
 +++
-draft = true
 title = "RUnit User #00"
 description = "Building a custom init with bash and runit"
 category = "devlog"

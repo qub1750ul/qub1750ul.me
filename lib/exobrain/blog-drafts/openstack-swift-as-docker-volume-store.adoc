@@ -1,7 +1,7 @@
 +++
-draft = true
 title = "Using OpenStack Swift as Docker volumes' backing store"
-category = [ "devart", "garrlab" ]
+category = [ "garrlab" ]
+type = "blog"
 +++
 :toc:
 
@@ -58,8 +58,8 @@ That is the object storage cluster that powers the
 https://docs.openstack.org/swift/latest/[SWIFT]
 service.
 
-SWIFT exposes a simple REST API that works on a few concepts: accounts,
-containers and objects. To put it briefly:
+SWIFT exposes a simple REST API built on few concepts: accounts, containers and
+objects. To put it briefly:
 
 - _objects_ are generic blobs of data with a name, usually encoding a single file
 - _containers_ are named collection of objects
@@ -69,7 +69,7 @@ It is that simple: nothing more, nothing less.
 
 .Mapping Docker volumes to Swift containers
 
-aa
+TODO: IDEA: Get container UUID from swift and write it into a volume label
 
 == Hacking a solution
 
@@ -87,7 +87,8 @@ that allow redefining the way volumes are administered.
 
 Docker comes by default with a
 https://docs.docker.com/registry/storage-drivers/swift/[Swift plugin]
-that while labeled as "storage driver" doesn't manage volumes. +
+that while labeled as "storage driver" doesn't manage volumes.
+NOTE: Rework the following period.
 In fact in the Linux container world the concept of _storage_ generally
 doesn't comprend volumes.
 
@@ -103,12 +104,15 @@ CLI.
 While swiftclient is generally deprecated in favor of openstackclient, the
 former is still maintained because the latter still isn't a full port.
 
-RClone...
+TODO: Talk about RClone
 
 .Putting all togheter
 
-aa
+TODO:
 
 == Conclusions
 
 .Performance considerations
+.Service relocability
+
+TODO: What if i want automatic failover for a service ?
