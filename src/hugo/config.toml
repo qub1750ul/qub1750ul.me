@@ -1,6 +1,6 @@
 baseURL       = "http://bad-ref.invalid"
 languageCode  = "en-us"
-title         = "qub1750ul's website"
+title         = "Giuseppe Masino"
 
 canonifyURLs  = false
 relativeURLs  = true
