@@ -1,4 +1,4 @@
-{{- $buildInfo := getJSON "../../build/.buildinfo.json" -}}
+{{- $buildInfo := getJSON "../../build/buildinfo.json" -}}
 
 <nav>
 	<a href="/credits">Credits</a>
@@ -8,11 +8,10 @@
 <div style="margin: 1rem"></div>
 
 <div>
+	Page last modified on {{ .Lastmod }}<br/>
 	{{ with $buildInfo }}
 		Built from commit
 		<abbr title="{{ .git.commitHash }}">{{ .git.shortCommitHash }}</abbr>
-		on {{ .git.commitDate }}.<br/>
-
-		Page last modified {{ .Lastmod }}
+		on {{ .git.commitDate }}
 	{{ end }}
 </div>

@@ -1,0 +1,20 @@
++++
+title = "Alternative interfaces"
++++
+
+- link:/link/mastodon[Mastodon] (WIP)
+- link:/link/bsky[Bluesky] (WIP)
+- https://twitter.com/qub1750ul[Twitter] (WIP)
+- https://t.me/qub1750ul_me[Telegram] (WIP)
+- mailto://info+me@qub1750ul.me[eMail] (WIP)
+
+== Messaging interfaces
+
+- mailto://info@qub1750ul.me[eMail]
+- https://t.me/qub1750ul[Telegram]
+
+== Other (minor) instances of me
+
+- https://github.com/qub1750ul[GitHub]
+- https://it.wikipedia.org/wiki/Utente:Giuseppe_Masino[Wikipedia (IT)]
+- https://meta.wikimedia.org/wiki/User:Giuseppe_Masino[Meta-wiki]

@@ -1,5 +1,5 @@
 +++
-title = "qub1750ul's website"
+title = "Giuseppe Masino"
 linkTitle = "Home"
 tagline = "Student. Engineer. Scientist. Likes computers."
 +++
