@@ -32,6 +32,7 @@ GAWK ?= awk
 FIND ?= find
 PIXZ ?= pixz
 CURL ?= curl
+PODMAN ?= podman
 
 # Default directory aliases
 PROJECT_ROOT  != pwd

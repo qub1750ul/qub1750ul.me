@@ -1,10 +1,12 @@
 # Rules to remake files which Hugo depends on, but are out of Hugo source tree
 
-# Create a `.buildinfo.json` file to allow Hugo to access more info than
+# Create a `buildinfo.json` file to allow Hugo to access more info than
 # builtin `.GitInfo` object allows
 #
-.SILENT: $(BUILD_DIR)/.buildinfo.json
-$(BUILD_DIR)/.buildinfo.json: .git/HEAD
+.SILENT: $(BUILD_DIR)/buildinfo.json
+$(BUILD_DIR)/buildinfo.json: .git/HEAD
+
+	echo "Remaking $@"
 
 	shopt -s lastpipe
 

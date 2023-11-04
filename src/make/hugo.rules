@@ -54,7 +54,7 @@ endef
 # Hugo build dependencies
 define hugoBuildDeps :=
 	$(hugoSources)
-	$(BUILD_DIR)/.buildinfo.json
+	$(BUILD_DIR)/buildinfo.json
 	$(BUILD_DIR)/devicons.min.css
 	lib/cv/build/cv.toml
 endef
@@ -88,21 +88,42 @@ endif
 # is accessible without further shenanigans.
 #
 .SILENT .PHONY: hugo.server
-hugo.server: $(hugoBuildDeps)
+hugo.server: $(hugoBuildDeps) hugo.setup
 
-	cat <<-EOF
-		WARNING: This server can't trigger rebuild of extra-hugo files, so some
-		dependencies will only be updated on server restart
+	echo "Starting Hugo development server"
 
-	EOF
+	printf '\n%s\n\n' \
+		"WARNING: This server can't trigger rebuild of extra-hugo files, so some dependencies will only be updated on server restart"
 
-	exec podman run --net host \
+	exec $(PODMAN) run --pull never --net host \
 		$(hugoCtnOptions) '$(HUGO_CTN_IMAGE)' $(hugoBaseOptions) \
 		server $(HUGO_SERVER_OPTIONS) $(HUGO_EXTRA_OPTIONS)
 
 # --------------------------------------------------------------------------- #
 # INTERNAL TARGETS                                                            #
 # --------------------------------------------------------------------------- #
+
+# This recipe does some preliminary setup needed to run other recipes
+# This is so we don't pollute other recipes output. See podman --pull never
+# TODO: Explain this better
+#
+.SILENT .PHONY: hugo.setup
+hugo.setup:
+
+	shopt -s lastpipe
+
+	# Search for Hugo container image in local cache. If not found fetch it.
+
+	$(PODMAN) image ls --format '{{.Repository}}:{{.Tag}}' \
+	| sed 's!^!docker://!' \
+	| { grep '$(HUGO_CTN_IMAGE)' || true ; } \
+	| wc -l \
+	| read -r matches
+
+	if [ $$matches -eq 0 ] ; then
+		echo "Fetching Hugo ..."
+		$(PODMAN) pull '$(HUGO_CTN_IMAGE)'
+	fi
 
 # General Hugo build recipe
 #
@@ -112,7 +133,7 @@ hugo.server: $(hugoBuildDeps)
 #
 $(BUILD_DIR)/hugo/%: $(hugoBuildDeps)
 
-	@ exec podman run \
+	@ exec $(PODMAN) run \
 		$(hugoCtnOptions) '$(HUGO_CTN_IMAGE)' $(hugoBaseOptions) \
 		$(HUGO_EXTRA_OPTIONS)
 
