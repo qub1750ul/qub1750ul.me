@@ -108,7 +108,7 @@ hugo.server: $(hugoBuildDeps) hugo.setup
 # dependencies.
 #
 .SILENT .PHONY: hugo.build
-.hugo.build: $(hugoBuildDeps) hugo.setup
+hugo.build: $(hugoBuildDeps) hugo.setup
 
 	exec $(PODMAN) run --pull never --net host \
 		$(hugoCtnOptions) '$(HUGO_CTN_IMAGE)' $(hugoBaseOptions) \
