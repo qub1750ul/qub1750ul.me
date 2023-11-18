@@ -1,0 +1,14 @@
++++
+title = "Tools"
+description = "A personal list of awesome(TM) tools"
++++
+
+== Awesome lists
+
+== Database development
+
+- https://github.com/schemaspy/schemaspy
+  SchemaSpy is a database metadata analyzer. It helps your database administors and developers visualize, navigate and understand your data model. With an easy-to-use HTML-based report, traversing the entity-relationship diagram has never been simpler. Our product showcase is available at
+
+- https://www.schemacrawler.com
+  SchemaCrawler is a free database schema discovery and comprehension tool. SchemaCrawler has a good mix of useful features for data governance. You can search for database schema objects using regular expressions, and output the schema and data in a readable text format. The output serves for database documentation, and is designed to be diff-ed against other database schemas. SchemaCrawler also generates schema diagrams. You can execute scripts in any standard scripting language against your database. You can find potential schema design issues with lint.

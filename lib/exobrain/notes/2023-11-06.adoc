@@ -1,0 +1,12 @@
+== Adding CoW capabilities to SQLite
+
+* Using BTRFS snapshots ?
+** Adds dependency on host system. May be necessary using a bundled BTRFS image.
+   Is BTRFS-on-VFS supported ?
+**** Apparently no, and for good reason: +
+     link:https://btrfs.readthedocs.io/en/latest/Hardware.html#storage-model +
+	  With such configuration many assumptions BTRFS makes on storage will be broken.
+	  Data corruption guaranteed on the long term.
+	 
+Someone built a SQLite-like DBMS with builtin CoW capabilities.
+Interesting, but not stable and thus not trustable. 

@@ -1,6 +1,34 @@
-+++
-+++
 
 - https://www.linusakesson.net/programming/tty/[TTY demystified]
 - https://xeiaso.net/blog/anything-message-queue
 - https://jvns.ca/blog/2023/06/05/some-blogging-myths/#myth-you-need-to-explain-every-concept
+
+== Awesome lists
+https://github.com/kdeldycke/awesome-iam#account-management  
+
+== Documentation
+https://docsfordevelopers.com/
+https://stackoverflow.blog/2022/06/21/an-engineers-field-guide-to-great-technical-writing-ep-455/?cb=1
+
+Bad usages of Protocol Buffers  
+https://developers.google.com/protocol-buffers/docs/overview#not-good-fit  
+
+== Etnography
+https://worldpece.org/
+
+== Other essays
+
+https://tanzu.vmware.com/developer/blog/the-hate-for-yaml-the-hammer-or-the-nail/  
+https://growth.design/psychology#hicks-law  
+https://publicsuffix.org/  
+
+https://github.com/readme/featured/vintage-computing  
+
+== CNCF Blog
+
+https://www.cncf.io/blog/2022/04/27/are-the-three-pillars-of-observability-still-relevant/  
+https://www.cncf.io/blog/2022/10/20/infrastructure-for-apps-platforms-for-cooperative-delivery/  
+https://www.cncf.io/blog/2022/10/25/opentelemetry-demo-now-generally-available/  
+https://www.cncf.io/blog/2022/10/17/how-to-setup-blue-green-deployments-with-dns-routing/  
+
+https://www.businesswire.com/news/home/20221025005368/en/Documentary-Film-%E2%80%9CInside-Prometheus%E2%80%9D-Highlights-Open-Source-Impact-and-the-Innovators-That-Make-it-Happen

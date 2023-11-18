@@ -46,3 +46,7 @@ https://apenwarr.ca/log/20190216
 
 == Crafting container images without Dockerfiles
 https://ochagavia.nl/blog/crafting-container-images-without-dockerfiles/
+
+== Email like a pro
+https://www.theregister.com/2023/08/23/email_like_a_pro/
+

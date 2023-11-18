@@ -1,0 +1,36 @@
++++
+title = "How to correctly deploy a PostgreSQL container using Terraform"
++++
+
+{{< blog/crosspost/garrlab.html >}}
+
+== Scenario
+
+== Solution
+
+Using Terraform
+https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax[provisioner feature]
+to refine deployment.
+
+https://docs.ansible.com/ansible/latest/command_guide/intro_adhoc.html[Ansible one-shot tasks]
+
+One-shot docker container
+https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html
+
+[source,src=ansible]
+--
+- name: "Initialize database if not exists"
+  when:
+  community.docker.docker_container:
+  	image: "docker.io/library/postgresql" {{image}}
+--
+
+[source,src=terraform]
+--
+resource "docker_container" "pgsql" {
+	image = "docker.io/library/postgresql"
+	provisioner "local-exec" {
+		command = "ansible -m pgsql-container-init"
+	}
+}
+--
