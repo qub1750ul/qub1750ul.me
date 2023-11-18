@@ -1,0 +1,15 @@
+# DigitalOcean App Platform build script
+#
+# This file is accepted by DigitalOcean App Platform as a build script.
+# This script mounts the repository and runs the content trough a containerized
+# process. The result is a directory of files representing the website to be pu-
+# blished, that gets exported by the system.
+#
+# Documentation:
+# https://docs.digitalocean.com/products/app-platform/reference/dockerfile/
+
+# All we need to to is to load our special-purpose pre-configured container
+# image from an online registry.
+# For image sources check /src/ctn/do-app-builder
+
+FROM ghcr.io/qub1750ul/www.qub1750ul.me/do-app-builder:latest

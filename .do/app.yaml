@@ -7,8 +7,8 @@ static_sites:
   routes:
   - path: /
 
-  dockerfile_path: src/ctn/do-app-builder.dockerfile
-  output_dir: /mnt/projectRoot/build/hugo
+  dockerfile_path: .do/dockerfile
+  output_dir: build/hugo
 
   github:
     repo: qub1750ul/qub1750ul.me

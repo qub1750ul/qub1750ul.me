@@ -33,6 +33,7 @@ FIND ?= find
 PIXZ ?= pixz
 CURL ?= curl
 PODMAN ?= podman
+export BUILDAH ?= buildah
 
 # Default directory aliases
 PROJECT_ROOT  != pwd

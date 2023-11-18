@@ -1,9 +1,9 @@
 # Rules to build hugo sites in linux containers using podman
 #
 # All Hugo instances in this ruleset run in ephemeral OCI containers originated
-# from a common base.
-# Main project directory (PROJECT_ROOT) is shared with containers via bind mount,
-# so containerized processes can access project files at `/mnt/projectRoot`
+# from a common base. Main project directory (PROJECT_ROOT) is shared with
+# containers via bind mount, so containerized processes can access project
+# files at `/mnt/projectRoot`
 
 # --------------------------------------------------------------------------- #
 # PUBLIC VARIABLE DEFAULTS                                                    #
@@ -99,6 +99,21 @@ hugo.server: $(hugoBuildDeps) hugo.setup
 		$(hugoCtnOptions) '$(HUGO_CTN_IMAGE)' $(hugoBaseOptions) \
 		server $(HUGO_SERVER_OPTIONS) $(HUGO_EXTRA_OPTIONS)
 
+##
+# @target hugo.build
+# @brief Launch Hugo site build process
+#
+# In general any file that exists in $(hugoBuildDir) must be built calling
+# Hugo. Some files that need to be externally generated are listed as
+# dependencies.
+#
+.SILENT .PHONY: hugo.build
+.hugo.build: $(hugoBuildDeps) hugo.setup
+
+	exec $(PODMAN) run --pull never --net host \
+		$(hugoCtnOptions) '$(HUGO_CTN_IMAGE)' $(hugoBaseOptions) \
+		$(HUGO_EXTRA_OPTIONS)
+
 # --------------------------------------------------------------------------- #
 # INTERNAL TARGETS                                                            #
 # --------------------------------------------------------------------------- #
@@ -125,22 +140,6 @@ hugo.setup:
 		$(PODMAN) pull '$(HUGO_CTN_IMAGE)'
 	fi
 
-# General Hugo build recipe
-#
-# In general any file that exists in $(BUILD_DIR)/hugo must be built calling
-# Hugo. Some files that need to be externally generated are listed as
-# dependencies.
-#
-$(BUILD_DIR)/hugo/%: $(hugoBuildDeps)
-
-	@ exec $(PODMAN) run \
-		$(hugoCtnOptions) '$(HUGO_CTN_IMAGE)' $(hugoBaseOptions) \
-		$(HUGO_EXTRA_OPTIONS)
-
-# This recipe is a little artificial hook to allow other recipes to easily
-# depend on the existence of up-to-date Hugo output files.
-# `index.html` works as the only dependency because general Hugo rule builds
-# the whole site anyway.
-#
-.SILENT .PHONY: $(hugoBuildDir)/
-$(hugoBuildDir)/: $(hugoBuildDir)/index.html
+# General dependency rule for hugo-generated files
+$(hugoBuildDir)/%: $(hugoBuildDeps)
+	$(MAKE) hugo.build

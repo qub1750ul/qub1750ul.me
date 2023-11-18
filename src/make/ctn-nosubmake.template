@@ -32,5 +32,6 @@ ctn.$(name): ctn.$(name).build
 ctn.$(name).%:
 	@ echo "Entering directory '$(ctndir)'"
 	@ cd "$(ctndir)"
-	@ . ./env
+	@ echo "Setting up environment"
+	@ test -e env && . ./env 
 	. ./$(subst ctn.$(name).,,$@).sh

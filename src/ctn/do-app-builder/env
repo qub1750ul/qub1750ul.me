@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# THIS FILE IS SOURCED BY MAKE
+
+HEAD_COMMIT="$( git log -1 --pretty=%H )"
+
+IMAGE_NAME="www.qub1750ul.me/do-app-builder"
+CANONICAL_IMAGE_TAG="commit.${HEAD_COMMIT}"
+IMAGE_URI_PREFIXES=(
+	"docker://ghcr.io/qub1750ul"
+)
