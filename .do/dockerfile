@@ -13,4 +13,4 @@
 # For image sources check /src/ctn/do-app-builder
 
 FROM ghcr.io/qub1750ul/www.qub1750ul.me/do-app-builder:latest
-RUN make hugo.build
+RUN --mount=target=/mnt/projectRoot,rw make hugo.build

@@ -43,6 +43,6 @@ $BUILDAH run "$wctn" -- dnf -y install "${packages[@]}"
 $BUILDAH config --user podman "$wctn"
 
 # Start build by default
-$BUILDAH config --cmd "make hugo.build" "$wctn"
+$BUILDAH config --workingdir /mnt/projectRoot --cmd "make hugo.build" "$wctn"
 
 $BUILDAH commit "$wctn" "$IMAGE_NAME"
