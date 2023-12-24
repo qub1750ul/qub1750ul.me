@@ -1,5 +1,5 @@
 +++
-title = "Read"
+title = "Favourite articles"
 +++
 :toc:
 
@@ -46,3 +46,24 @@ https://apenwarr.ca/log/20190216
 
 == Crafting container images without Dockerfiles
 https://ochagavia.nl/blog/crafting-container-images-without-dockerfiles/
+
+== Email like a pro
+https://www.theregister.com/2023/08/23/email_like_a_pro/
+
+== War of the CI servers - GitLab vs GitHub vs Jenkins
+https://www.eficode.com/blog/war-of-the-ci-servers-gitlab-vs-github-vs-jenkins
+
+[quote]
+--
+Since their inception as little more than glorified shell scripts, continuous integration systems,
+or build servers as they were called, they have evolved from an exotic niche product to a central
+piece of any well-oiled software delivery project.
+
+Along with the rise of agile methodologies and Continuous Delivery practices, the CI server has
+moved towards the center stage in your development lifecycle.
+
+And while the market for CI servers is booming, it can be hard to tell the difference between them
+and choose which one to adopt. Should one choose Jenkins, GitLab CI, or maybe GitHub Actions?
+This blog post will guide you through the selection process and give you guidance for making the 
+optimal choice.
+--

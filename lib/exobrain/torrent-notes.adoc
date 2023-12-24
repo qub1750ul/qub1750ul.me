@@ -1,0 +1,36 @@
++++
+title = "Notes on BitTorrent technology"
++++
+
+This is a wiki-like page where i write down what i need know about
+BitTorrent.
+
+// Individual reposibility disclaimer here
+
+== Concepts
+
+=== What is BitTorrent
+=== What is a torrent
+=== What is a magnet URI
+=== What is a metalink
+
+== Torrenting mechanics
+
+=== Fetching files from BitTorrent network
+=== Managing a torrent collection
+=== Uploading files to the BitTorrent network
+=== Managing a seedbox
+
+== Privacy and security
+
+=== Data integrity and authentication
+=== Sharing sensible content
+
+== External resources
+
+* http://bittorrent.org/[BitTorrent protocol homepage]
+* https://magnet-uri.sourceforge.net/[MAGNET-URI specification homepage]
+* https://en.wikipedia.org/wiki/BitTorrent["BitTorrent" on Wikipedia]
+* https://en.wikipedia.org/wiki/Magnet_URI_scheme["Magnet URI scheme" on
+* Wikipedia]
+

@@ -1,0 +1,34 @@
++++
+title = "Tools"
+description = "A personal list of awesome(TM) tools"
++++
+
+== Awesome lists
+
+- https://www.bbkane.com/blog/diagram-tools/[Diagram tools]
+
+== Database development
+
+- https://github.com/schemaspy/schemaspy
+  SchemaSpy is a database metadata analyzer. It helps your database administors
+	and developers visualize, navigate and understand your data model.
+	With an easy-to-use HTML-based report, traversing the entity-relationship
+	diagram has never been simpler.
+
+- https://www.schemacrawler.com
+  SchemaCrawler is a free database schema discovery and comprehension tool.
+	SchemaCrawler has a good mix of useful features for data governance. You can 
+	search for database schema objects using regular expressions, and output the 
+	schema and data in a readable text format. The output serves for database 
+	documentation, and is designed to be diff-ed against other database schemas.
+	SchemaCrawler also generates schema diagrams. You can execute scripts in any
+	standard scripting language against your database. You can find potential
+	schema design issues with lint.
+
+== Secret scanning and leak prevention
+
+- https://spectralops.io/blog/top-9-git-secret-scanning-tools/
+
+- https://github.com/Yelp/detect-secrets
+  A nice scanning tool that can be integrated using Make  
+

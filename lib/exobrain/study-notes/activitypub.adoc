@@ -1,0 +1,14 @@
++++
+title = "About ActivityPub and the Fediverse"
++++
+
+== Index page of ActivityPub related material  
+  https://indieweb.org/ActivityPub
+
+== General commentary about ActivityPub: community, spec, impl, WG, and pain points   
+  https://overengineer.dev/blog/2019/01/13/activitypub-final-thoughts-one-year-later.html
+	
+== Implementing federation on static blogs  
+* https://gitlab.garrlab.it/greenfield/blog/-/issues/1[GARRLab Reference Implementation]
+* https://jlelse.blog/dev/activitystreams-hugo[Content federation in Hugo via ActivityStream]
+* https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/

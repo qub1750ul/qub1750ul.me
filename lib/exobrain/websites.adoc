@@ -1,5 +1,6 @@
 +++
-title = "Other"
+title = "Websites"
+description = "An annotated collection of cool, useful or amusing places on the web"
 +++
 :toc:
 
@@ -19,3 +20,4 @@ https://wireless.wiki.kernel.org
 
 .Tabs vs Spaces
 https://lea.verou.me/2012/01/why-tabs-are-clearly-superior
+

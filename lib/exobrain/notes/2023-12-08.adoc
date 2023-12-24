@@ -1,0 +1,8 @@
+== Nix ecosystem criticalities
+
+Nix is a very interesting project that aims to solve fundamental issues of
+traditional package management systems.
+However itself presents some issues that makes its adoption difficult.
+
+https://github.com/NixOS/nixpkgs/issues/93327#issuecomment-778546569
+

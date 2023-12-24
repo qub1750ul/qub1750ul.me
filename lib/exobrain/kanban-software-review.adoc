@@ -1,0 +1,109 @@
+﻿+++
+title = "Notes about the Kanban system"
++++
+
+## Planka
+
+_Reviewed on 2022-07-24_  
+Planka is a user-friendly Kanban built using React.js.  
+
+* Still in beta stage:
+	* lacks basic features such as username search and sort [#249](https://github.com/plankanban/planka/issues/249)  
+	* some configurations are only [half-supported](https://github.com/plankanban/planka/issues/272).  
+
+
+* UI is sleek, but problematic: 
+ * not tested with more than a few users, UI bugs appear as soon as user number increases [#250](https://github.com/plankanban/planka/issues/250)
+ 
+ 
+* Updates are quite complicated [#139](https://github.com/plankanban/planka/issues/139) and require [badly tested (at all ?) procedures](https://github.com/plankanban/planka/issues/242).
+
+* Update paths for breaking changes aren't managed appropriately, and often impraticable. [[issue #242]](https://github.com/plankanban/planka/issues/242)
+
+* Lacks any form of external auth.
+
+### Judgement
+
+Cool UX, but doesn't meet basic requirements for our use case.  
+Notably SSO.
+
+## Wekan
+_Reviewed on 2022-07-24_    
+Wekan is an enterprise-grade Kanban built using MeteorJS.  
+
+* The deployment procedure is... [WEIRDLY over-documented](https://github.com/wekan/wekan/blob/master/docker-compose.yml),
+  with a LOT of useless repetition, at the point that it is difficult to read.
+* The project website and info on the software in general is VERY chaotic and all over the place.
+* They claim the software is enterprise grade, but we could argue it seems built by a monkey.  
+  _( ~fdinucci: that's the reason why it is labeled as monkey-proof )_
+	
+* Dubious approaches in maintaining auth features, and questionable methods to approach standards and interop quirks implementation 
+
+* Disregard of fundamental security best practices:
+	* All config happens EXCLUSIVELY through environment variables
+	* This includes SECRETS, that can be [ONLY MANAGED IN PLAINTEXT](https://github.com/wekan/wekan/blob/760dde2c103c6de04042ccd1e9a1b28f78e8b604/docker-compose.yml#L343)
+
+
+* UX is enterprise grade, in the sense that is an "enterprise grade mess (TM)".
+	* UI is unpolished in a lot of places, it may appear broken when in reality it's not
+	* UI is confusing to approach in general
+	* A lot of UI options aren't documented ( even tooltips are missing ), and is not inutitive to understand how they work. 
+	* Head developer *refuses* to write user documentation, as it is deemed not important because "the software has proven monkey-proof".
+	  [Discussion #4522](https://github.com/wekan/wekan/discussions/4522)
+	
+	
+* Has a variuous external auth options, but management of these is kinda cumbersome.
+* Disparity in features among builds for different platforms, even trough is is a
+  _Node.js webapp_ built using a JS framework whose main feature is to "unify server and client environments" (???)
+* Various usability problems dating back at least to 2020, still unsolved as of today and unlikely to be solved soon. 
+
+
+### Judgement
+
+Has interesting features.  
+UX confusing for simple usage and a nightmare for complex workflows, also a security nightmare.  
+Cumbersome documentation and dubious development practices.
+
+## Taiga
+
+_Reviewed on 2022-10-22_  
+_Missing some details from @qub1750ul_  
+
+Taiga is a project management tool for Agile teams.
+
+* Deployment and Docs: @qub1750ul up to you
+
+* Mainly revolves around Scrum methods. It is possible to use it as a Kanban, but still the workflow is hevily influenced by  Scrum, with _user stories_ instead of tasks, _Epics_ that should group feedback from the user stories and a points system to determine more important tasks (points for UI/Design/Front/Back). Oh, the point system can't be disabled. And the labels can't be changed (eg. Ops instead of UI)
+
+* Rewards&Badges for users, based on eg. closed issues (Mr. Wolf) or who-knows-what (**Iocaine drinker**). Do we seriously need it?
+
+* Useless features in our use-case, such as issues, that are better managed on GitLab (due to linking to MR etc); or the whole Scrum section. We are not in a enterprise environment, sprints/due dates/customer requirements have no meaning. Or the whole part about interaction with external users, as this should be an internal-use-only tool.
+
+* Videochat integration: practically non existent, it is a link to an external service such as Jitsi. Btw, it lacks a text chat.
+
+* Wiki: nice to have, but we're using GitOps and Hugo for the documentation. And, by the way, it is really too basic to be a proper documentation wiki
+
+### Judgement
+
+Lots of features are not fit for our use case, it would just become a more complicated and resource-hungry version of Planka _~fdinucci_
+
+## Mattermost Boards
+
+_Currently in review_
+
+Mattermost boards is a kanban board platform available both as a plugin for the Mattermost platform, or as a standalone single-user application ( Focalboard ).
+
+* It suffers from dreadful _SSO Tax_: the free version has very limited authentication options.  
+  In particular we found that OIDC auth is artificially limited to GitLab instances. Fortunately for us self-hosted instances are supported, and our GitLab supports the RP role.
+
+* UX is polished, intuitive and overall user-friendly.
+
+* Boards are very flexible: for each board a multitude of _views_ can be created, allowing to have different customized perspectives on the same data.
+
+* It allows for flexible metadata management: each card can be arbitrarily enriched with strongly-typed structured fields.
+
+* Card metadata is reactive: it is smartly and automatically updated when it makes sense.
+
+### Judgement
+
+# Final considerations

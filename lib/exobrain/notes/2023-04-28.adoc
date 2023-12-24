@@ -10,5 +10,6 @@ This policy is quite rigid, with very few carefully considered exceptions.
 
 Why ?
 
+Let's say you want to take the lazy route and put everithing together without
+much regard.
 
-Let's say you want to take the lazy route and put everithing together without much regard.

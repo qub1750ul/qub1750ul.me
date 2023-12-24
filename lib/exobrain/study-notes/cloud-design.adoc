@@ -1,0 +1,26 @@
++++
+title = "Research notes on cloud design"
++++
+
+The LDAP Directory Schema: a Guide for the Newcomer  
+https://ldapcon.org/2015/wp-content/uploads/2015/10/The-LDAP-Directory-Schema-a-guide-for-the-newcomer-v3.pdf  
+
+LDAP schema design guide  
+https://www.skills-1st.co.uk/papers/ldap-schema-design-feb-2005/ldap-schema-design-feb-2005.html
+
+Google Cloud Architecture KB:
+Best practices for automatically provisioning and configuring edge and bare metal systems
+and servers  
+https://cloud.google.com/architecture/best-practices-provisioning-configuring-bare-metal
+
+NIST Cloud Computing Standards Roadmap (2011)  
+https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.500-291r2.pdf  
+
+IEEE Internet Computing Journal  
+Cloud Computing Standards: Where's the Beef?  
+https://ieeexplore.ieee.org/abstract/document/5755603
+
+IEEE Conference Proceedings  
+International Conference on Emerging eLearning Technologies and Applications (ICETA)  
+Overview of Cloud Computing Standards  
+https://ieeexplore.ieee.org/abstract/document/8572237  

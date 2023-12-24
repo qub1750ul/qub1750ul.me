@@ -1,0 +1,3 @@
+https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/
+https://davesteele.github.io/gpg/2015/08/01/intermediate-gpg/
+https://serverfault.com/questions/397973/gpg-why-am-i-encrypting-with-subkey-instead-of-primary-key

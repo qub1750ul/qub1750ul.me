@@ -2,6 +2,11 @@
 title = "Carne & Fornelli"
 +++
 
+A list of tested burger recipes from
+http://www.carneefornelli.com/[Carne&Fornelli],
+a butcher and gastonomy shop that does diner service in the evening.
+They're located in Lancusi (SA), offer home delivery, and the food is amazing.
+
 == Gold Standard
 
 - Hamburger di Scottona

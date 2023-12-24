@@ -1,0 +1,24 @@
+﻿+++
+title = "PGSQL config overlaying methods"
++++
+
+== Status of this Memo
+
+
+== Abstract
+
+These are research notes about solving a very specific problem:
+
+- I need to patch a vendor-app-managed database with user code
+
+=== Requirements
+
+NOTE: This section SHOULD be interpreted as described in IETF RFC 2119 and relative errata.  
+- The patch MUST be idempotently applicable and removable, without affecting system
+  integrity.
+- The (un)patching process SHOULD be easy to operate, e.g. by executing an Ansible 
+  playbook. 
+- Operation of the (un)patching process SHOULD bring the database in one of two possible
+  configuration states, replicating respectively the following situations:  
+	* The database has never been patched, and so matches vendor configuration  
+	* The database has been patched from the start

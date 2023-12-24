@@ -158,7 +158,6 @@ What was this chapter about ?
 
 Introducing object-oriented software design principles, processes and tools, higlighting related idiosycraties.
 
---
 The objectives of this chapter are to introduce object-oriented software 
 design using the UML and highlight important implementation concerns.
 

@@ -1,4 +1,0 @@
-+++
-title = "Makefile Conventions"
-category = "devart"
-+++

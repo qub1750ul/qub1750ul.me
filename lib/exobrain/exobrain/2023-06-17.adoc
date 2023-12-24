@@ -9,7 +9,8 @@ isn't from the codegen one, this mainly due to the underlying Asciidoctor
 codegen combined with the inflexibility of certain Hugo features. +
 The table of contents for example results in this:
 
-```html
+[html]
+--
 <nav id="TableOfContents">
 	
 	<h1>Table of Contents</h1>
@@ -32,8 +33,9 @@ The table of contents for example results in this:
 	<nav id="TableOfContents"></nav>
 		
 	<nav id="TableOfContents"></nav>
+
 </nav>	
-```
+--
 
 TODO: Figure out how to customize Asciidoctor codegen
 

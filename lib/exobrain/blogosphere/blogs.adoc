@@ -1,5 +1,5 @@
 +++
-title = "Blogs"
+title = "Favourite blogs"
 +++
 :toc:
 
@@ -58,6 +58,11 @@ of articles.
 === public voit - Home page of Karl Voit
 https://karl-voit.at
 
+=== ∑ Xah Code
+http://xahlee.info
+
+A blog of the "ugly but damn interesting" type
+
 == Friends
 
 === Alberto Ventafridda
@@ -85,3 +90,4 @@ https://dvblog.soabit.com
 
 === Marco Russo
 https://mrusso99.com/
+
