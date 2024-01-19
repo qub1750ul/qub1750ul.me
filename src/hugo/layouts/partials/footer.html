@@ -1,6 +1,7 @@
 {{- $buildInfo := getJSON "../../build/buildinfo.json" -}}
 
 <nav>
+	<a href="{{ .Site.Params.license.url }}" target="_blank">License</a>
 	<a href="/credits">Credits</a>
 	<a href="/history">History</a>
 </nav>
@@ -8,10 +9,25 @@
 <div style="margin: 1rem"></div>
 
 <div>
-	Page last modified on {{ .Lastmod }}<br/>
+
+	Page last modified on {{ .Lastmod }}.<br>
+
+	{{/*  Build information  */}}
 	{{ with $buildInfo }}
 		Built from commit
 		<abbr title="{{ .git.commitHash }}">{{ .git.shortCommitHash }}</abbr>
-		on {{ .git.commitDate }}
+		on {{ .git.commitDate }}.<br>
 	{{ end }}
+
+	{{/* Copyright statement
+		 * IMPORTANT: Machine-readable license data lives in document head
+		 */}}
+	Copyleft &copy;
+	{{ with .Params.pubDate }}{{ dateFormat . "2006" }}-{{ end -}}
+	{{- dateFormat "2006" now }}
+	{{ .Site.Params.license.rightsHolder -}}.<br>
+	<a href="http://creativecommons.org/licenses/by-sa/4.0/">
+		<img src="/img/CC-BY-SA-icon-orange.svg" alt="cc by-sa logo">
+	</a>
+
 </div>

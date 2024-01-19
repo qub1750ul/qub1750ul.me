@@ -1,20 +1,51 @@
+{{/*************************************************************************\}}
+                                  head.html
+{{\*************************************************************************/}}
+
+{{/*
+   * Get page title from page attributes.
+   * If not possible, generate one from content file name.
+   */}}
 <title>
-
-	{{/*
-	   * Get page title from page attributes.
-	   * If not possible, generate one from content file name.
-	   */}}
-
 	{{ if not .IsHome }}
 		{{ $pageTitle := default ( replace .File.BaseFileName "-" " " ) .Title | title }}
 		{{ print $pageTitle " | " }}
 	{{ end }}
 	{{ .Site.Title }}
-
 </title>
+
+{{/*************************************************************************\}}
+   * Page metadata
+{{\*************************************************************************/}}
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="author" content="{{ .Site.Params.license.rightsHolder }}">
+<meta name="color-scheme" content="dark">
+{{ with .Params.tagline }}
+	<meta name="description" content="{{.}}">
+{{ end }}
+
+<!-- Machine-readable copyright statement -->
+<span hidden="true" xmlns:cc="http://creativecommons.org/ns#">
+	<a
+		rel="cc:attributionURL dct:creator"
+		property="cc:attributionName"
+		href='{{ ( .Site.GetPage "/" ).Permalink }}'
+	>
+		{{- .Site.Params.license.rightsHolder -}}
+	</a>
+	<a rel="cc:attributionURL" href="{{ .Permalink }}">{{ .Site.Title }}</a>
+	<a
+		rel="license noopener noreferrer" 
+		href="http://creativecommons.org/licenses/by-sa/4.0/" 
+	>
+		{{- .Site.Params.license.id -}}
+	</a>
+</span>
+
+{{/*  Related documents  */}}
 
 <link rel="stylesheet" href="/css/baseof.css"/>
 

@@ -9,8 +9,13 @@ enableGitInfo = true
 enableInlineShortcodes = true
 destination = "/mnt/projectRoot/build/hugo"
 
-[params]
-gitRepo = "https://github.com/qub1750ul/qub1750ul.me/"
+[Params]
+gitRepoUrl = "https://github.com/qub1750ul/qub1750ul.me/"
+
+[Params.license]
+rightsHolder = "Giuseppe Masino"
+url = "http://creativecommons.org/licenses/by-sa/4.0/"
+id = "CC BY-SA 4.0"
 
 [permalinks]
 #	"blog" = "/:section/:year/:month/:title/"
