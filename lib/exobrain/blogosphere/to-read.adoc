@@ -1,48 +1,38 @@
 +++
 title = "Articles to read"
 +++
-:toc:
 
-- https://www.linusakesson.net/programming/tty/[TTY demystified]
-- https://xeiaso.net/blog/anything-message-queue
-- https://jvns.ca/blog/2023/06/05/some-blogging-myths/#myth-you-need-to-explain-every-concept
-
-== Awesome lists
-https://github.com/kdeldycke/awesome-iam#account-management  
-
-== Documentation
-https://docsfordevelopers.com/
-https://stackoverflow.blog/2022/06/21/an-engineers-field-guide-to-great-technical-writing-ep-455/?cb=1
-
-Bad usages of Protocol Buffers  
-https://developers.google.com/protocol-buffers/docs/overview#not-good-fit  
-
-== Etnography
-https://worldpece.org/
-
-== Other essays
-
-https://tanzu.vmware.com/developer/blog/the-hate-for-yaml-the-hammer-or-the-nail/  
-https://growth.design/psychology#hicks-law  
-https://publicsuffix.org/  
-
-https://github.com/readme/featured/vintage-computing  
-
-== CNCF Blog
-
-https://www.cncf.io/blog/2022/04/27/are-the-three-pillars-of-observability-still-relevant/  
-https://www.cncf.io/blog/2022/10/20/infrastructure-for-apps-platforms-for-cooperative-delivery/  
-https://www.cncf.io/blog/2022/10/25/opentelemetry-demo-now-generally-available/  
-https://www.cncf.io/blog/2022/10/17/how-to-setup-blue-green-deployments-with-dns-routing/  
-
-https://www.businesswire.com/news/home/20221025005368/en/Documentary-Film-%E2%80%9CInside-Prometheus%E2%80%9D-Highlights-Open-Source-Impact-and-the-Innovators-That-Make-it-Happen
-
-== HackerNews
-https://news.ycombinator.com/item?id=8697772[Ask HN: How or where to begin learning mathematics from first principles?]
-
-== Other
-https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/
-https://www.slice.zone/blog/nix-in-practice
-https://beepb00p.xyz/unnecessary-db.html
-https://beepb00p.xyz/grasp.html
-
+* https://bsky.app/profile/adamkotsko.bsky.social/post/3kl5fafwzkk2z
+* https://janert.me/guides/hugo-survival-guide/[A Hugo Survival Guide - Philipp K. Janert, Ph.D.]
+* https://www.simplilearn.com/difference-between-terraform-vs-ansible-article#when_should_you_not_use_ansible_or_terraform[Terraform vs Ansible: Their Differences, and When to Use or Not]
+* https://cohost.org/tef/post/1764930-how-not-to-write-a[how (not) to write a pipeline]
+* https://ersei.net/en/blog/its-nixin-time[NixOS and my Descent into Insanity | Ersei 'n Stuff]
+* https://richardbucker.com/posts/lcx-or-docker/[LXC or Docker - Richard Bucker]
+* https://thenewstack.io/kelsey-hightower-on-open-source-pitfalls-and-challenges/[Kelsey Hightower on Open Source Pitfalls and Challenges]
+* https://www.youtube.com/watch?v=IlJ5vJGydWw[NUCLEARE o RINNOVABILI: su cosa puntare per la transizione energetica in Italia?]
+* https://fasterthanli.me/articles/abstracting-away-correctness[fasterthanli.me: Abstracting away correctness]
+* https://www.linusakesson.net/programming/tty/[TTY demystified]
+* https://xeiaso.net/blog/anything-message-queue
+* https://jvns.ca/blog/2023/06/05/some-blogging-myths/#myth-you-need-to-explain-every-concept
+* https://github.com/kdeldycke/awesome-iam#account-management 
+* https://docsfordevelopers.com
+* https://stackoverflow.blog/2022/06/21/an-engineers-field-guide-to-great-technical-writing-ep-455/?cb=1
+* https://developers.google.com/protocol-buffers/docs/overview#not-good-fit[Bad usages of Protocol Buffers]
+* https://worldpece.org/
+* https://tanzu.vmware.com/developer/blog/the-hate-for-yaml-the-hammer-or-the-nail/  
+* https://growth.design/psychology#hicks-law  
+* https://publicsuffix.org/  
+* https://github.com/readme/featured/vintage-computing
+* https://www.cncf.io/blog/2022/04/27/are-the-three-pillars-of-observability-still-relevant/  
+* https://www.cncf.io/blog/2022/10/20/infrastructure-for-apps-platforms-for-cooperative-delivery/  
+* https://www.cncf.io/blog/2022/10/25/opentelemetry-demo-now-generally-available/  
+* https://www.cncf.io/blog/2022/10/17/how-to-setup-blue-green-deployments-with-dns-routing/  
+* https://www.businesswire.com/news/home/20221025005368/en/Documentary-Film-%E2%80%9CInside-Prometheus%E2%80%9D-Highlights-Open-Source-Impact-and-the-Innovators-That-Make-it-Happen
+* https://news.ycombinator.com/item?id=8697772[Ask HN: How or where to begin learning mathematics from first principles?]
+* https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/
+* https://www.slice.zone/blog/nix-in-practice
+* https://beepb00p.xyz/unnecessary-db.html
+* https://beepb00p.xyz/grasp.html
+* https://journals.sagepub.com/doi/full/10.1177/0963662519888757[From self-tracking to self-expertise: The production of self-related knowledge by doing personal science]
+* https://www.w3.org/TR/html-data-guide/
+* https://arie.ls/2016/typography-for-user-interfaces/

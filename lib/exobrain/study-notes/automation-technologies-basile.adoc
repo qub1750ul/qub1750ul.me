@@ -1,0 +1,82 @@
+Gaethered from "Tecnologie informatiche per l'automazione ( 2nd edition ), Pasquale Chiacchio - Francesco Basile" ISBN-10: 88-386-6147-2
+
+while preparing for the exam of "Information technologies for control systems", lectured by prof. Francesco Basile at University of Salerno, Italy during 1st semester A.A. 2022-2023
+
+by Giuseppe Masino, at the time student of B.Sc. in Informatics Engineering from A.A. 2018-2019
+
+== Preface
+
+These notes are not a replacement to studying the source material, as they are very sparse and dry. These are published for use as a tool for comparative verification of learning goals for the serious student.
+
+Original source material is in Italian, eventual references are being adapted to English.
+
+=== Structure of this document
+
+A section for each read chapter of the textbook.
+For each chapter i produce a brief synthesis and a bullet list of key points to keep in mind.
+An optional section of original commentary may be provided.
+
+When deemed appropriate, dedicated sections for subchapters are provided.
+
+== Ch.4 Sequential Function Chart
+
+=== What is this chapter about ?
+=== Key points
+=== Commentary
+
+==== Requirements engineering and systematic algorithm sketching
+
+OOD tecniques are suitable.
+
+== Ch.11 Computer networks for automation
+
+=== What is this chapter about ?
+Presenting the main networking technologies used in CIM and generic DCS environments
+
+=== Key points
+* Computer networks are an essential part of any Enterprise System that leverages CIM;
+* The OSI model is used as a reference framework to define network architectures, with some additional provisions specifically for automation-oriented ones:
+** L4 Transport protocols implement transmission reliability features;
+** L5 Session protocols implement syncronization features and in general, e2e logical channel management.
+* Main differentiators for network technologies are **topology**, **physical link type** and **access protocol**;
+* Subfunctions of the L2 **access protocol**:
+** while receiving, identify sernder and receiver nodes of a given message;
+** while transmitting, avoid simultaneous access conflicts among different nodes;
+*** Access coordination schemes: Leader/Follower, Token passing, CSMA/CD, CSMA/BA , TDMA.
+* L2 network standards: Full Ethernet, Token Bus; 
+
+* In CIM contexts network requirements are varied, and target a few different application domains. For reference, three categories of networks are considered:
+** Information networks: CIM L4+, Ethernet
+** Control networks: CIM L2-4, Token passing or Switched or Proprietary
+** Field networks: CIM L1-2
+
+=== Commentary
+
+== Ch. 11.6 Field networks
+=== What is this chapter about ?
+Illustrating what field networks are, their features and advantages, compared both to other automation network types and classical CIM-L1 architectures.
+
+=== Key points
+
+[NOTE]
+--
+expand and reformulate the following
+--
+* Field networks improve over classical arrays of controller-device links in a number of ways, presuming that now sensors and actuators now have computational power:
+** easier expansion and reconfigurability;
+** reduction in cabling, given the opportunity of more sophisticated topologies, encoding schemes and integration of functionality over the same channel like data+power; 
+** richer messaging and more powerful protocols;
+** smaller control loops;
+** remote operations against field devices;
+** added robustness given by usage of digital protocols;
+
+* There are three de-facto classes of field networks:
+** sensor-buses, which are bit-oriented;
+** device-buses, which are byte-oriented;
+** field-buses, which are block oriented.
+
+* Field-buses are the more sophisticated type, and fully embody the idea of field network. These busses are typically based on a 4 level architecture, implementing OSI L1-2-7 plus a superior one (OSI pseudo-L8) named "User". The user level specifies high-level network functions, to be implemented as standard routines (e.g. function blocks) and services that must be installed on each partecipating device. This allows the user to operate against a highly abstracted model of the network (See "Engineering System" in DCS. n.d.r.). Popular industry-standard implementations are Foundation FieldBus and Profibus.
+
+* Devices-buses are essentially light versions of field-buses, implementing OSI L1-2 and only a few L7 functions. Poupular industry-standard implementations are InterBus-S, DeviceNet and SDS.
+
+* Sensor-buses are the simplest type of field networks, and are conceptually closer to traditional field architectures. The main goal is reduction of cabling via link concentration, and are thus very simple to integrate with traditional (signal-oriented) field devices. Popular industry-standard implementations are ASI and Seriplex.

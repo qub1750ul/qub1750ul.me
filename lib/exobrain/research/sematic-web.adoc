@@ -1,0 +1,5 @@
+* https://www.w3.org/TR/html-data-guide/
+* https://html.spec.whatwg.org/multipage/microdata.html
+* https://www.w3.org/TR/xhtml-rdfa-primer/
+* https://webdatacommons.org/structureddata/
+* https://www.w3.org/TR/rdfa-in-html/

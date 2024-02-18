@@ -3,6 +3,32 @@ title = "Favourite articles"
 +++
 :toc:
 
+== Give constructive proofs of your ideas
+https://catern.com/constructive.html
+
+== Docker Considered Harmful
+https://catern.com/posts/docker.html
+
+[quote]
+--
+Docker is extremely popular these days. Too bad it's not very good.
+
+A note in advance: This is absolutely not about Docker being too "opinionated"
+for me, or other tools being more flexible. I believe that learning and using
+Docker is just plain more complicated than learning and using the tools I
+describe below. Docker is genuinely more complex and harder to use than the
+alternatives. These tools also happen to be more flexible than Docker, but
+that's not why I'm recommending them: I'm recommending them because they are
+simpler to learn and use. If they are indeed more flexible in addition to being
+simpler to use, then that's just due to an overall superior design. 
+--
+
+== Buying guide to the best pencils for technical design
+https://www.momarte.com/blog/per-iniziare/guida-allacquisto-delle-migliori-matite-per-il-disegno-tecnico
+
+== How to choose a graphite pencil ?
+https://www.momarte.com/blog/per-iniziare/come-scegliere-le-matite-da-disegno-in-grafite
+
 == How to use zettelkasten as a programmer
 https://theproductiveengineer.net/how-to-use-zettelkasten-as-a-programmer-or-developer/
 
@@ -21,19 +47,21 @@ https://karl-voit.at/2020/01/25/avoid-complex-folder-hierarchies/
 by Ken Bellows +
 https://dev.to/kenbellows/stop-using-so-many-divs-an-intro-to-semantic-html-3i9i
 
-> Authors are strongly encouraged to view the div element as an element of last resort,
-> for when no other element is suitable.
-> Use of more appropriate elements instead of the div element leads to better accessibility
+> Authors are strongly encouraged to view the div element as an element of last
+> resort, for when no other element is suitable. Use of more appropriate
+> elements instead of the div element leads to better accessibility
 > for readers and easier maintainability for authors.
 
 == The log/event processing pipeline you can't have
 https://apenwarr.ca/log/20190216
 
-> Lately, I've had a surprisingly large number of conversations about logs processing pipelines.
-> I can find probably 10+ already-funded, seemingly successful startups processing logs, and the
-> Big Name Cloud providers all have some kind of logs thingy, but still, people are not satisfied.
-> It's expensive and slow. And if you complain, you mostly get told that you shouldn't be using
-> unstructured logs anyway, you should be using event streams.
+> Lately, I've had a surprisingly large number of conversations about logs
+> processing pipelines. I can find probably 10+ already-funded, seemingly
+> successful startups processing logs, and the Big Name Cloud providers all
+> have some kind of logs thingy, but still, people are not satisfied.
+> It's expensive and slow. And if you complain, you mostly get told that you
+> shouldn't be using unstructured logs anyway, you should be using event
+> streams.
 >
 > That advice is not wrong, but it's incomplete.
 >
