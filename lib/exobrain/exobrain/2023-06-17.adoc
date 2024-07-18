@@ -37,7 +37,12 @@ The table of contents for example results in this:
 </nav>	
 --
 
-TODO: Figure out how to customize Asciidoctor codegen
+[DONE,open=2023-06-17,close=2024-02-23]
+--
+* Figure out how to customize Asciidoctor codegen
+** https://github.com/asciidoctor/jekyll-asciidoc#step-5-compose-a-template
+** https://github.com/asciidoctor/asciidoctor/issues/3533
+--
 
 Overall this tecnique is is still an inferior solution to the data driven one,
 but it's slighly better than before.

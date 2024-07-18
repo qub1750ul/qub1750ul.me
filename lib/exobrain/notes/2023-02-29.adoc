@@ -1,0 +1,4 @@
+== Write libnotify notifications to file
+
+TODO: Fork and write a proper build script for this 
+https://github.com/erickloeckner/dbus-notifyd

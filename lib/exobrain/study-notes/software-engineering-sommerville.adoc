@@ -20,7 +20,7 @@ as they are very sparse and dry.
 These are published for use as a tool for comparative verification of learning
 goals for the serious student.
 
-=== Strcture of this document
+=== Structure of this document
 
 A section for each read chapter.
 For each chapter i produce a breaf synthesis and a bullet list of key points
@@ -156,8 +156,10 @@ About application architectures:
 
 What was this chapter about ?
 
-Introducing object-oriented software design principles, processes and tools, higlighting related idiosycraties.
+Introducing object-oriented software design principles, processes and tools,
+higlighting related idiosycraties.
 
+- - - -
 The objectives of this chapter are to introduce object-oriented software 
 design using the UML and highlight important implementation concerns.
 

@@ -1,4 +1,0 @@
-+++
-title = "Site"
-description = "Notes about this website at large"
-+++

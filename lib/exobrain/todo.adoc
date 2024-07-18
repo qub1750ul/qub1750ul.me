@@ -1,0 +1,19 @@
++++
+title = "TODO"
+description = "A non-sparse context-free todo list"
++++
+:toc:
+:toclevels: 1
+
+* fix noteless
+* setup STUN service on oraclesrv
+* personal-cloud: write automated bootstrap system +
+  See sync/share/shell-conf.sh
+* termux: setup automation
+* adoc: fix weird HTML codegen
+** https://github.com/asciidoctor/jekyll-asciidoc#step-5-compose-a-template
+** https://github.com/asciidoctor/asciidoctor/issues/3533
+
+* urlstash: quick command to add stuff to eb lists
+* change website color scheme to #ff832b/#000000
+* fix nvim dynamic column resize

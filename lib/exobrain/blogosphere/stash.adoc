@@ -1,0 +1,13 @@
++++
+title = "Stash of random articles"
+description = "Random stash of read articles, with little curation"
++++
+
+* https://mischavandenburg.com/zet/neovim-zettelkasten/
+* https://codeinthehole.com/tips/debugging-vim-by-example/
+* https://www.reddit.com/r/neovim/comments/wicvqu/how_to_debug_my_config/
+* https://www.reddit.com/r/ItalyInformatica/comments/1cjxwx9/ma_vaffa_stampante_laser_hp/?share_id=wMR9TFXEKs27Gk2qUc3pi
+* https://www.hillelwayne.com/post/flossing/
+* https://subtxt.in/digital-libraries/2015/05/09/youtube_preservation
+* https://nynp.dev/logs/excalidraw-vscode-dx/
+* https://www.namecheap.com/guru-guides/how-to-choose-the-best-domain-name-dp/

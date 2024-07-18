@@ -1,0 +1,31 @@
+---
+title: "OpenSSL usage notes"
+---
+
+== Create a self-signed TLS cert
+
+* Create a private key (PEM encoded)
+
+[shell]
+--
+openssl genpkey -algorithm ed25519 -out ssl.pkey
+--
+
+* To create a certificate we need to request one to a CA (in this case
+* ourselves). Create a CSR (Certificate Signing Request), fill it
+* (interactiverly) with details of the cert to generate and sign it with our
+* private key.
+
+[shell]
+--
+openssl req -new -key ssl.pkey -out csr
+--
+
+* (Wears the CA hat)
+* Accept the CSR, generate the requested cert, make it last 1y, and sign it with our private key
+
+[shell]
+--
+openssl x509 -req -in csr -signkey ssl.pkey -days 365 -out domain.crt
+--
+

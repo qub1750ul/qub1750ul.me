@@ -1,4 +1,5 @@
 == Blogpost idea: dealing with bad containers
+keyw::[blogpost]
 
 Talk about:
 - containers that do not allow to mount config in a volume-friendly way

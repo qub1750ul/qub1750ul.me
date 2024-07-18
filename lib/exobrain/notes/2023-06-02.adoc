@@ -1,4 +1,4 @@
 == A small glossary for the Web2.x platform
 
-There is a lot of confusion among my peers about the web platform.
+There is a lot of confusion among my peers about the web platform. What sources are authoritative to define e.g. microservices?
 

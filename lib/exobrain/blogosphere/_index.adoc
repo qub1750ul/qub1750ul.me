@@ -1,4 +1,3 @@
 +++
 title = "Blogosphere"
-description = "A list of interesting posts from the blogospehere"
 +++

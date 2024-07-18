@@ -1,0 +1,8 @@
++++
+title = "Fuzzyman: a better 'man' command"
++++
+
+== See also
+
+https://cozy.computer/manual-pages-and-using-vim-as-the-manual-pager-on-ubuntu-linux[]
+* https://github.com/zigalenarcic/mangl[zigalenarcic/mangl - An enhanced man page viewer for linux and BSD systems based on OpenGL and mandoc]

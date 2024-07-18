@@ -1,0 +1,7 @@
+== Line wrapping
+
+Hard wrapping is a must for every file to be processed by line-oriented software, like most unix tools or compiler.
+
+Some files do not play well with hard wrapping (e.g git COMMIT_EDITMSG) or is not useful (ADOC files).
+footnote:[https://asciidoctor.org/docs/asciidoc-recommended-practices/]
+

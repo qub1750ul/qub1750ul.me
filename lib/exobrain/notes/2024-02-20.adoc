@@ -1,0 +1,11 @@
+== My gripes with NixOS
+keyw:[nixos, package management, rant]
+
+NixOS is a linux distribution based on Nix, a revolutionary package manager that fixes many fundamental issues of previous generation package managers such as APT and pacman.
+
+While i myself am entusiastic about it, it has several issues that hinder its adoption, reducing it essentially to "Gentoo with extra steps":
+
+* nix cli utilities are badly designed
+* Too hard to downgrade packages
+* Not actually reproducible
+** Addressed by flakes?

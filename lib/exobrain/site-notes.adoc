@@ -1,0 +1,24 @@
++++
+title = "Notes about www.qub1705ul.me"
++++
+
+* The website should be as static as possible, without sacrificing functionality.
+
+* For discussion to happen the blog must transparently tap in the existing social network fabric.
+** TODO: Seek fediverse integration for comments
+
+[todo]
+--
+* Setup IndieAuth
+* EX: Make sections collapsible in exobrain root
+* EX: Set text-indent CSS property on note sections
+* CV: Remove photograph
+* CV: Make machine-readable
+--
+
+== Code to add
+
+<link rel="me authn" href="https://github.com/qub1750ul">
+<link rel="me authn" href="mailto:auth@qub1750ul.me>
+<link rel="pgpkey authn" href=""/keys/qub1750ul.pub">
+

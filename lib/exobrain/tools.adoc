@@ -2,38 +2,40 @@
 title = "Tools"
 description = "A personal list of awesome(TM) tools"
 +++
+:toc:
+:toclevels: 2
 
 == Awesome lists
 
-- https://www.bbkane.com/blog/diagram-tools/[Diagram tools]
+* https://www.bbkane.com/blog/diagram-tools/[Diagram tools]
 
 == Database development
 
-- https://github.com/schemaspy/schemaspy
+* https://github.com/schemaspy/schemaspy
   SchemaSpy is a database metadata analyzer. It helps your database administors
-	and developers visualize, navigate and understand your data model.
-	With an easy-to-use HTML-based report, traversing the entity-relationship
-	diagram has never been simpler.
+  and developers visualize, navigate and understand your data model.
+  With an easy-to-use HTML-based report, traversing the entity-relationship
+  diagram has never been simpler.
 
-- https://www.schemacrawler.com
+* https://www.schemacrawler.com
   SchemaCrawler is a free database schema discovery and comprehension tool.
-	SchemaCrawler has a good mix of useful features for data governance. You can 
-	search for database schema objects using regular expressions, and output the 
-	schema and data in a readable text format. The output serves for database 
-	documentation, and is designed to be diff-ed against other database schemas.
-	SchemaCrawler also generates schema diagrams. You can execute scripts in any
-	standard scripting language against your database. You can find potential
-	schema design issues with lint.
+  SchemaCrawler has a good mix of useful features for data governance. You can 
+  search for database schema objects using regular expressions, and output the 
+  schema and data in a readable text format. The output serves for database 
+  documentation, and is designed to be diff-ed against other database schemas.
+  SchemaCrawler also generates schema diagrams. You can execute scripts in any
+  standard scripting language against your database. You can find potential
+  schema design issues with lint.
 
 == Secret scanning and leak prevention
 
-- https://spectralops.io/blog/top-9-git-secret-scanning-tools/
+* https://spectralops.io/blog/top-9-git-secret-scanning-tools/
 
-- https://github.com/Yelp/detect-secrets
+* https://github.com/Yelp/detect-secrets
   A nice scanning tool that can be integrated using Make  
 
 == Hardware simulation
 
-- https://github.com/buserror/simavr
+* https://github.com/buserror/simavr
   simavr is an AVR simulator for linux, or any platform that uses avr-gcc.
   It uses avr-gcc's own register definition to simplify creating new targets for supported AVR devices. The core was made to be small and compact, and hackable so allow quick prototyping of an AVR project. The AVR core is now stable for use with parts with <= 128KB flash, and with preliminary support for the bigger parts. The simulator loads ELF files directly, and there is even a way to specify simulation parameters directly in the emulated code using an .elf section. You can also load multipart HEX files.

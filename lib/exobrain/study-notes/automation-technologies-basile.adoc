@@ -40,9 +40,9 @@ Presenting the main networking technologies used in CIM and generic DCS environm
 ** L5 Session protocols implement syncronization features and in general, e2e logical channel management.
 * Main differentiators for network technologies are **topology**, **physical link type** and **access protocol**;
 * Subfunctions of the L2 **access protocol**:
-** while receiving, identify sernder and receiver nodes of a given message;
+** while receiving, identify sender and receiver nodes of a given message;
 ** while transmitting, avoid simultaneous access conflicts among different nodes;
-*** Access coordination schemes: Leader/Follower, Token passing, CSMA/CD, CSMA/BA , TDMA.
+*** Access coordination schemes: Leader/Follower, Token passing, CSMA/CD, CSMA/BA, TDMA.
 * L2 network standards: Full Ethernet, Token Bus; 
 
 * In CIM contexts network requirements are varied, and target a few different application domains. For reference, three categories of networks are considered:
@@ -58,11 +58,11 @@ Illustrating what field networks are, their features and advantages, compared bo
 
 === Key points
 
-[NOTE]
+[TODO]
 --
 expand and reformulate the following
 --
-* Field networks improve over classical arrays of controller-device links in a number of ways, presuming that now sensors and actuators now have computational power:
+* Field networks improve over classical arrays of controller-device links in a number of ways, presuming the use of sensors and actuators with some on-board computational power:
 ** easier expansion and reconfigurability;
 ** reduction in cabling, given the opportunity of more sophisticated topologies, encoding schemes and integration of functionality over the same channel like data+power; 
 ** richer messaging and more powerful protocols;
@@ -75,8 +75,9 @@ expand and reformulate the following
 ** device-buses, which are byte-oriented;
 ** field-buses, which are block oriented.
 
-* Field-buses are the more sophisticated type, and fully embody the idea of field network. These busses are typically based on a 4 level architecture, implementing OSI L1-2-7 plus a superior one (OSI pseudo-L8) named "User". The user level specifies high-level network functions, to be implemented as standard routines (e.g. function blocks) and services that must be installed on each partecipating device. This allows the user to operate against a highly abstracted model of the network (See "Engineering System" in DCS. n.d.r.). Popular industry-standard implementations are Foundation FieldBus and Profibus.
+* Field-buses are the more sophisticated type, and fully embody the idea of field network. These busses are typically based on a 4 level architecture, implementing OSI L1-2-7 plus an additional one (OSI pseudo-L8) nicknamed "User". The user level specifies high-level network functions, to be implemented as standard routines (e.g. function blocks) and services that must be installed on each partecipating device. This allows the user to operate against a highly abstracted model of the network (See "Engineering System" in DCS. n.d.r.). Popular industry-standard implementations are Foundation FieldBus and Profibus.
 
-* Devices-buses are essentially light versions of field-buses, implementing OSI L1-2 and only a few L7 functions. Poupular industry-standard implementations are InterBus-S, DeviceNet and SDS.
+* Devices-buses are essentially light versions of field-buses, implementing OSI L1-2 and only a few selected L7 functions. Poupular industry-standard implementations are InterBus-S, DeviceNet and SDS.
 
 * Sensor-buses are the simplest type of field networks, and are conceptually closer to traditional field architectures. The main goal is reduction of cabling via link concentration, and are thus very simple to integrate with traditional (signal-oriented) field devices. Popular industry-standard implementations are ASI and Seriplex.
+

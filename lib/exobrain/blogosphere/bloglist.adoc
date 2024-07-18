@@ -3,18 +3,6 @@ title = "Favourite blogs"
 +++
 :toc:
 
-[NOTE]
---
-This page is a list of sites i like. +
-Each entry is organized in the following format:
-
-- Short title
-- Main URL
-- About page
-- Themes ?
-- Personal tought
---
-
 == Specer Baugh's blog
 https://catern.com
 
@@ -28,21 +16,23 @@ https://jvns.ca
 About: https://jvns.ca/about/
 
 This blog is about
-- being delighted about programming
-- showing how topics traditionally considered “hard” and “scary” are actually accessible and
-  interesting and fun (TCP! / Kernel hacking! / Traceroute! / gzip! / databases! / SSL!)
-- asking questions and getting better every day.
-- how being clear & curious & humble is better than sounding like I know it all already
-- experimenting with alternative ways to teach hard concepts (zines!)
+* being delighted about programming
+* showing how topics traditionally considered “hard” and “scary” are actually
+  accessible and interesting and fun (TCP! / Kernel hacking! / Traceroute! /
+	gzip! / databases! / SSL!)
+* asking questions and getting better every day.
+* how being clear & curious & humble is better than sounding like I know it all
+  already
+* experimenting with alternative ways to teach hard concepts (zines!)
 
 == Matt Might's blog
 http://matt.might.net
 
-Dr. Matthew Might has been A CS and Internal Medicine professor
-at the University of Alabama at Birmingham. +
+Dr. Matthew Might has been A CS and Internal Medicine professor at the
+University of Alabama at Birmingham.
 The articles on his blog cover various topics:
-life hacking, computing and programming languages theory and tips,
-academic life tips.
+life hacking, computing and programming languages theory and tips, academic
+life tips.
 
 == The Overflow
 https://stackoverflow.blog
@@ -95,11 +85,11 @@ https://dvblog.soabit.com
 --
 I really like to spend time:
 
-- investigating networking news and problems (at least in LAN and small WAN
+* investigating networking news and problems (at least in LAN and small WAN
   environments; from Ethernet to IPv4, up to BGP);
-- improving my skills in system administration, expecially GNU/Linux
+* improving my skills in system administration, expecially GNU/Linux
   environments;
-- getting my hands on top of current Web 2.0 development standards (I started
+* getting my hands on top of current Web 2.0 development standards (I started
   enjoying AngularJS and Bootstrap one year ago, when I finally understood
   that Javascript is no more what I knew lots and lots of year ago…)
 --

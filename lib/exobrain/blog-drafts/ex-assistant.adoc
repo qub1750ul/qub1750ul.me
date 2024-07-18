@@ -1,0 +1,37 @@
+---
+title: "Exobrain assistant"
+---
+
+In the exobrain i have a page where i stash links to read later.
+Often i do not have the patience to compile in some useful data such as page title and description, which are very useful when going back to the list.
+
+So i tought of an automated curation system that upon insertion filters the
+links that lack context, visits them, extracts relevant info and gets them back 
+in form of ready to apply patches to me.
+
+Some code that i quickly hacked toghether to extract https://ogp.me[OpenGraph]
+data from a test webpage:
+
+[code,jq]
+--
+#!/usr/bin/env xq -f
+# Scan a HTML document for certain info and compile a JSON structure with
+# findings
+
+def getProperty(id):
+	map(select(."@property" == id))|first|."@content" ;
+
+[ "og:url", "og:title", "og:description" ] as $propIds
+| .html.head.meta
+| map( select( [."@property"] | inside($propIds) ))
+| {
+		url: getProperty("og:url"),
+		title: getProperty("og:title"),
+		description: getProperty("og:description")
+}
+--
+
+== References
+
+* https://ogp.me/
+* https://andrejgajdos.com/how-to-create-a-link-preview/

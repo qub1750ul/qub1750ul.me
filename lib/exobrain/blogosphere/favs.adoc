@@ -1,0 +1,199 @@
++++
+title = "Favourite articles"
+description = "A curated list of favourite blog posts from the interwebs"
++++
+:toc:
+
+== Why use SSL/TLS on websites?
+https://www.sweharris.org/post/2016-05-31-secure-webserver/
+
+== Now how many USB-C to USB-C cables are there?
+https://people.kernel.org/bleung/now-how-many-usb-c-to-usb-c-cables-are-there-usb4-update-september-12
+
+== The general public is misinformed about USB-C
+https://x.com/_MG_/status/1797461630437241318?t=yWVav3ckGTfYdw126-eSCA
+
+== HTMX is the Future
+https://quii.dev/HTMX_is_the_Future
+
+[quote]
+--
+User expectations of the web are now that you have this super-smooth no-reload experience. Unfortunately, it's an expectation that is usually delivered with single-page applications (SPAs) that rely on libraries and frameworks like React and Angular, which are very specialised tools that can be complicated to work with.
+
+A new approach is to put the ability to deliver this UX back into the hands of engineers that built websites before the SPA-craze, leveraging their existing toolsets and knowledge, and HTMX is the best example I've used so far.
+--
+
+== Choosing The Right ZFS Pool Layout
+https://klarasystems.com/articles/choosing-the-right-zfs-pool-layout/
+keywords::[zfs mirror, RAID-Z, dRAID, vdev]
+
+[quote]
+--
+Setting up a ZFS pool involves a number of permanent decisions that will affect the performance, cost, and reliability of your data storage systems, so you really want to understand all the options at your disposal for making the right choices from the beginning.
+--
+
+== Choosing an internet screen name
+https://qntm.org/nickname
+
+[quote]
+--
+Choosing an internet nickname is more serious a task than one might realise. It is not quite as important as choosing your child's real name, or changing your own, but it is still worth devoting a reasonable amount of time to, because, if you end up spending as much time on the internet as I have in the last five years, then you may find yourself running up against several problems.
+--
+
+== Adding comments to your static blog with Mastodon
+https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/
+
+[quote]
+--
+When publishing an article, you now only need to also write a simple toot linking to your article. Then Mastodon has a simple API to fetch the answer to your toot. This is the code I made for my Hugo powered blog, but it is easily adaptable for other static site generators. It will create a button to load comments instead of loading them for every visitor so that it decreases the load on your mastodon server.
+--
+
+== Resolve Syncthing conflicts using three way merge
+https://www.rafa.ee/articles/resolve-syncthing-conflicts-using-three-way-merge/
+
+[quote]
+--
+I think this method has lots of potential to enable more use cases for syncthing.
+For example, if you keep your playlists as .m3u files in a syncthing folder,
+you might use git merge-file --union to tell git to just keep both versions in
+case of conflicting lines.
+This way, at the cost of some deleted songs re-appearing, you would never have
+a single conflict!
+--
+
+== Communal commenting
+https://hitchdev.com/approach/communal-commenting/
+
+[quote]
+--
+Communal commenting is a team based approach to writing clear, useful comments.
+It may be a useful approach to take if you find yourself encountering no shit 
+sherlock comments.
+--
+
+== How to Kill a Decentralised Network (such as the Fediverse)
+https://ploum.net/2023-06-23-how-to-kill-decentralised-networks.html
+
+[quote]
+--
+You cannot buy a decentralised network!
+But there’s another way: make it irrelevant.
+That’s exactly what Google did with XMPP. [...]
+
+First of all, despites collaborating to develop the XMPP standard,
+Google was doing its own closed implementation that nobody could review.
+It turns out they were not always respecting the protocol they were developing.
+They were not implementing everything. This forced XMPP development to be
+slowed down, to adapt.
+Nice new features were not implemented or not used in XMPP clients because they
+were not compatible with Google Talk [...]
+
+And because there were far more Google talk users than "true XMPP" users, there
+was little room for "not caring about Google talk users".
+--
+
+== Why tabs are clearly superior
+https://lea.verou.me/2012/01/why-tabs-are-clearly-superior
+
+== Give constructive proofs of your ideas
+https://catern.com/constructive.html
+
+== Docker Considered Harmful
+https://catern.com/posts/docker.html
+
+[quote]
+--
+Docker is extremely popular these days. Too bad it's not very good.
+
+A note in advance: This is absolutely not about Docker being too "opinionated"
+for me, or other tools being more flexible. I believe that learning and using
+Docker is just plain more complicated than learning and using the tools I
+describe below. Docker is genuinely more complex and harder to use than the
+alternatives. These tools also happen to be more flexible than Docker, but
+that's not why I'm recommending them: I'm recommending them because they are
+simpler to learn and use. If they are indeed more flexible in addition to being
+simpler to use, then that's just due to an overall superior design. 
+--
+
+== Buying guide to the best pencils for technical design
+https://www.momarte.com/blog/per-iniziare/guida-allacquisto-delle-migliori-matite-per-il-disegno-tecnico
+
+== How to choose a graphite pencil ?
+https://www.momarte.com/blog/per-iniziare/come-scegliere-le-matite-da-disegno-in-grafite
+
+== How to use zettelkasten as a programmer
+https://theproductiveengineer.net/how-to-use-zettelkasten-as-a-programmer-or-developer/
+
+== Don't Do Complex Folder Hierarchies - They Don't Work and This Is Why and What to Do Instead
+by Karl Voit +
+https://karl-voit.at/2020/01/25/avoid-complex-folder-hierarchies/
+
+[quote]
+--
+I often read comments from people that are trying to come up with a clever,
+deeply-nested directory hierarchy to manage their personal files.
+You will frequently find discussions about these topics on this
+https://reddit.com/r/datacurator[sub-reddit].
+I don't recommend investing effort in complex directory structures and this 
+is why and what to do instead.
+--
+
+== Stop using so many divs! An intro to semantic HTML
+by Ken Bellows +
+https://dev.to/kenbellows/stop-using-so-many-divs-an-intro-to-semantic-html-3i9i
+
+[quote]
+--
+Authors are strongly encouraged to view the div element as an element of last
+resort, for when no other element is suitable. Use of more appropriate
+elements instead of the div element leads to better accessibility
+for readers and easier maintainability for authors.
+--
+
+== The log/event processing pipeline you can't have
+https://apenwarr.ca/log/20190216
+
+[quote]
+--
+Lately, I've had a surprisingly large number of conversations about logs
+processing pipelines. I can find probably 10+ already-funded, seemingly
+successful startups processing logs, and the Big Name Cloud providers all
+have some kind of logs thingy, but still, people are not satisfied.
+It's expensive and slow. And if you complain, you mostly get told that you
+shouldn't be using unstructured logs anyway, you should be using event
+streams.
+
+That advice is not wrong, but it's incomplete.
+
+Instead of doing a survey of the whole unhappy landscape, let's just ignore what other people
+suffer with and talk about what does work. You can probably find, somewhere, something similar to
+each of the components I'm going to talk about, but you probably can't find a single solution
+that combines it all with good performance and super-low latency for a reasonable price.
+At least, I haven't found it. I was a little surprised by this, because I didn't think we were
+doing anything all that innovative. Apparently I was incorrect.
+--
+
+== Crafting container images without Dockerfiles
+https://ochagavia.nl/blog/crafting-container-images-without-dockerfiles/
+
+== Email like a pro
+https://www.theregister.com/2023/08/23/email_like_a_pro/
+
+== War of the CI servers - GitLab vs GitHub vs Jenkins
+https://www.eficode.com/blog/war-of-the-ci-servers-gitlab-vs-github-vs-jenkins
+
+[quote]
+--
+Since their inception as little more than glorified shell scripts, continuous integration systems,
+or build servers as they were called, they have evolved from an exotic niche product to a central
+piece of any well-oiled software delivery project.
+
+Along with the rise of agile methodologies and Continuous Delivery practices, the CI server has
+moved towards the center stage in your development lifecycle.
+
+And while the market for CI servers is booming, it can be hard to tell the difference between them
+and choose which one to adopt. Should one choose Jenkins, GitLab CI, or maybe GitHub Actions?
+This blog post will guide you through the selection process and give you guidance for making the 
+optimal choice.
+--
+

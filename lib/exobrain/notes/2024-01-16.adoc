@@ -8,21 +8,36 @@ Una matita con mina più dura presenterà un tratto più chiaro e sottile, ma an
 Esistono 2 tipi di scale per misurare la durezza di una matita, la scala britannica che utilizza le lettere e quella statunitense che utilizza invece i numeri. Nella tabella qui sotto si possono trovare entrambe le scale con alcune indicazioni sugli utilizzi più idonei.
 
 [header,cols="4*"]
-===
+|===
 2+| Grado durezza .2+| Caratteristiche .2+| Utilizzo
-| Britannico | Statunitense
-| 9B | .5+| Molto morbide, tratto nero .5+| Lavori artistici quali schizzi e bozze
+  | Britannico       | Statunitense
+
+| 9B |
+.5+| Molto morbide, tratto nero
+.5+| Lavori artistici quali schizzi e bozze
+
 | 8B |
 | 7B |
 | 6B |
 | 5B |
-| 4B | .4+| Abbastanza morbide, tratto nero .4+| Adatte al disegno a mano libera
+
+| 4B |
+.4+| Abbastanza morbide, tratto nero
+.4+| Adatte al disegno a mano libera
+
 | 3B |
 | 2B | #0
-| B   | #1
-| HB | #2 .2+| Durezza media, tratto scuro .2+| Piuttosto versatili, adatte alla scrittura
-| F    | #21/2
-| H   | #3 .2+| Mina dura, tratto grigio .2+| Indicate per il disegno tecnico
+| B  | #1
+
+| HB | #2
+.2+| Durezza media, tratto scuro
+.2+| Piuttosto versatili, adatte alla scrittura
+
+| F  | #21/2
+| H  | #3
+.2+| Mina dura, tratto grigio
+.2+| Indicate per il disegno tecnico
+
 | 2H | #4
 | 3H | .3+| Piuttosto dure, tratto chiaro .3+| Idonea per progettazioni tecniche o grafiche a livelli avanzati
 | 4H |
@@ -32,5 +47,6 @@ Esistono 2 tipi di scale per misurare la durezza di una matita, la scala britann
 | 8H
 | 9H
 |===
+
 La lettera H indica le mine più dure (hard) mentre la lettera B indica quelle più morbide (black, ad indicare il tratto più scuro). La lettera F (fine point) invece indica una via di mezzo, né troppo dura né troppo morbida, che, insieme alla HB, via di mezzo leggermente più morbida, è  quella più indicata per l’utilizzo nelle scuole.
 

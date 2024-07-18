@@ -1,0 +1,15 @@
+---
+title: "Car TCO"
+---
+
+* Ricerca prezzi carburanti
+https://carburanti.mise.gov.it/ospzSearch/home
+
+* Prezzo medio carburanti
+https://www.mimit.gov.it/it/prezzo-medio-carburanti/regioni#campania
+
+* Pedaggio (Autostrade per l'italia)
+https://www.autostrade.it/en/pedaggio
+
+* Carburante
+https://www.infomotori.com/guide/calcolo-del-consumo-di-carburante-quanto-beve-la-tua-auto/

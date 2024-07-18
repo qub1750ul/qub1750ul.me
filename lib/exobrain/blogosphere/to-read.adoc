@@ -2,6 +2,39 @@
 title = "Articles to read"
 +++
 
+* https://github.blog/2023-10-04-how-to-communicate-like-a-github-engineer-our-principles-practices-and-tools/
+* https://matduggan.com/a-eulogy-for-devops/
+* https://ludic.mataroa.blog/blog/i-will-fucking-piledrive-you-if-you-mention-ai-again/
+* https://medium.com/javarevisited/10-best-linux-unix-and-system-programming-books-for-beginners-2fe750951c9f
+
+* https://www.youtube.com/watch?v=luogje8IHpM[I embedded a programming language interpreter inside Linux debug information]
+* https://aeon.co/essays/why-the-neurodiversity-movement-has-become-harmful
+* +
+--
+Durov on Apple compliance
+https://t.me/durov/266
+https://youtu.be/1Ut6RouSs0w?si=2kPnWjnuyn6K-TCX
+--
+* https://web.archive.org/web/20070814184957/http://www.moolenaar.net/habits.html[Brian Moolenar: Seven habits of effective text editing]
+* https://web.archive.org/web/20160407202902/http://www.lib.umich.edu/pda2016[Personal
+* Digital Archiving Conference 2016]
+* https://subtxt.in/library-data/2016/03/28/json_stream_jq[Handling Large JSON Files with Streaming]
+* https://www.xml.com/pub/a/2006/05/31/converting-between-xml-and-json.html
+* https://andrejgajdos.com/how-to-create-a-link-preview/
+* https://hal.science/hal-00618977/file/PEER_stage2_10.1016%252Fj.applthermaleng.2008.05.014.pdf[L. Navarini, E. Nobile, F. Pinto, A. Scheri, F. Suggi-Liverani. Experimental Investigation of Steam Pressure Coffee Extraction in a Stove-top Coffee Maker. Applied Thermal Engineering, 2010, 29 (5-6), pp.998. ff10.1016/j.applthermaleng.2008.05.014ff. ffhal-00618977f
+]
+* http://dx.doi.org/10.1002/asi.23995[Accidental Information Discovery: Cultivating Serendipity in the Digital Age. Tammera M.Race & Stephann Makri.]
+* https://github.com/eLvErDe/proxmox-debian-img-scripts[Import cloud images on
+* PVE]
+* https://github.com/rvaiya/keyd[Keyd: A key remapping daemon for linux]
+* https://www.manton.org/2021/05/19/webmention-and-twitter.html
+* https://eng.lyft.com/how-lyft-discovered-openstreetmap-is-the-freshest-map-for-rideshare-a7a41bf92ec
+* https://torrentfreak.com/cloudflare-disables-access-to-pirated-content-on-its-ipfs-gateway-230324/
+* https://slate.com/human-interest/2024/02/literacy-crisis-reading-comprehension-college.html
+* https://www.sciencedirect.com/science/article/abs/pii/S0003687017300212[Touchscreen interfaces in context: A systematic review of research into touchscreens across settings, populations, and implementations]
+* https://www.abortretry.fail/p/the-berkley-software-distribution
+* https://www.corsix.org/content/elf-eh-frame
+* https://opensource.org/blog/a-historic-view-of-the-practice-to-delay-releasing-open-source-software-osis-report
 * https://bsky.app/profile/adamkotsko.bsky.social/post/3kl5fafwzkk2z
 * https://janert.me/guides/hugo-survival-guide/[A Hugo Survival Guide - Philipp K. Janert, Ph.D.]
 * https://www.simplilearn.com/difference-between-terraform-vs-ansible-article#when_should_you_not_use_ansible_or_terraform[Terraform vs Ansible: Their Differences, and When to Use or Not]
@@ -36,3 +69,4 @@ title = "Articles to read"
 * https://journals.sagepub.com/doi/full/10.1177/0963662519888757[From self-tracking to self-expertise: The production of self-related knowledge by doing personal science]
 * https://www.w3.org/TR/html-data-guide/
 * https://arie.ls/2016/typography-for-user-interfaces/
+

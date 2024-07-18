@@ -1,0 +1,19 @@
++++
+title = "Bookmarks"
+description = "An annotated collection of cool, useful or amusing places on the web"
++++
+:toc:
+
+* https://github.com/erikw/vim-keybindings-everywhere-the-ultimate-list/blob/main/README.md[Vim keybindings everywhere]
+* https://clig.dev/[Command Line Interface Guidelines]
+* https://wireless.wiki.kernel.org[Linux Wireless Wiki]
+
+== Curiosities
+* https://en.wikipedia.org/wiki/Rekursiv[Rekursiv: object-oriented computer]
+
+== A list of quality threads with people having strong feelings about technology
+
+* https://github.com/orgs/mdn/discussions/242[Self-closing elements in HTML considered harmful]
+* https://github.com/rust-lang/rfcs/issues/3003[Tabs vs Spaces - Rust edition (2020)]
+
+

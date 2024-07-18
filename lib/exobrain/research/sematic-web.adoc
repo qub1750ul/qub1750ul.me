@@ -1,3 +1,14 @@
+---
+title: "Research notes on Semaantic Web"
+---
+
+The semantic web is all about embedding non-presentational data into hypermedia, enabling machines to perform inference on loosely linked data.
+
+There are about three standard-ish ways to perform such a data embedding in web documents:
+* RDFa
+* Microdata
+* Microformats
+
 * https://www.w3.org/TR/html-data-guide/
 * https://html.spec.whatwg.org/multipage/microdata.html
 * https://www.w3.org/TR/xhtml-rdfa-primer/

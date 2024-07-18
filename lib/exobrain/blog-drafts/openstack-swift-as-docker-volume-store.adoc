@@ -1,7 +1,6 @@
 +++
 title = "Using OpenStack Swift as Docker volumes' backing store"
-category = [ "garrlab" ]
-type = "blog"
+category = [ "devart", "garrlab" ]
 +++
 :toc:
 
@@ -30,13 +29,11 @@ solution for the cloud.
 Well, not exactly.
 
 For starters, the fact that a Docker volume is truly nothing more than a
-directory on a regular file system on a block device means that container state
-is interwinted with global VM state.
+directory on a regular file system on a block device means that container state is interwinted with global VM state.
 This is especially problematic, considering that the maximum level of
 granularity in terms of block storage management from outside the VM is the
 *entire block device*.
-In fact, the only way to meaningfully inspect the contents of a block device is
-to mount it somewhere, and run scripts that are inevitably linked to the OS
+In fact, the only way to meaningfully inspect the contents of a block device is to mount it somewhere, and run scripts that are inevitably linked to the OS
 configuration.
 
 Not much scalable.

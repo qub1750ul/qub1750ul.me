@@ -1,0 +1,12 @@
++++
+title = "Books"
+description = "A list of books to remeber"
++++
+
+== Read
+
+== To read
+
+== To evaluate
+
+* The Humane Interface: New Directions for Designing Interactive Systems, (ISBN 0-201-37937-6)

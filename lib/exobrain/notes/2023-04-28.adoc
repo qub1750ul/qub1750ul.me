@@ -1,5 +1,3 @@
-:toc:
-
 == The case for biparted project structure ( build/src )
 
 I always structure my projects in two main directories: build and src.

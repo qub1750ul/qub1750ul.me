@@ -1,9 +1,8 @@
-﻿+++
-title = "PGSQL config overlaying methods"
-+++
+﻿---
+title: "PGSQL config overlaying methods"
+---
 
 == Status of this Memo
-
 
 == Abstract
 

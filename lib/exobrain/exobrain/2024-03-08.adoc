@@ -1,0 +1,23 @@
+== Link stash curation
+
+Basic curation of links can be automated. Tasks to do:
+* Fetch and register title
+* Fetch author info
+* (MAYBE) Fetch summary
+* Auto-snapshot using wayback-machine-like software
+
+[TODO]
+--
+Build a link auto-curation toolkit:
+* Should be partily usable in CI
+** Explore keyw:Zuul CI as possible base platform
+* Will need vim bindings for occasional interactive use
+--
+
+== Exobrain tags
+[TODO]
+--
+Create a ADOC macro to generate global cross references (keyw)
+* These should point to a generated index page for the specific keyword
+--
+

@@ -1,0 +1,14 @@
+== Modal keyboard for Android
+
+Editing exobrain on pc is fine, on mobile kinda dreadful.
+Mostly because input methods are kinda limited in comparison to what i can do on vim with physical keyboard.
+
+IDEA: Get a swipe-based softkeyb. Maybe has less friction?
+
+What i really miss is easy modal interaction, that enables single-hotkey macros.
+
+IDEA: Maybe F-keys can help?
+
+https://www.thegadhian.com/posts/using-obsidian-with-termux-and-vim/
+
+

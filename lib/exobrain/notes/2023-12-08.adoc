@@ -1,4 +1,5 @@
 == Nix ecosystem criticalities
+keyw:[nix, nixos]
 
 Nix is a very interesting project that aims to solve fundamental issues of
 traditional package management systems.

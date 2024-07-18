@@ -11,11 +11,8 @@ https://github.com/f-dinucci/[@f_dinucci]
 evaluating "cloud-ready" Kanban software for coordination purposes in
 https://www.garrlab.it/[GARRLab].
 
-The views, thoughts, and opinions expressed in this article belong solely to the
-authors, and do not necessarily reflect the official policy or position of any
-other organization or individual. While every caution has been taken to provide
-readers with the most accurate information and honest analysis, please use your
-discretion before taking any decisions based on the contents of this article.
+The views, thoughts, and opinions expressed in this article belong solely to the authors, and do not necessarily reflect the official policy or position of any other organization or individual.
+While every caution has been taken to provide readers with the most accurate information and honest analysis, please use your discretion before taking any decisions based on the contents of this article.
 All information in the following is provided "as is", with no guarantee of
 completeness, accuracy or currentness.
 
@@ -40,8 +37,7 @@ At the time of writing the software is still in beta stage:
 * Updates are quite
   https://github.com/plankanban/planka/issues/139[complicated]
   and require
-	https://github.com/plankanban/planka/issues/242[badly tested (at
-	all ?) procedures].
+  https://github.com/plankanban/planka/issues/242[badly tested (at all ?) procedures].
 
 * Update paths for breaking changes aren't managed appropriately, and often
   impraticable. (https://github.com/plankanban/planka/issues/242[GH issue])
@@ -78,8 +74,7 @@ FIXME: tone down for publication
 * Disregard of fundamental security best practices:
 ** All config happens EXCLUSIVELY through environment variables
 ** This includes SECRETS, that can be
-	 https://github.com/wekan/wekan/blob/760dde2c103c6de04042ccd1e9a1b28f78e8b604/docker-compose.yml#L343[ONLY
-	 MANAGED IN PLAINTEXT]
+	 https://github.com/wekan/wekan/blob/760dde2c103c6de04042ccd1e9a1b28f78e8b604/docker-compose.yml#L343[ONLY MANAGED IN PLAINTEXT]
 
 * UX is enterprise grade, in the sense that is an "enterprise grade mess"(TM):
 

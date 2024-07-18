@@ -7,11 +7,11 @@ Models are just models
 
 Standards are so only if they get largely accepted
 
-== Distinction
+== Distinction among exobrain and blog
 
-Exobrain is a weakly structured blog without constraints on content.
+The Exobrain is a weakly structured blog without constraints on content.
 
-Blog is the place for curated essay-like documents.
+The Blog is the place for curated essay-like documents.
 A blog post should be at least three paragraphs long.
 Paragraphs should be dense, about 10 periods.
 Incorporates a lot of qualities typical of essays.

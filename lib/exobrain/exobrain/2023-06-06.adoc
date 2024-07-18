@@ -1,11 +1,7 @@
 == On removing "Hugo magic" from exobrain files
 
-Currently to correctly render exobrain via Hugo, exobrain files need to include
-some Hugo-specific data.
-Since this repository is not indended to be consumed by just Hugo in particular
-i was searching for a workflow alternative to "just plop files into a Hugo
-project", that being the very thing requiring "magic" to be there. +
+Currently to correctly render exobrain via Hugo, exobrain files need to include some Hugo-specific data.
+Since this repository is not indended to be consumed by just Hugo in particular i was searching for a workflow alternative to "just plop files into a Hugo project", that being the very thing requiring "magic" to be there. +
 For a variety of reasons this is quite challenging at the moment.
 
-Today tho i come across https://github.com/gohugoio/hugo/issues/6098[this thread],
-that may provide a very interesting intermediate solution.
+Today tho i come across https://github.com/gohugoio/hugo/issues/6098[this thread], that may provide a very interesting intermediate solution.

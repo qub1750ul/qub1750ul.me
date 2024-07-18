@@ -1,0 +1,27 @@
+---
+title: "Automotive data reporting"
+keywords: [ auto, data, obd ]
+---
+
+== Data access
+From year 2000 most veichle manufacturers adopt the ODB-II standard for
+on-board diagnostic data access. Data can be acquired by connecting to the
+on-board computer via the "ODB port", which should be easily accessible from
+the cockpit.
+
+* Link: https://www.partsweb.it/porta-obd-cosa-serve-dove-si-trova-nuove-regole-revisione-auto/[Porta OBD: a cosa serve e dove si trova]
+
+From february 2024 a new ministerial notice mandates ODB based checks during
+veichle revisions.
+
+== Automated data pipeline
+
+I could concieve a device (ESP32 based?) that semi-permanently connects to the
+ODB port, periodically exports data and then pushes it to a remote database
+for long-term storage and later processing. The device could work this way:
+
+* Periodically acquire data. (Local storage is necessary because ODB could work only when veichle is on, and data transmission would occur mainly when the veichle is off).
+* Detect known wifi network (or bt tehering link)
+* Connect to remote data storage
+* Push data from local storage
+
